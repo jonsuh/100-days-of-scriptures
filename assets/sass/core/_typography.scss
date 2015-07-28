@@ -8,6 +8,10 @@
   font-family: $sans-serif;
 }
 
+@mixin serif {
+  font-family: $serif;
+}
+
 // Body
 // ==================================================
 $body-font-color: $grey-darkest;

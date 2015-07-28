@@ -19,7 +19,7 @@
 }
 
 .about-title {
-  font-family: "Playfair Display";
+  @include serif;
   margin-bottom: em-calc(20);
 }
 
