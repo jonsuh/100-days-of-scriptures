@@ -4,6 +4,7 @@ var browserSync  = require('browser-sync');
 var concat       = require('gulp-concat');
 var filter       = require('gulp-filter');
 var jshint       = require('gulp-jshint');
+var minifycss    = require('gulp-minify-css');
 var newer        = require('gulp-newer');
 var notify       = require('gulp-notify');
 var plumber      = require('gulp-plumber');
@@ -21,6 +22,12 @@ var onError = function(err) {
 var plumberOptions = {
   errorHandler: onError,
 };
+
+gulp.task('minifycss', function() {
+  return gulp.src('assets/css/**/*.css')
+    .pipe(minifycss())
+    .pipe(gulp.dest('assets/css'))
+});
 
 gulp.task('sass', function() {
   var autoprefixerOptions = {
@@ -66,3 +73,6 @@ gulp.task('browsersync', function() {
 
 gulp.task('build', ['sass']);
 gulp.task('default', ['sass', 'browsersync', 'watch']);
+gulp.task('production', ['build'], function() {
+  gulp.start('minifycss');
+});
