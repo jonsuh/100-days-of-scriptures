@@ -1,3 +1,24 @@
 // ==================================================
 // Reset
 // ==================================================
+html, body, div, nav, header, footer, section, aside, span, figure, figcaption, img,
+h1, h2, h3, h4, h5, h6, p, a, blockquote, small, strong, b, em, i, sub, sup, ol, ul, li {
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+nav, header, footer, section, aside, figure, figcaption {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
