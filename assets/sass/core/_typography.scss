@@ -17,7 +17,7 @@
 }
 
 @mixin serif {
-  font-family: $serif;
+  font-family: $serif-local;
 
   .fonts-loaded-100 & {
     font-family: $serif;
