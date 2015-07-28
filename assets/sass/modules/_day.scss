@@ -27,27 +27,20 @@
 
 // Info
 // ==================================================
+$day-info-font-size: 12;
+
 .day-info {
+  font-size: em-calc($day-info-font-size);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   text-align: center;
 }
 
 // Reference
 // ==================================================
 .day-reference {
-  position: relative;
-  padding-top: em-calc(13);
-
-  &::before {
-    content: "";
-    display: inline-block;
-    width: em-calc(30);
-    height: em-calc(3);
-    background-color: $grey-darkest;
-    position: absolute;
-    top: em-calc(-10);
-    left: 50%;
-    margin-left: em-calc(-15);
-  }
+  
 }
 
 .day-reference-link {
@@ -58,7 +51,6 @@
 // ==================================================
 .day-font {
   line-height: 1.4;
-  margin-top: em-calc(10);
 }
 
 .day-font-link {
@@ -73,10 +65,10 @@ $day-spacing-y: 40;
   padding: em-calc($day-spacing-y 15);
 }
 .day-number {
-  margin-bottom: em-calc($day-spacing-y);
+  margin-bottom: em-calc($day-spacing-y * 1.4);
 }
 .day-info {
-  margin-top: em-calc($day-spacing-y);
+  margin-top: em-calc($day-spacing-y * 1.4, $day-info-font-size);
 }
 
 @include mq(small) {
@@ -86,10 +78,10 @@ $day-spacing-y: 40;
     padding: em-calc($day-spacing-y 30);
   }
   .day-number {
-    margin-bottom: em-calc($day-spacing-y);
+    margin-bottom: em-calc($day-spacing-y * 1.3);
   }
   .day-info {
-    margin-top: em-calc($day-spacing-y);
+    margin-top: em-calc($day-spacing-y * 1.3, $day-info-font-size);
   }
 }
 @include mq(medium) {
@@ -100,10 +92,10 @@ $day-spacing-y: 40;
   }
   .day-number {
     font-size: 1.05em;
-    margin-bottom: em-calc($day-spacing-y);
+    margin-bottom: em-calc($day-spacing-y * 1.2);
   }
   .day-info {
-    margin-top: em-calc($day-spacing-y);
+    margin-top: em-calc($day-spacing-y * 1.2, $day-info-font-size);
   }
 }
 @include mq(mid) {
@@ -113,10 +105,10 @@ $day-spacing-y: 40;
     padding: em-calc($day-spacing-y 75)
   }
   .day-number {
-    margin-bottom: em-calc($day-spacing-y);
+    margin-bottom: em-calc($day-spacing-y * 1.1);
   }
   .day-info {
-    margin-top: em-calc($day-spacing-y);
+    margin-top: em-calc($day-spacing-y * 1.1, $day-info-font-size);
   }
 }
 @include mq(large) {
@@ -130,6 +122,6 @@ $day-spacing-y: 40;
     margin-bottom: em-calc($day-spacing-y);
   }
   .day-info {
-    margin-top: em-calc($day-spacing-y);
+    margin-top: em-calc($day-spacing-y, $day-info-font-size);
   }
 }
