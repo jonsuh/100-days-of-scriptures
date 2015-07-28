@@ -4,8 +4,16 @@
 
 // Fonts
 // ==================================================
-$sans-serif: "Karla", sans-serif;
-$serif     : "Playfair Display", "Times New Roman", Times, serif;
+$sans-serif-stack   : "Open Sans", Helvetica, Arial, sans-serif;
+$serif-stack        : "Times New Roman", Times, serif;
+
+$sans-serif-local   : KarlaLocal, $sans-serif-stack;
+$sans-serif         : Karla, $sans-serif-local;
+$sans-serif-fallback: KarlaLocal, Karla, $sans-serif-stack;
+
+$serif-local        : PlayfairDisplayLocal, $serif-stack;
+$serif              : "Playfair Display", $serif-local;
+$serif-fallback     : PlayfairDisplayLocal, "Playfair Display", $serif-stack;
 
 // Colors
 // ==================================================

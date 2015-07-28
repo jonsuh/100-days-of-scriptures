@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "KarlaLocal";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Karla"),
+       local("Karla-Regular");
+}
+
+@font-face {
+  font-family: "KarlaLocal";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Karla"),
+       local("Karla-Bold");
+}
+
+@font-face {
+  font-family: "PlayfairDisplayLocal";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Playfair Display"),
+       local("PlayfairDisplay-Regular");
+}
+
+@font-face {
+  font-family: "PlayfairDisplayLocal";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Playfair Display"),
+       local("PlayfairDisplay-Bold");
+}
+
+@font-face {
+  font-family: "PlayfairDisplayLocal";
+  font-weight: 700;
+  font-style: italic;
+  src: local("Playfair Display"),
+       local("PlayfairDisplay-BoldItalic");
+}
