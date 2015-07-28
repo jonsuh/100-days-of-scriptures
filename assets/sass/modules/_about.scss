@@ -1,0 +1,99 @@
+// ==================================================
+// About
+// ==================================================
+.about {
+  @extend .day;
+  background-color: $grey-lightest;
+}
+
+// Header
+// ==================================================
+.about-header {
+
+}
+
+// Title
+// ==================================================
+.about-title-wrap {
+  text-align: center;
+}
+
+.about-title {
+  font-family: "Playfair Display";
+  margin-bottom: em-calc(20);
+}
+
+.about-title-head {
+  font-size: 2.5em;
+  font-style: italic;
+  font-weight: 700;
+  display: block
+}
+
+.about-title-tail {
+  font-size: 1em;
+  font-style: italic;
+  letter-spacing: 0.21em;
+  text-transform: uppercase;
+}
+
+// Description
+// ==================================================
+.about-description {
+  color: $grey-darker;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  max-width: em-calc(500);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Responsive
+// ==================================================
+@include mq(medium) {
+  .container--about {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-title-wrap {
+    text-align: right;
+    flex: 0 0 em-calc(210);
+    margin-right: em-calc(50);
+  }
+
+  .about-description {
+    flex: 1;
+    max-width: em-calc(400);
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .about-title {
+    margin-top: em-calc(-15);
+    margin-bottom: 0;
+  }
+
+  .about-title-head {
+    font-size: 3em;
+  }
+
+  .about-title-tail {
+    font-size: 1.2em;
+  }
+}
+
+@include mq(mid) {
+  .about-title-head {
+    font-size: 4em;
+  }
+
+  .about-title-tail {
+    font-size: 1.4em;
+    letter-spacing: 0.32em;
+  }
+
+  .about-title-wrap {
+    flex-basis: em-calc(270);
+  }
+}
