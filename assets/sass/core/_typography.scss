@@ -15,6 +15,9 @@ $body-font-color: $grey-darkest;
 body {
   @include sans-serif;
   color: $body-font-color;
+  text-rendering: optimizeLegibility;
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "liga";
 }
 
 // Anchor
