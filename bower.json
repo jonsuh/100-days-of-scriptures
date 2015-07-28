@@ -3,5 +3,8 @@
   "version": "0.0.1",
   "description": "100 Days",
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "bourbon": "~4.2.3",
+    "mq-sass": "~0.2.0"
+  }
 }
