@@ -16,6 +16,11 @@
   padding-bottom: em-calc(10);
 }
 
+.day-number--white {
+  color: $white;
+  border-bottom-color: $white;
+}
+
 // Scripture
 // ==================================================
 .day-scripture {
