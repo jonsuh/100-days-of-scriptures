@@ -1,0 +1,135 @@
+// ==================================================
+// Day
+// ==================================================
+.day {
+  
+}
+
+// Number
+// ==================================================
+.day-number {
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 3px solid $grey-darkest;
+  display: inline-block;
+  width: em-calc(35);
+  padding-bottom: em-calc(10);
+}
+
+// Scripture
+// ==================================================
+.day-scripture {
+  max-width: em-calc(map-get($mq-breakpoints, xlarge));
+  margin-left: auto;
+  margin-right: auto;
+  @include clearfix;
+}
+
+// Info
+// ==================================================
+.day-info {
+  text-align: center;
+}
+
+// Reference
+// ==================================================
+.day-reference {
+  position: relative;
+  padding-top: em-calc(13);
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: em-calc(30);
+    height: em-calc(3);
+    background-color: $grey-darkest;
+    position: absolute;
+    top: em-calc(-10);
+    left: 50%;
+    margin-left: em-calc(-15);
+  }
+}
+
+.day-reference-link {
+  
+}
+
+// Font
+// ==================================================
+.day-font {
+  line-height: 1.4;
+  margin-top: em-calc(10);
+}
+
+.day-font-link {
+
+}
+
+// Responsive
+// ==================================================
+$day-spacing-y: 40;
+
+.day {
+  padding: em-calc($day-spacing-y 15);
+}
+.day-number {
+  margin-bottom: em-calc($day-spacing-y);
+}
+.day-info {
+  margin-top: em-calc($day-spacing-y);
+}
+
+@include mq(small) {
+  $day-spacing-y: 50;
+
+  .day {
+    padding: em-calc($day-spacing-y 30);
+  }
+  .day-number {
+    margin-bottom: em-calc($day-spacing-y);
+  }
+  .day-info {
+    margin-top: em-calc($day-spacing-y);
+  }
+}
+@include mq(medium) {
+  $day-spacing-y: 60;
+
+  .day {
+    padding: em-calc($day-spacing-y 55)
+  }
+  .day-number {
+    font-size: 1.05em;
+    margin-bottom: em-calc($day-spacing-y);
+  }
+  .day-info {
+    margin-top: em-calc($day-spacing-y);
+  }
+}
+@include mq(mid) {
+  $day-spacing-y: 70;
+
+  .day {
+    padding: em-calc($day-spacing-y 75)
+  }
+  .day-number {
+    margin-bottom: em-calc($day-spacing-y);
+  }
+  .day-info {
+    margin-top: em-calc($day-spacing-y);
+  }
+}
+@include mq(large) {
+  $day-spacing-y: 80;
+
+  .day {
+    padding: em-calc($day-spacing-y 90);
+  }
+  .day-number {
+    font-size: 1.1em;
+    margin-bottom: em-calc($day-spacing-y);
+  }
+  .day-info {
+    margin-top: em-calc($day-spacing-y);
+  }
+}

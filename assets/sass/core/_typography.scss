@@ -1,3 +1,30 @@
 // ==================================================
 // Typography
 // ==================================================
+
+// Mixins
+// ==================================================
+@mixin sans-serif {
+  font-family: $sans-serif;
+}
+
+// Body
+// ==================================================
+$body-font-color: $grey-darkest;
+
+body {
+  @include sans-serif;
+  color: $body-font-color;
+}
+
+// Anchor
+// ==================================================
+a {
+  color: $blue;
+  text-decoration: none;
+  transition: color $transition-duration linear;
+
+  &:hover {
+    color: $orange;
+  }
+}
