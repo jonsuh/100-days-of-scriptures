@@ -1,8 +1,9 @@
 // ==================================================
 // Reset
 // ==================================================
-html, body, div, nav, header, footer, section, aside, span, figure, figcaption, img,
-h1, h2, h3, h4, h5, h6, p, a, blockquote, small, strong, b, em, i, sub, sup, ol, ul, li {
+html, body, aside, div, footer, header, nav, section,
+h1, h2, h3, h4, h5, h6, p,
+a, b, blockquote, cite, em, figcaption, figure, i, img, li, ol, q, small, span, strong, sub, sup, time, ul {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
@@ -11,7 +12,7 @@ h1, h2, h3, h4, h5, h6, p, a, blockquote, small, strong, b, em, i, sub, sup, ol,
   margin: 0;
 }
 
-nav, header, footer, section, aside, figure, figcaption {
+article, aside, details, figcaption, figure, footer, header, nav, section {
   display: block;
 }
 
@@ -21,4 +22,14 @@ body {
 
 ol, ul {
   list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
 }
