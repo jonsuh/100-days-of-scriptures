@@ -16,3 +16,13 @@ $prefix-for-spec     : true;
 // mq Settings
 // ==================================================
 $mq-ems: true;
+$mq-breakpoints: (
+  iphone   : 320px,
+  iphone6  : 375px,
+  iphone6p : 414px,
+  small    : 480px,
+  medium   : 640px,
+  mid      : 832px,
+  large    : 1024px,
+  xlarge   : 1280px,
+);
