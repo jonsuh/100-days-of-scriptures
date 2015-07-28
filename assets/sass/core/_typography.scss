@@ -5,11 +5,27 @@
 // Mixins
 // ==================================================
 @mixin sans-serif {
-  font-family: $sans-serif;
+  font-family: $sans-serif-local;
+
+  .fonts-loaded-100 & {
+    font-family: $sans-serif;
+  }
+
+  .fonts-timeout-100 & {
+    font-family: $sans-serif-fallback;
+  }
 }
 
 @mixin serif {
   font-family: $serif;
+
+  .fonts-loaded-100 & {
+    font-family: $serif;
+  }
+
+  .fonts-timeout-100 & {
+    font-family: $serif-fallback;
+  }
 }
 
 // Body
