@@ -1,0 +1,175 @@
+// ==================================================
+// Day 2
+// ==================================================
+$day-2-serif     : "Glegoo";
+$day-2-blue      : #283593;
+$day-2-blue-light: #5c6bc0;
+$day-2-pink      : #ec407a;
+
+.day--2 {
+  background-color: $day-2-blue;
+  position: relative;
+  overflow: hidden;
+
+  .day-scripture {
+    font-family: $day-2-serif;
+    color: $day-2-blue-light;
+  }
+
+  .day-number {
+    @extend .day-number--white;
+  }
+
+  a {
+    color: $day-2-blue-light;
+  }
+
+  .day-reference-link {
+    color: $day-2-pink;
+    width: 95%;
+    padding-bottom: em-calc(10);
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0em;
+      right: 0;
+      width: 100%;
+      height: 1em;
+      background: rgba($day-2-pink, 0.3);
+      background: linear-gradient(to right, rgba($day-2-pink, 0.3) 20%, $day-2-pink);
+      z-index: -1;
+    }
+
+    @include mq(small) {
+      width: 90%;
+    }
+    @include mq(medium) {
+      $font-size: 18;
+
+      font-size: em-calc($font-size);
+      width: 85%;
+      padding-bottom: em-calc(15, $font-size);
+
+      &::before {
+        height: 1.25em;
+      }
+    }
+    @include mq(large) {
+      $font-size: 20;
+      font-size: em-calc($font-size);
+      width: 75%;
+      padding-bottom: em-calc(15, $font-size);
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $white;
+
+      &::before {
+        background: $day-2-pink;
+      }
+    }
+  }
+
+  .day-text {
+    max-width: em-calc(1000);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: em-calc(40);
+    margin-bottom: em-calc(40);
+
+    @include mq(small) {
+      margin-top: em-calc(50);
+      margin-bottom: em-calc(50);
+    }
+    @include mq(medium) {
+      margin-top: em-calc(60);
+      margin-bottom: em-calc(60);
+    }
+    @include mq(mid) {
+      margin-top: em-calc(70);
+      margin-bottom: em-calc(70);
+    }
+    @include mq(large) {
+      margin-top: em-calc(80);
+      margin-bottom: em-calc(80);
+    }
+  }
+}
+
+.day-2-first {
+  font-size: 1.2em;
+  margin-bottom: 0.2em;
+  line-height: 1.2;
+  position: relative;
+  z-index: 2;
+}
+
+.day-2-next {
+  $font-size: 50;
+
+  font-size: em-calc($font-size);
+  line-height: 1;
+  color: $day-2-pink;
+  letter-spacing: -0.02em;
+  position: relative;
+  z-index: 1;
+
+  em {
+    font-weight: 700;
+    font-style: normal;
+    color: $white;
+    text-shadow: 0 0 em-calc(1) rgba($white,0.6),
+                 0 0 em-calc(2.5) rgba($white,0.5),
+                 0 0 em-calc(4) rgba($white,0.45),
+                 0 0 em-calc(5.5) rgba($white,0.4),
+                 0 0 em-calc(7) rgba($white,0.35);
+    animation: day-2-next-em-glow 6s linear infinite;
+  }
+}
+
+@include mq(small) {
+  .day-2-first {
+    font-size: 1.3em;
+  }
+
+  .day-2-next {
+    $font-size: 50;
+
+    font-size: em-calc($font-size);
+    max-width: em-calc(400, $font-size);
+  }
+}
+
+@include mq(medium) {
+  .day-2-first {
+    font-size: 1.4em;
+  }
+
+  .day-2-next {
+    $font-size: 65;
+
+    font-size: em-calc($font-size);
+    max-width: em-calc(520, $font-size);
+  }
+}
+
+@include mq(large) {
+  .day-2-first {
+    font-size: 1.5em;
+  }
+
+  .day-2-next {
+    $font-size: 80;
+
+    font-size: em-calc($font-size);
+    max-width: em-calc(650, $font-size);
+  }
+}
