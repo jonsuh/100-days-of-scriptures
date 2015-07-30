@@ -10,7 +10,7 @@ $day-5-serif: "Abril Fatface", "Times New Roman", Times, serif;
   overflow: hidden;
 
   .day-number {
-    @extend .day-number-white;
+    @extend .day-number--white;
   }
 
   .day-scripture {
