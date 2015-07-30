@@ -35,7 +35,7 @@
     function cookie(a,b,c){if(void 0===b){var d="; "+window.document.cookie,e=d.split("; "+a+"=");return 2===e.length?e.pop().split(";").shift():null}var f;if(b===!1&&(c=-1),c){var g=new Date;g.setTime(g.getTime()+1e3*60*60*24*c),f="; expires="+g.toGMTString()}else f="";window.document.cookie=a+"="+b+f+"; path=/"}
 
     /*! Magic. © 2015 Jonathan Suh. All rights reserved */
-    for(var metaTags=document.getElementsByTagName("meta"),metaArray=[],metaContent=["fontsCSS","mainCSS"],i=0;i<metaTags.length;i++)metaContent.indexOf(metaTags[i].getAttribute("name"))>-1&&metaArray.push(metaTags[i]);for(var i=0;i<metaArray.length;i++){var metaAttrName=metaArray[i].getAttribute("name");metaAttrName.match(/CSS/)&&("mainCSS"==metaAttrName?loadCSS(metaArray[i].getAttribute("content"),null,null,function(){null===cookie("mainCSS")&&cookie("mainCSS","true",1)}):loadCSS(metaArray[i].getAttribute("content")))}!function(){if(null===cookie("fonts-loaded-100")){var a=new FontFaceObserver("Karla",{weight:400}),b=new FontFaceObserver("Karla",{weight:700}),c=new FontFaceObserver("Playfair Display",{weight:400}),d=new FontFaceObserver("Playfair Display",{weight:700}),e=new FontFaceObserver("Playfair Display",{weight:700,style:"italic"});Promise.all([a.check(),b.check(),c.check(),d.check(),e.check()]).then(function(){document.documentElement.className+=" fonts-loaded-100",cookie("fonts-loaded-100","true",1)},function(){document.documentElement.className+=" fonts-timeout-100"})}}();
+    for(var metaTags=document.getElementsByTagName("meta"),metaArray=[],metaContent=["fontsCSS","mainCSS"],i=0;i<metaTags.length;i++)metaContent.indexOf(metaTags[i].getAttribute("name"))>-1&&metaArray.push(metaTags[i]);for(var i=0;i<metaArray.length;i++){var metaAttrName=metaArray[i].getAttribute("name");metaAttrName.match(/CSS/)&&("mainCSS"==metaAttrName?loadCSS(metaArray[i].getAttribute("content"),null,null,function(){null===cookie("mainCSS")&&cookie("mainCSS","true",0.8)}):loadCSS(metaArray[i].getAttribute("content")))}!function(){if(null===cookie("fonts-loaded-100")){var a=new FontFaceObserver("Karla",{weight:400}),b=new FontFaceObserver("Karla",{weight:700}),c=new FontFaceObserver("Playfair Display",{weight:400}),d=new FontFaceObserver("Playfair Display",{weight:700}),e=new FontFaceObserver("Playfair Display",{weight:700,style:"italic"});Promise.all([a.check(),b.check(),c.check(),d.check(),e.check()]).then(function(){document.documentElement.className+=" fonts-loaded-100",cookie("fonts-loaded-100","true",0.8)},function(){document.documentElement.className+=" fonts-timeout-100"})}}();
     !function(a,b,c,d,e,f,g){a.GoogleAnalyticsObject=e,a[e]=a[e]||function(){(a[e].q=a[e].q||[]).push(arguments)},a[e].l=1*new Date,f=b.createElement(c),g=b.getElementsByTagName(c)[0],f.async=1,f.src=d,g.parentNode.insertBefore(f,g)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-2018785-1","auto"),ga("send","pageview",{transport:"beacon"});
   </script>
 
@@ -70,6 +70,7 @@
   <meta name="twitter:image:src" content="https://jonsuh.com/100-days-of-scriptures/icon.png">
 
   <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="https://jonsuh.com/100-days-of-scriptures/icon.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="yes">
   <meta name="apple-mobile-web-app-title" content="100 Days of Scriptures">
@@ -107,7 +108,7 @@
     </aside>
   </article>
 </main>
-<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=jonsuh" id="_carbonads_js"></script>
+<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=jonsuh"></script>
 <footer class="footer" role="contentinfo">
   <div class="container">
     &copy; 2015 <a href="https://jonsuh.com">Jonathan Suh</a>.
