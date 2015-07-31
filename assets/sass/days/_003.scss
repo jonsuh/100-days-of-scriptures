@@ -12,10 +12,6 @@ $day-3-serif          : "Crimson Text", "Times New Roman", Times, serif;
     text-align: center;
   }
 
-  a {
-    color: $grey;
-  }
-
   .day-reference-link {
     color: $black;
     font-style: italic;
@@ -29,6 +25,14 @@ $day-3-serif          : "Crimson Text", "Times New Roman", Times, serif;
       font-size: em-calc(18);
       margin-top: 3em;
     }
+  }
+
+  .day-font-link {
+    color: $grey;
+  }
+
+  .day-next {
+    border-color: $black;
   }
 }
 
