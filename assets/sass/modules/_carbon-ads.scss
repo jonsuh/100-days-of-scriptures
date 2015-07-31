@@ -1,0 +1,101 @@
+// ==================================================
+// Carbon Ads
+// ==================================================
+#carbonads {
+  background-color: $grey-lightest;
+  padding-top: em-calc(20);
+  padding-bottom: em-calc(40);
+  @include mq(medium) {
+    padding-top: em-calc(30);
+    padding-bottom: em-calc(50);
+  }
+  @include mq(large) {
+    padding-top: em-calc(40);
+    padding-bottom: em-calc(60);
+  }
+
+  > span {
+    width: 100%;
+    max-width: em-calc(300);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+  }
+}
+
+.carbon-wrap {
+  width: 100%;
+  display: table;
+  position: relative;
+}
+
+.carbon-img,
+.carbon-text {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.carbon-img {
+  background-color: $white;
+
+  img {
+    display: block;
+  }
+}
+
+$carbon-text-font-size: 12;
+
+.carbon-text {
+  font-size: em-calc($carbon-text-font-size);
+  color: $grey-dark;
+  line-height: 1.2;
+  padding-left: em-calc(15, $carbon-text-font-size);
+}
+
+$carbon-poweredby-font-size: 11;
+
+.carbon-poweredby {
+  @include serif;
+  font-size: em-calc($carbon-poweredby-font-size);
+  color: $grey;
+  text-align: center;
+  width: em-calc(130, $carbon-poweredby-font-size);
+  position: absolute;
+  bottom: em-calc(-20, $carbon-poweredby-font-size);
+  left: 0;
+}
+
+@include mq(1200) {
+  #carbonads {
+    padding-bottom: 0;
+    padding-top: 0;
+    position: absolute;
+    top: em-calc(20);
+    right: em-calc(30);
+
+    > span {
+      max-width: em-calc(130);
+      position: static;
+    }
+  }
+
+  .carbon-img,
+  .carbon-text {
+    display: block;
+  }
+
+  .carbon-text {
+    padding-top: em-calc(7, $carbon-poweredby-font-size);
+    padding-left: 0;
+  }
+
+  a.carbon-text {
+    color: $grey-dark;
+  }
+
+  .carbon-poweredby {
+    // bottom: em-calc(-20, $carbon-poweredby-font-size);
+  }
+}

@@ -1,0 +1,27 @@
+// ==================================================
+// Footer
+// ==================================================
+.footer {
+  $font-size: 14;
+
+  font-size: em-calc($font-size);
+  color: $white;
+  text-align: center;
+  background-color: $grey-darkest;
+  padding-top: em-calc(25);
+  padding-bottom: em-calc(25);
+
+  @include mq(medium) {
+    padding-top: em-calc(30);
+    padding-bottom: em-calc(30);
+  }
+
+  @include mq(mid) {
+    padding-top: em-calc(40);
+    padding-bottom: em-calc(40);
+  }
+
+  a {
+    color: $white;
+  }
+}

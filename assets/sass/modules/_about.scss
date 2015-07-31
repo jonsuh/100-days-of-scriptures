@@ -33,8 +33,10 @@
 .about-title-tail {
   font-size: 1em;
   font-style: italic;
-  letter-spacing: 0.21em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
+  position: relative;
+  left: em-calc(1);
 }
 
 // Description
@@ -75,25 +77,33 @@
   }
 
   .about-title-head {
-    font-size: 3em;
+    font-size: em-calc(48);
   }
 
   .about-title-tail {
-    font-size: 1.2em;
+    $font-size: 19;
+
+    font-size: em-calc($font-size);
+    letter-spacing: 0.23em;
+    left: em-calc(3.5, $font-size);
   }
 }
 
 @include mq(mid) {
   .about-title-head {
-    font-size: 4em;
+    font-size: em-calc(64);
   }
 
   .about-title-tail {
-    font-size: 1.4em;
-    letter-spacing: 0.32em;
+    $font-size: 22;
+
+    font-size: em-calc($font-size);
+    letter-spacing: 0.355em;
+    left: em-calc(6, $font-size);
   }
 
   .about-title-wrap {
     flex-basis: em-calc(270);
+    margin-right: em-calc(70);
   }
 }

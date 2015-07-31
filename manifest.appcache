@@ -1,0 +1,12 @@
+CACHE MANIFEST
+# Day 1: 2015-07-31
+
+CACHE:
+favicon.ico
+index.html
+assets/css/screen.css
+
+FALLBACK:
+
+
+NETWORK:
