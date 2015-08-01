@@ -91,7 +91,7 @@ $day-info-font-size: 12;
   transition: transform 0.1s ease;
   text-indent: 999px;
   position: relative;
-  top: em-calc(15);
+  top: em-calc(25);
   margin-left: auto;
   margin-right: auto;
   // position: absolute;
@@ -114,11 +114,17 @@ $day-info-font-size: 12;
     transform: rotate(45deg) translate3d(em-calc(2), em-calc(2), 0);
   }
 
+  @include mq(small) {
+    top: em-calc(30);
+    border-color: yellow;
+  }
   @include mq(medium) {
-    top: em-calc(25);
+    top: em-calc(35);
+    border-color: red;
   }
   @include mq(mid) {
-    top: em-calc(30);
+    top: em-calc(45);
+    border-color: blue;
 
   //   $arrow-size: 20;
 
@@ -134,7 +140,7 @@ $day-info-font-size: 12;
   //   }
   }
   @include mq(large) {
-    top: em-calc(35);
+    top: em-calc(55);
   }
 }
 
