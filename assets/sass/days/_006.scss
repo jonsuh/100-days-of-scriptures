@@ -1,0 +1,104 @@
+// ==================================================
+// Day 6
+// ==================================================
+$day-6-mono: "PT Mono", Consolas, "Liberation Mono", Courier, monospace;
+$day-6-tan: #ece7d8;
+$day-6-brown: #5d4037;
+
+.day--6 {
+  background-color: $day-6-tan;
+
+  .day-text {
+    max-width: em-calc(500);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .day-scripture {
+    font-family: $day-6-mono;
+  }
+
+  .day-font-link {
+    color: $day-6-brown;
+  }
+}
+
+.day-6-wrap {
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.day-6-list li,
+.day-reference {
+  line-height: 3em;
+  height: 2.5em;
+}
+
+.day-6-list {
+  text-align: right;
+  margin-bottom: 2em;
+
+  li {
+    border-bottom: 3px solid $day-6-brown;
+    &:nth-child(1) {
+      width: 90%;
+    }
+    &:nth-child(2) {
+      width: 60%;
+    }
+    &:nth-child(3) {
+      width: 80%;
+    }
+    &:nth-child(4) {
+      width: 55%;
+    }
+    &:nth-child(5) {
+      width: 70%;
+    }
+    &:nth-child(6) {
+      width: 100%;
+    }
+    &:nth-child(7) {
+      width: 40%;
+    }
+    &:nth-child(8) {
+      width: 70%;
+    }
+  }
+}
+
+.day-reference-link {
+  text-align: right;
+  width: 50%;
+  color: $grey-darkest;
+  line-height: 2.5em;
+  height: 2em;
+  border-bottom: 3px solid transparent;
+  display: inline-block;
+
+  &:hover {
+    border-bottom-color: $day-6-brown;
+    text-decoration: none;
+  }
+}
+
+@include mq(small) {
+  .day-6-wrap,
+  .day-reference-link {
+    letter-spacing: 0.1em;
+  }
+}
+
+@include mq(medium) {
+  .day-6-wrap,
+  .day-reference-link {
+    font-size: 1.05em;
+  }
+}
+
+@include mq(large) {
+  .day-6-wrap,
+  .day-reference-link {
+    font-size: 1.1em;
+  }
+}
