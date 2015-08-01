@@ -1,0 +1,213 @@
+// ==================================================
+// Day 3
+// ==================================================
+$day-3-serif          : "Crimson Text", "Times New Roman", Times, serif;
+
+.day--3 {
+  background-color: $white;
+
+  .day-scripture {
+    font-family: $day-3-serif;
+    color: $black;
+    text-align: center;
+  }
+
+  .day-reference-link {
+    color: $black;
+    font-style: italic;
+    margin-top: 2em;
+    display: inline-block;
+
+    @include mq(medium) {
+      font-size: em-calc(17);
+    }
+    @include mq(large) {
+      font-size: em-calc(18);
+      margin-top: 3em;
+    }
+  }
+
+  .day-font-link {
+    color: $grey;
+  }
+
+  .day-next {
+    border-color: $black;
+  }
+}
+
+.day-3-container {
+  text-align: justify;
+  font-kerning: none;
+  max-width: em-calc(300);
+  border: 2px solid $black;
+  padding: em-calc(60 20);
+  background-color: $white;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: em-calc(10 10 0) $grey-lightest;
+  position: relative;
+
+  ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+    line-height: 1.2;
+  }
+
+  li {
+    position: relative;
+  }
+
+  li::first-letter {
+    padding-left: 0.5em;
+  }
+
+  li:first-child {
+    list-style-type: none;
+
+    &::first-letter {
+      padding-left: 0;
+    }
+  }
+
+  p {
+    padding-left: 1em;
+  }
+  p:first-of-type {
+    padding-left: 0;
+  }
+}
+
+.day-3-book,
+.day-3-caption {
+  text-align: center;
+}
+
+.day-3-book {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+
+.day-3-caption {
+  margin-bottom: 0.5em;
+}
+
+.day-3-drop-cap {
+  font-size: 2.9em;
+  font-weight: 700;
+  float: left;
+  margin-bottom: -0.5em;
+  margin-right: 0.1em;
+  margin-top: -0.05em;
+}
+
+.day-3-caps {
+  text-transform: uppercase;
+}
+
+.day-3-small-caps {
+  font-variant: small-caps;
+}
+
+.day-3-reference {
+  font-size: 0.8em;
+  @include mq(medium) {
+    font-size: 0.9em;
+  }
+  @include mq(large) {
+    font-size: 1em;
+  }
+  position: absolute;
+  top: 1em;
+  right: 1em;
+
+  sup {
+    font-size: 0.7em;
+    vertical-align: top;
+  }
+}
+
+.day-3-page {
+  text-align: center;
+  display: block;
+  position: relative;
+  bottom: -2.5em;
+  @include mq(small){
+    bottom: -3.5em;
+  }
+  @include mq(medium){
+    bottom: -4em;
+  }
+  @include mq(mid){
+    bottom: -4.5em;
+  }
+  @include mq(large){
+    bottom: -5em;
+  }
+}
+
+@include mq(small) {
+  .day-3-container {
+    max-width: em-calc(320);
+    padding: em-calc(75 40);
+
+    li {
+      font-size: em-calc(17);
+    }
+  }
+}
+
+@include mq(medium) {
+  .day-3-book {
+    font-size: 1.3em;
+  }
+
+  .day-3-caption {
+    font-size: 1.1em;
+  }
+
+  .day-3-container {
+    max-width: em-calc(340);
+    padding: em-calc(90 50);
+    box-shadow: em-calc(15 15 0) $grey-lightest;
+
+    ol {
+      line-height: 1.25;
+    }
+
+    li {
+      font-size: em-calc(18);
+    }
+  }
+}
+
+@include mq(mid) {
+  .day-3-book {
+    font-size: 1.4em;
+  }
+
+  .day-3-caption {
+    font-size: 1.2em;
+  }
+
+  .day-3-container {
+    max-width: em-calc(360);
+    padding: em-calc(105 60);
+
+    ol {
+      line-height: 1.3;
+    }
+
+    li {
+      font-size: em-calc(19);
+    }
+  }
+}
+
+@include mq(mid) {
+  .day-3-container {
+    padding-top: em-calc(120);
+    padding-bottom: em-calc(120);
+  }
+}
