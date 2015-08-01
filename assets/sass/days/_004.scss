@@ -24,6 +24,8 @@ $day-4-shadow-color: #a7acd4;
   .day-reference-link {
     color: $grey-dark;
     border: 2px solid $white;
+    border-top: 0;
+    border-left: 0;
     padding: em-calc(15 30);
     display: inline-block;
     box-shadow: 1px 1px 0 $day-4-shadow-color,
