@@ -1,0 +1,116 @@
+// ==================================================
+// Day 5
+// ==================================================
+$day-5-serif: "Abril Fatface", "Times New Roman", Times, serif;
+
+.day--5 {
+  color: $white;
+  font-weight: 400;
+  background-color: $black;
+  overflow: hidden;
+
+  .day-number {
+    @extend .day-number--white;
+  }
+
+  .day-scripture {
+    @include font-smoothing;
+    font-family: $day-5-serif;
+    margin-top: em-calc(50);
+    margin-bottom: em-calc(50);
+    @include mq(small) {
+      margin-top: em-calc(30);
+      margin-bottom: em-calc(25);
+    }
+    @include mq(medium) {
+      margin-top: em-calc(20);
+      margin-bottom: em-calc(20);
+    }
+    @include mq(mid) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .day-reference {
+    text-align: right;
+    margin-left: auto;
+    display: block;
+  }
+
+  .day-reference-link {
+    color: $white;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    display: inline-block;
+    margin-right: -0.1em;
+    @include mq(small) {
+      font-size: em-calc(17);
+    }
+    @include mq(medium) {
+      font-size: em-calc(20);
+    }
+    @include mq(mid) {
+      font-size: em-calc(23);
+    }
+    @include mq(large) {
+      font-size: em-calc(26);
+    }
+
+    &:hover {
+      color: $black;
+      background-color: $white;
+      text-decoration: none;
+    }
+  }
+
+  .day-font-link {
+    color: $grey;
+  }
+
+  .day-next {
+    border-color: $grey;
+  }
+}
+
+.day-5-first {
+  $day-5-font-size: 35;
+
+  font-size: em-calc($day-5-font-size);
+  line-height: 1.1;
+  max-width: em-calc(370, $day-5-font-size);
+  display: block;
+  margin-left: auto;
+  margin-bottom: 0.2em;
+  text-align: right;
+
+  @include mq(small) {
+    $day-5-font-size: 39;
+
+    font-size: em-calc($day-5-font-size);
+    max-width: em-calc(410, $day-5-font-size);
+  }
+
+  @include mq(medium) {
+    $day-5-font-size: 50;
+
+    font-size: em-calc($day-5-font-size);
+    line-height: 1.05;
+    max-width: em-calc(520, $day-5-font-size);
+  }
+
+  @include mq(mid) {
+    $day-5-font-size: 65;
+
+    font-size: em-calc($day-5-font-size);
+    max-width: em-calc(670, $day-5-font-size);
+  }
+
+  @include mq(large) {
+    $day-5-font-size: 80;
+
+    font-size: em-calc($day-5-font-size);
+    line-height: 1;
+    max-width: em-calc(830, $day-5-font-size);
+  }
+}
