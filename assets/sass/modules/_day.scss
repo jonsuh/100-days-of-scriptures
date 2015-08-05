@@ -116,15 +116,12 @@ $day-info-font-size: 12;
 
   @include mq(small) {
     top: em-calc(30);
-    border-color: yellow;
   }
   @include mq(medium) {
     top: em-calc(35);
-    border-color: red;
   }
   @include mq(mid) {
     top: em-calc(45);
-    border-color: blue;
 
   //   $arrow-size: 20;
 
