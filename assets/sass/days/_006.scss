@@ -36,6 +36,10 @@ $day-6-brown: #5d4037;
       text-decoration: none;
     }
   }
+
+  .day-next {
+    border-color: $day-6-brown;
+  }
 }
 
 .day-6-wrap {
@@ -56,7 +60,7 @@ $day-6-brown: #5d4037;
   li {
     border-bottom: 3px solid $day-6-brown;
     &:nth-child(1) {
-      width: 90%;
+      width: 35%;
     }
     &:nth-child(2) {
       width: 60%;
@@ -78,6 +82,9 @@ $day-6-brown: #5d4037;
     }
     &:nth-child(8) {
       width: 70%;
+    }
+    &:nth-child(9) {
+      width: 90%;
     }
   }
 }
