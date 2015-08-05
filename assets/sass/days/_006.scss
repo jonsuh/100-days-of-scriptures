@@ -36,6 +36,10 @@ $day-6-brown: #5d4037;
       text-decoration: none;
     }
   }
+
+  .day-next {
+    border-color: $day-6-brown;
+  }
 }
 
 .day-6-wrap {
