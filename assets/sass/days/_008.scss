@@ -1,0 +1,265 @@
+// ==================================================
+// Day 8
+// ==================================================
+$day-8-font      : "Vast Shadow", serif;
+$day-8-grey      : #2c343b;
+$day-8-grey-light: #52616d;
+$day-8-red       : #be4641;
+$day-8-tan       : #e5e1d1;
+
+.day--8 {
+  background-color: $day-8-tan;
+  @include font-smoothing;
+
+  .day-scripture {
+    font-family: $day-8-font;
+    color: $day-8-grey;
+    text-align: center;
+    text-transform: uppercase;
+
+    padding-top: 1em;
+    @include mq(small) {
+      padding-top: 2em;
+    }
+    @include mq(mid) {
+      padding-top: 3em;
+    }
+  }
+
+  .day-reference {
+    position: relative;
+    z-index: 2;
+  }
+
+  .day-reference-link {
+    $font-size: 14;
+
+    font-size: em-calc($font-size);
+    color: $day-8-tan;
+    padding-left: em-calc(3, $font-size);
+    padding-right: em-calc(3, $font-size);
+    display: inline-block;
+    position: relative;
+    transform: rotate(-45deg);
+    top: em-calc(27, $font-size);
+    left: em-calc(-11, $font-size);
+
+    &:hover {
+      background-color: $day-8-tan;
+      color: $day-8-red;
+      text-decoration: none;
+    }
+  }
+
+  .day-font {
+    padding-top: 5em;
+    @include mq(small) {
+      padding-top: 7em;
+    }
+    @include mq(medium) {
+      padding-top: 8em;
+    }
+    @include mq(mid) {
+      padding-top: 10em;
+    }
+  }
+
+  .day-font-link {
+    color: $day-8-grey;
+  }
+}
+
+.day-8-first {
+  $font-size: 16;
+
+  font-size: em-calc($font-size);
+  color: shade($day-8-grey-light, 20%);
+  display: block;
+  margin-bottom: em-calc(8, $font-size);
+  position: relative;
+  z-index: 1;
+}
+
+.day-8-last {
+  $font-size: 40;
+
+  font-size: em-calc($font-size);
+  line-height: 1.3;
+  display: inline-block;
+  width: em-calc(280, $font-size);
+  position: relative;
+  z-index: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    background-color: $day-8-red;
+    width: 70%;
+    height: 110%;
+    display: block;
+    position: absolute;
+    top: em-calc(15, $font-size);
+    z-index: -1;
+  }
+
+  &::before {
+    right: 21.5%;
+    transform: rotate(-45deg);
+    background: linear-gradient(to left, rgba($day-8-red, 0.85), $day-8-red 30%);
+  }
+
+  &::after {
+    left: -12.25%;
+    transform: rotate(45deg);
+    background: linear-gradient(to right, rgba($day-8-red, 0.85), $day-8-red 30%);
+  }
+}
+
+.day-8-last-first {
+  letter-spacing: 0.04em;
+}
+
+.day-8-loved {
+  color: $white;
+}
+
+@include mq(small) {
+  .day--8 {
+    .day-reference-link {
+      $font-size: 15;
+
+      font-size: em-calc($font-size);
+      padding-left: em-calc(3, $font-size);
+      padding-right: em-calc(3, $font-size);
+      top: em-calc(45, $font-size);
+      left: em-calc(-21, $font-size);
+    }
+  }
+
+  .day-8-first {
+    $font-size: 22;
+
+    font-size: em-calc($font-size);
+    margin-bottom: em-calc(10.5, $font-size);
+  }
+
+  .day-8-last {
+    $font-size: 54;
+
+    font-size: em-calc($font-size);
+    width: em-calc(400, $font-size);
+
+    &::before,
+    &::after {
+      width: 70%;
+      height: 110%;
+      top: em-calc(15, $font-size);
+    }
+
+    &::before {
+      right: 20.5%;
+    }
+
+    &::after {
+      left: -12.75%;
+    }
+  }
+
+  .day-8-last-first {
+    letter-spacing: 0.04em;
+  }
+}
+
+@include mq(medium) {
+  .day--8 {
+    .day-reference-link {
+      $font-size: 17;
+
+      font-size: em-calc($font-size);
+      padding-left: em-calc(3, $font-size);
+      padding-right: em-calc(3, $font-size);
+      top: em-calc(42, $font-size);
+      left: em-calc(-21, $font-size);
+    }
+  }
+
+  .day-8-first {
+    $font-size: 26;
+
+    font-size: em-calc($font-size);
+    margin-bottom: em-calc(12.5, $font-size);
+  }
+
+  .day-8-last {
+    $font-size: 65;
+
+    font-size: em-calc($font-size);
+    width: em-calc(500, $font-size);
+
+    &::before,
+    &::after {
+      width: 60%;
+      height: 100%;
+      top: em-calc(30, $font-size);
+    }
+
+    &::before {
+      right: 26%;
+    }
+
+    &::after {
+      left: -4.75%;
+    }
+  }
+
+  .day-8-last-first {
+    letter-spacing: 0.04em;
+  }
+}
+
+@include mq(mid) {
+  .day--8 {
+    .day-reference-link {
+      $font-size: 20;
+
+      font-size: em-calc($font-size);
+      padding-left: em-calc(3, $font-size);
+      padding-right: em-calc(3, $font-size);
+      top: em-calc(43, $font-size);
+      left: em-calc(-25, $font-size);
+    }
+  }
+
+  .day-8-first {
+    $font-size: 32;
+
+    font-size: em-calc($font-size);
+    margin-bottom: em-calc(15.5, $font-size);
+  }
+
+  .day-8-last {
+    $font-size: 80;
+
+    font-size: em-calc($font-size);
+    width: em-calc(600, $font-size);
+
+    &::before,
+    &::after {
+      width: 60%;
+      height: 100%;
+      top: em-calc(30, $font-size);
+    }
+
+    &::before {
+      right: 26.5%;
+    }
+
+    &::after {
+      left: -4.5%;
+    }
+  }
+
+  .day-8-last-first {
+    letter-spacing: 0.04em;
+  }
+}
