@@ -1,0 +1,154 @@
+// ==================================================
+// Day 7
+// ==================================================
+$day-7-font      : "Amatic SC";
+$day-7-teal      : #01a2a6;
+$day-7-grey      : #2f2933;
+$day-7-yellow    : #ffffa6;
+
+.day--7 {
+  background-color: $day-7-teal;
+
+  .day-scripture {
+    font-family: $day-7-font;
+    font-weight: 100;
+    color: $day-7-grey;
+    @include font-smoothing;
+  }
+
+  .day-reference {
+    text-align: center;
+    margin-top: em-calc(20);
+  }
+
+  .day-reference-link {
+    text-transform: none;
+    font-size: em-calc(30);
+    color: $day-7-yellow;
+  }
+
+  .day-font-link {
+    color: $black;
+  }
+}
+
+.day-7-first,
+.day-7-next {
+  text-align: center;
+  width: em-calc(270);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.day-7-the {
+  $font-size: 50;
+  font-size: em-calc($font-size);
+  line-height: 0.5;
+  display: inline-block;
+  text-align: left;
+  width: em-calc(145, $font-size);
+}
+
+.day-7-lord {
+  $font-size: 130;
+  font-size: em-calc($font-size);
+  letter-spacing: -0.01em;
+  display: block;
+  text-transform: uppercase;
+}
+
+.day-7-shield-path {
+  fill: $day-7-yellow;
+}
+
+.day-7-next {
+  color: $day-7-grey;
+  position: relative;
+}
+
+.day-7-is,
+.day-7-strength,
+.day-7-and,
+.day-7-shield {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.day-7-is {
+  $font-size: 40;
+  font-size: em-calc($font-size);
+  top: em-calc(22, $font-size);
+}
+
+.day-7-strength {
+  $font-size: 90;
+  font-size: em-calc($font-size);
+  letter-spacing: -0.01em;
+  top: em-calc(62, $font-size);
+  text-transform: uppercase;
+}
+
+.day-7-and {
+  $font-size: 32;
+  font-size: em-calc($font-size);
+  line-height: 0.8;
+  top: em-calc(165, $font-size);
+  text-align: right;
+  width: em-calc(30, $font-size);
+  left: em-calc(45, $font-size);
+}
+
+.day-7-shield {
+  $font-size: 90;
+  font-size: em-calc($font-size);
+  letter-spacing: -0.01em;
+  top: em-calc(148, $font-size);
+  padding-left: em-calc(15, $font-size);
+  text-transform: uppercase;
+}
+
+@include mq(medium) {
+  .day--7 {
+    .day-text {
+      text-align: center;
+    }
+
+    .day-reference {
+      padding-left: em-calc(230);
+    }
+  }
+
+  .day-7-first,
+  .day-7-next {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .day-7-first {
+    text-align: left;
+    width: em-calc(230);
+  }
+
+  .day-7-lord {
+    font-size: em-calc(170);
+  }
+}
+
+@include mq(mid) {
+  .day-7-first,
+  .day-7-next,
+  .day--7 .day-reference {
+    font-size: 1.1em;
+  }
+}
+
+@include mq(large) {
+  .day-7-first,
+  .day-7-next,
+  .day--7 .day-reference {
+    font-size: 1.2em;
+  }
+}
