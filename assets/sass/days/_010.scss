@@ -1,0 +1,248 @@
+// ==================================================
+// Day 10
+// ==================================================
+$day-10-font  : Lato, "Helvetica Neue", Helvetica, sans-serif;
+$day-10-purple: #d81b60;
+
+.day--10 {
+  background-color: $day-10-purple;
+  background: linear-gradient(to bottom, shade($day-10-purple, 20%), $day-10-purple);
+
+  .day-scripture {
+    font-family: $day-10-font;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    @include mq(medium) {
+      padding-top: 2em;
+      padding-bottom: 2em;
+    }
+    @include mq(large) {
+      padding-top: 3em;
+      padding-bottom: 3em;
+    }
+  }
+
+  .day-text {
+    color: $white;
+    text-transform: uppercase;
+    @include font-smoothing;
+  }
+
+  .day-reference {
+    margin-top: 3em;
+  }
+
+  .day-reference-link {
+    color: $white;
+    color: rgba($white, 0.4);
+    display: inline-block;
+  }
+
+  .day-font-link {
+    color: $grey-darkest;
+  }
+}
+
+.day-10-text {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.day-10-first,
+.day-10-next,
+.day-10-last {
+  display: block;
+}
+
+.day-10-first,
+.day-10-next {
+  margin-bottom: 1.5em;
+}
+
+.day-10-em {
+  font-size: em-calc(60);
+  font-weight: 100;
+  font-style: normal;
+  display: block;
+  margin-bottom: 0.05em;
+  text-shadow: 0 0 em-calc(0.5) rgba($white,0.4),
+               0 0 em-calc(1) rgba($white,0.3),
+               0 0 em-calc(1.5) rgba($white,0.2),
+               0 0 em-calc(2) rgba($white,0.1);
+}
+
+.day-10-first {
+  color: rgba($white, 0.45);
+}
+
+.day-10-next {
+  color: rgba($white, 0.6);
+
+  .day-10-em {
+    margin-left: -0.05em;
+  }
+}
+
+.day-10-last {
+  color: rgba($white, 0.75);
+
+  .day-10-em {
+    margin-left: -0.12em;
+  }
+}
+
+@include mq(small) {
+  .day--10 {
+    .day-reference {
+      text-align: center;
+    }
+
+    .day-reference-link {
+      margin-left: em-calc(-18);
+    }
+  }
+
+  .day-10-text {
+    width: em-calc(410);
+  }
+
+  .day-10-next {
+    margin-left: em-calc(60);
+  }
+
+  .day-10-last {
+    margin-left: em-calc(120);
+  }
+}
+
+@include mq(medium) {
+  .day--10 {
+    .day-reference-link {
+      margin-left: em-calc(102);
+    }
+  }
+
+  .day-10-text {
+    width: em-calc(520);
+  }
+
+  .day-10-em {
+    text-shadow: 0 0 em-calc(0.6) rgba($white,0.5),
+                 0 0 em-calc(1.2) rgba($white,0.4),
+                 0 0 em-calc(1.8) rgba($white,0.3),
+                 0 0 em-calc(2.4) rgba($white,0.2),
+                 0 0 em-calc(3.0) rgba($white,0.1);
+  }
+
+  .day-10-next {
+    margin-left: em-calc(117);
+  }
+
+  .day-10-last {
+    margin-left: em-calc(234);
+  }
+}
+
+@include mq(mid) {
+  .day--10 {
+    .day-reference-link {
+      margin-left: em-calc(-105);
+    }
+  }
+
+  .day-10-text {
+    width: em-calc(670);
+  }
+
+  .day-10-em {
+    font-size: em-calc(49);
+    display: inline;
+  }
+
+  .day-10-next,
+  .day-10-last {
+    .day-10-em {
+      margin-left: 0;
+    }
+  }
+
+  .day-10-next {
+    margin-left: em-calc(87);
+  }
+
+  .day-10-last {
+    margin-left: em-calc(199);
+  }
+}
+
+@include mq(large) {
+  .day--10 {
+    .day-reference-link {
+      margin-left: em-calc(-95);
+    }
+  }
+
+  .day-10-text {
+    width: em-calc(830);
+  }
+
+  .day-10-em {
+    font-size: em-calc(69);
+    text-shadow: 0 0 em-calc(1) rgba($white,0.5),
+                 0 0 em-calc(2) rgba($white,0.4),
+                 0 0 em-calc(3) rgba($white,0.3),
+                 0 0 em-calc(4) rgba($white,0.2),
+                 0 0 em-calc(5) rgba($white,0.1);
+  }
+
+  .day-10-next {
+    margin-left: em-calc(123);
+  }
+
+  .day-10-last {
+    margin-left: em-calc(282);
+  }
+}
+
+@include mq(xlarge) {
+  .day--10 {
+    .day-reference-link {
+      margin-left: em-calc(-75);
+    }
+  }
+
+  .day-10-text {
+    width: em-calc(1065);
+  }
+
+  .day-10-em {
+    font-size: em-calc(100);
+  }
+
+  .day-10-next {
+    margin-left: em-calc(177);
+  }
+
+  .day-10-last {
+    margin-left: em-calc(404);
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .day-10-first {
+    background: linear-gradient(rgba($white, 0.3), rgba($white, 0.45));
+  }
+  .day-10-next {
+    background: linear-gradient(rgba($white, 0.45), rgba($white, 0.6));
+  }
+  .day-10-last {
+    background: linear-gradient(rgba($white, 0.6), rgba($white, 0.75));
+  }
+
+  .day-10-first,
+  .day-10-next,
+  .day-10-last {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
