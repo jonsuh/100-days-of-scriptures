@@ -1,0 +1,83 @@
+// ==================================================
+// Day 11
+// ==================================================
+$day-11-font: Ovo, "Times New Roman", Times, serif;
+$day-11-blue: #046380;
+$day-11-tan : #efecca;
+$day-11-sand: #969371;
+
+.day--11 {
+  background-color: $day-11-tan;
+
+  .day-scripture {
+    text-align: center;
+  }
+
+  .day-text {
+    font-family: $day-11-font;
+    color: $day-11-blue;
+  }
+
+  .day-reference {
+    margin-top: 2em;
+  }
+
+  .day-reference-link {
+    color: $day-11-sand;
+  }
+
+  .day-font-link {
+    color: $grey-darkest;
+  }
+}
+
+.day-11-text {
+  $font-size: 20;
+  font-size: em-calc($font-size);
+  line-height: 1.05;
+  border: em-calc(3) solid $day-11-blue;
+  padding: em-calc(25, $font-size);
+  width: em-calc(185, $font-size);
+  text-align: justify;
+  display: inline-block;
+}
+
+@include mq(small) {
+  .day--11 {
+    .day-11-text {
+      font-size: 1.4em;
+    }
+  }
+}
+
+@include mq(medium) {
+  .day--11 {
+    .day-11-text {
+      font-size: 1.6em;
+    }
+
+    .day-reference-link {
+      font-size: em-calc(17);
+    }
+  }
+}
+
+@include mq(mid) {
+  .day--11 {
+    .day-11-text {
+      font-size: 1.8em;
+    }
+  }
+}
+
+@include mq(large) {
+  .day--11 {
+    .day-11-text {
+      font-size: 2em;
+    }
+
+    .day-reference-link {
+      font-size: em-calc(18);
+    }
+  }
+}
