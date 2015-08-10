@@ -1,0 +1,93 @@
+// ==================================================
+// Day 12
+// ==================================================
+$day-12-font : Oswald, sans-serif;
+$day-12-ivory: #fff8e3;
+$day-12-grey : #33332d;
+$day-12-blue : #9fb4cc;
+
+.day--12 {
+  background-color: $day-12-blue;
+
+  .day-text {
+    font-family: $day-12-font;
+    color: $day-12-grey;
+    text-align: center;
+  }
+
+  .day-reference {
+    margin-top: 3em;
+  }
+
+  .day-reference-link {
+    color: $day-12-grey;
+    border-bottom: 2px solid $day-12-ivory;
+
+    &:hover {
+      color: $day-12-ivory;
+      border-bottom-color: $day-12-grey;
+      text-decoration: none;
+    }
+  }
+}
+
+.day-12-line {
+  font-size: em-calc(30);
+  text-transform: lowercase;
+  font-weight: 300;
+  line-height: 1.4;
+  display: block;
+  position: relative;
+  z-index: 1;
+
+  &:first-child {
+    margin-top: -1em;
+  }
+}
+
+.day-12-em {
+  font-size: 2.5em;
+  font-style: normal;
+  color: $day-12-ivory;
+  margin-left: -0.2em;
+  margin-right: -0.2em;
+  position: relative;
+  z-index: -1;
+  top: 0.15em;
+}
+
+@include mq(small) {
+  .day--12 {
+    .day-reference {
+      margin-top: 5.25em;
+    }
+  }
+
+  .day-12-line {
+    font-size: em-calc(40);
+  }
+}
+
+@include mq(medium) {
+  .day--12 {
+    .day-reference {
+      margin-top: 5.5em;
+    }
+  }
+
+  .day-12-line {
+    font-size: em-calc(50);
+  }
+}
+
+@include mq(mid) {
+  .day--12 {
+    .day-reference {
+      margin-top: 5.75em;
+    }
+  }
+
+  .day-12-line {
+    font-size: em-calc(60);
+  }
+}
