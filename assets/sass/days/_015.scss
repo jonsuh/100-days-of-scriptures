@@ -1,0 +1,91 @@
+// ==================================================
+// Day 15
+// ==================================================
+$day-15-font : Inconsolata;
+$day-15-green: #50e11f;
+
+.day--15 {
+  background-color: $grey-darkest;
+
+  .day-number {
+    @extend .day-number--white;
+  }
+
+  .day-scripture,
+  .day-15-pre {
+    font-family: $day-15-font;
+  }
+
+  .day-scripture {
+    font-weight: 700;
+    color: $day-15-green;
+    text-align: center;
+    @include font-smoothing;
+  }
+
+  .day-text {
+    text-align: left;
+    line-height: 1.2;
+    display: inline-block;
+    @include mq(medium) {
+      font-size: 1.1em;
+    }
+    @include mq(large) {
+      font-size: 1.2em;
+    }
+  }
+
+  .day-reference {
+    margin-top: 1em;
+  }
+
+  .day-reference-link {
+    color: $day-15-green;
+
+    &::before {
+      content: "> ";
+    }
+  }
+
+  .day-font-link {
+    color: $white;
+  }
+}
+
+.day-15-pre {
+  white-space: pre-wrap;
+}
+
+.day-15-first,
+.day-15-next {
+  color: $white;
+}
+
+.day-15-first {
+  display: block;
+}
+
+.day-15-next {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: em-calc(-8);
+    width: em-calc(8);
+    height: 100%;
+    background: $day-15-green;
+    animation: day-15-blink 1s step-end infinite;
+  }
+}
+
+@keyframes day-15-blink {
+  0%, 100% {
+    background: transparent;
+  }
+  50% {
+    background: $day-15-green;
+  }
+}
