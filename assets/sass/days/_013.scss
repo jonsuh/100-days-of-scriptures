@@ -1,0 +1,98 @@
+// ==================================================
+// Day 13
+// ==================================================
+$day-13-font      : "Old Standard TT";
+$day-13-green     : #e8f0df;
+$day-13-green-dark: #2f3e4d;
+$day-13-orange    : #fc4349;
+
+.day--13 {
+  background-color: $day-13-green;
+
+  .day-scripture {
+    width: em-calc(290);
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+
+  .day-text {
+    font-family: $day-13-font;
+    color: $day-13-green-dark;
+    line-height: 1.2;
+  }
+
+  .day-reference {
+    margin-top: 1em;
+    width: 48%;
+    float: right;
+  }
+
+  .day-reference-link {
+    color: $day-13-orange;
+    font-style: italic;
+  }
+}
+
+.day-13-first {
+  font-size: em-calc(25);
+  color: $day-13-green-dark;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  display: block;
+  text-shadow: 1px 1px 0 $day-13-green,
+               2px 2px 0 $day-13-green,
+               3px 3px 0 $day-13-orange;
+}
+
+.day-13-next,
+.day-13-last {
+  font-size: em-calc(17);
+  width: 48%;
+  float: left;
+}
+
+.day-13-next {
+  margin-right: 4%;
+}
+
+@include mq(small) {
+  .day--13 {
+    .day-scripture {
+      width: em-calc(410);
+    }
+  }
+
+  .day-13-first {
+    font-size: em-calc(27.5);
+  }
+}
+
+@include mq(medium) {
+  .day--13 {
+    .day-scripture {
+      font-size: 1.2em;
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+
+    .day-text {
+      line-height: 1.25;
+    }
+
+    .day-reference-link {
+      font-size: 0.9em;
+    }
+  }
+}
+
+@include mq(mid) {
+  .day--13 {
+    .day-scripture {
+      font-size: 1.4em;
+    }
+
+    .day-text {
+      line-height: 1.3;
+    }
+  }
+}
