@@ -1,0 +1,103 @@
+// ==================================================
+// Day 16
+// ==================================================
+$day-16-font: Montserrat, Helvetica, sans-serif;
+$day-16-orange: #f75b5b;
+$day-16-purple: #662a6b;
+$day-16-yellow: #f9ed69;
+
+.day--16 {
+  background-color: $day-16-orange;
+
+  .day-scripture {
+    font-family: $day-16-font;
+  }
+
+  .day-text {
+    text-align: center;
+  }
+
+  .day-reference {
+    margin-top: 2.5em;
+  }
+
+  .day-reference-link {
+    color: $grey-darkest;
+    padding: em-calc(10 15);
+    background-color: $day-16-yellow;
+    position: relative;
+    box-shadow: em-calc(3 3) 0 $day-16-purple;
+
+    &:hover {
+      color: $white;
+      background-color: $day-16-purple;
+      box-shadow: em-calc(3 3) 0 $day-16-yellow;
+      text-decoration: none;
+    }
+  }
+}
+
+$day-16-font-size: 21;
+
+.day-16-text {
+  font-size: em-calc($day-16-font-size);
+  line-height: 1.1;
+  border: em-calc(2) solid $day-16-purple;
+  padding: em-calc(20);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: em-calc(160, $day-16-font-size);
+  box-shadow: em-calc(4 4) 0 $day-16-yellow;
+  position: relative;
+}
+
+.day-16-text--first {
+  left: em-calc(-30);
+}
+
+.day-16-text--next {
+  max-width: em-calc(190, $day-16-font-size);
+  margin-top: em-calc(-15);
+  right: em-calc(-20);
+}
+
+@include mq(small) {
+  .day-16-text {
+    font-size: em-calc(25);
+  }
+}
+
+@include mq(medium) {
+  .day-16-text {
+    font-size: em-calc(30);
+  }
+
+  .day-16-text--first {
+    left: em-calc(-40);
+  }
+
+  .day-16-text--next {
+    right: em-calc(-30);
+  }
+}
+
+@include mq(mid) {
+  .day-16-text {
+    font-size: em-calc(35);
+  }
+
+  .day-16-text--first {
+    left: em-calc(-50);
+  }
+
+  .day-16-text--next {
+    right: em-calc(-40);
+  }
+}
+
+@include mq(large) {
+  .day-16-text {
+    font-size: em-calc(40);
+  }
+}
