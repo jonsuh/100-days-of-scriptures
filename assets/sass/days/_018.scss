@@ -1,0 +1,230 @@
+// ==================================================
+// Day 18
+// ==================================================
+$day-18-font: "Share Tech Mono", Consolas, "Liberation Mono", Courier, monospace;
+
+.day--18 {
+  position: relative;
+  height: em-calc(420);
+  @include mq(small) {
+    height: em-calc(400);
+  }
+  @include mq(medium) {
+    height: em-calc(480);
+  }
+  @include mq(mid) {
+    height: em-calc(460);
+  }
+  @include mq(large) {
+    height: em-calc(540);
+  }
+
+  .day-number {
+    position: relative;
+    z-index: 2;
+  }
+
+  .day-text {
+    font-family: $day-18-font;
+  }
+
+  .day-reference {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    float: right;
+    top: 5em;
+
+    @include mq(mid) {
+      top: 7em;
+    }
+    @include mq(large) {
+      top: 10em;
+    }
+  }
+
+  .day-reference-link {
+    color: $white;
+    padding: 0.5em 0.75em;
+    background-color: $black;
+    display: inline-block;
+  }
+
+  .day-font {
+    position: relative;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    bottom: 2.5em;
+
+    @include mq(small) {
+      bottom: 3.125em;
+    }
+    @include mq(medium) {
+      bottom: 3.75em;
+    }
+    @include mq(mid) {
+      bottom: 4.375em;
+    }
+    @include mq(large) {
+      bottom: 5em;
+    }
+    left: 0;
+  }
+
+  .day-font-link {
+    color: $white;
+  }
+}
+
+.day-18-bars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.day-18-bar {
+  width: 14.285714286%;
+  float: left;
+}
+
+.day-18-bars--top {
+  .day-18-bar {
+    height: em-calc(400);
+
+    &:nth-child(2) { background: yellow; }
+    &:nth-child(3) { background: cyan; }
+    &:nth-child(4) { background: #41ff00; }
+    &:nth-child(5) { background: magenta; }
+    &:nth-child(6) { background: red; }
+    &:nth-child(7) { background: blue; }
+  }
+}
+
+.day-18-bars--mid {
+  top: em-calc(400);
+
+  .day-18-bar {
+    height: em-calc(50);
+
+    &:nth-child(1) { background: blue; }
+    &:nth-child(3) { background: magenta; }
+    &:nth-child(5) { background: cyan; }
+    &:nth-child(7) { background: white; }
+
+    &:nth-child(2),
+    &:nth-child(4),
+    &:nth-child(6) {
+      background: black
+    }
+  }
+}
+
+.day-18-bars--bottom {
+  top: em-calc(450);
+
+  .day-18-bar {
+    width: 6.666666667%;
+    height: em-calc(50);
+
+    &:nth-child(1) { background: black; }
+    &:nth-child(2) { background: #121212; }
+    &:nth-child(3) { background: #242424; }
+    &:nth-child(4) { background: #373737; }
+    &:nth-child(5) { background: #494949; }
+    &:nth-child(6) { background: #5b5b5b; }
+    &:nth-child(7) { background: #6d6d6d; }
+    &:nth-child(8) { background: #808080; }
+    &:nth-child(9) { background: #929292; }
+    &:nth-child(10) { background: #a4a4a4; }
+    &:nth-child(11) { background: #b6b6b6; }
+    &:nth-child(12) { background: #c8c8c8; }
+    &:nth-child(13) { background: #dbdbdb; }
+    &:nth-child(14) { background: #ededed; }
+    &:nth-child(15) { background: white; }
+  }
+}
+
+.day-18-text {
+  font-size: 1.3em;
+  color: $white;
+  text-align: center;
+  padding: 1em;
+  background: $black;
+  display: block;
+  max-width: em-calc(300);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 3.2em;
+  z-index: 2;
+}
+
+@include mq(small) {
+  .day-18-text {
+    font-size: 1.6em;
+    top: 1.8em;
+  }
+}
+
+@include mq(medium) {
+  .day--18 {
+    .day-reference-link {
+      font-size: 1.1em;
+    }
+
+    .day-reference {
+      bottom: 8.5em;
+    }
+  }
+
+  .day-18-bars--top {
+    .day-18-bar {
+      height: em-calc(500);
+    }
+  }
+
+  .day-18-bars--mid {
+    top: em-calc(500);
+  }
+
+  .day-18-bars--bottom {
+    top: em-calc(550);
+  }
+
+  .day-18-text {
+    font-size: 2em;
+    top: 1.8em;
+  }
+}
+
+@include mq(large) {
+  .day--18 {
+    .day-reference {
+      bottom: 9.5em;
+    }
+  }
+
+  .day-18-bars--top {
+    .day-18-bar {
+      height: em-calc(600);
+    }
+  }
+
+  .day-18-bars--mid {
+    top: em-calc(600);
+  }
+
+  .day-18-bars--bottom {
+    top: em-calc(650);
+  }
+
+  .day-18-text {
+    font-size: 2.2em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    top: 2em;
+  }
+}
