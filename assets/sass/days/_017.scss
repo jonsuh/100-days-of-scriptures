@@ -1,0 +1,145 @@
+// ==================================================
+// Day 17
+// ==================================================
+
+$day-17-font: "PT Serif", "Times New Roman", Times, Georgia, serif;
+
+.day--17 {
+  .day-text {
+    font-size: 0.7em;
+    font-family: $day-17-font;
+    text-align: center;
+  }
+
+  .day-reference {
+    position: relative;
+    z-index: 4;
+    margin-top: em-calc(20);
+  }
+
+  a.day-reference-link {
+    font-size: 1.2em;
+    color: $grey-dark;
+  }
+
+  @include mq(small) {
+    .day-reference {
+      margin-top: em-calc(-48);
+    }
+
+    a.day-reference-link {
+      font-size: 0.9em;
+    }
+  }
+  @include mq(medium) {
+    a.day-reference-link {
+      font-size: 0.8em;
+    }
+  }
+}
+
+$day-17-frame-width : 350;
+$day-17-frame-height: 450;
+$day-17-mat-size    : 50;
+
+.day-17-frame-outer {
+  width: em-calc($day-17-frame-width);
+  height: em-calc($day-17-frame-height);
+  border: em-calc(15) solid $black;
+  border-left-color: tint($black, 9%);
+  border-top-color: tint($black, 6%);
+  border-right-color: tint($black, 3%);
+  background-color: $grey-lightest;
+  display: inline-block;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+  }
+
+  &::before {
+    top: em-calc(-5);
+    left: 0;
+    right: em-calc(-30);
+    bottom: em-calc(-15);
+    filter: blur(em-calc(5));
+    background: linear-gradient(to right, rgba($black, 0.5) 90%, rgba($black, 0.4) 95%, rgba($black, 0.2));
+    transform: skewX(0.7deg) skewY(1deg);
+    z-index: -1;
+  }
+
+  &::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(110deg, rgba($white, 0.5), rgba($white, 0) 70%);
+    box-shadow: inset em-calc(4 2 7) rgba($black, 0.3);
+    z-index: 3;
+  }
+}
+
+.day-17-frame-mat {
+  border: em-calc(2) solid $grey-light;
+  border-top-color: shade($grey-light, 20%);
+  border-left-color: $grey-light;
+  border-right-color: $grey-lighter;
+  border-bottom-color: tint($grey-lighter, 20%);
+
+  display: inline-block;
+  width: em-calc($day-17-frame-width - ($day-17-mat-size * 2));
+  height: em-calc($day-17-frame-height - ($day-17-mat-size * 2));
+  margin-top: em-calc(50);
+  position: relative;
+}
+
+.day-17-frame-canvas {
+  background: #4CB8C4;
+  background: linear-gradient(140deg, #85d8ce, #4cb8c4, #3cd3ad);
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(50deg, rgba(#8e4eea, 0.8) 10%, transparent);
+  }
+}
+
+.day-17-text {
+  font-size: em-calc(30);
+  line-height: 1.1;
+  padding-left: 1.1em;
+  padding-right: 1.1em;
+  margin-top: em-calc(13);
+  position: relative;
+  z-index: 1;
+}
+
+@include mq(small) {
+  .day--17 {
+    .day-text {
+      font-size: 1em;
+    }
+  }
+}
+
+@include mq(medium) {
+  .day--17 {
+    .day-text {
+      font-size: 1.2em;
+    }
+  }
+}
