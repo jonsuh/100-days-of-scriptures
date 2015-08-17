@@ -1,0 +1,177 @@
+// ==================================================
+// Day 18
+// ==================================================
+$day-18-font: "Share Tech Mono", Consolas, "Liberation Mono", Courier, monospace;
+
+.day--18 {
+  background: linear-gradient(to right,
+    white 0%,
+    white 14.29%,
+    yellow 14.29%,
+    yellow 28.57%,
+    cyan 28.57%,
+    cyan 42.86%,
+    #41ff00 42.86%,
+    #41ff00 57.14%,
+    magenta 57.14%,
+    magenta 71.43%,
+    red 71.43%,
+    red 85.71%,
+    blue 85.71%);
+
+  position: relative;
+  height: em-calc(400);
+  @include mq(small) {
+    height: em-calc(450);
+  }
+  @include mq(medium) {
+    height: em-calc(500);
+  }
+  @include mq(large) {
+    height: em-calc(550);
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    width: 100%;
+    height: em-calc(50);
+    position: absolute;
+    left: 0;
+  }
+
+  &::before {
+    bottom: em-calc(50);
+    background: linear-gradient(to right,
+      blue 0%,
+      blue 14.29%,
+      black 14.29%,
+      black 28.57%,
+      magenta 28.57%,
+      magenta 42.86%,
+      black 42.86%,
+      black 57.14%,
+      cyan 57.14%,
+      cyan 71.43%,
+      black 71.43%,
+      black 85.71%,
+      white 85.71%);
+  }
+
+  &::after {
+    bottom: 0;
+    background: linear-gradient(to right,
+      black 0,
+      black 6.67%,
+      #121212 6.67%,
+      #121212 13.33%,
+      #242424 13.33%,
+      #242424 20%,
+      #373737 20%,
+      #373737 26.67%,
+      #494949 26.67%,
+      #494949 33.33%,
+      #5b5b5b 33.33%,
+      #5b5b5b 40%,
+      #6d6d6d 40%,
+      #6d6d6d 46.67%,
+      #808080 46.67%,
+      #808080 53.33%,
+      #929292 53.33%,
+      #929292 60%,
+      #a4a4a4 60%,
+      #a4a4a4 66.67%,
+      #b6b6b6 66.67%,
+      #b6b6b6 73.33%,
+      #c8c8c8 73.33%,
+      #c8c8c8 80%,
+      #dbdbdb 80%,
+      #dbdbdb 86.67%,
+      #ededed 86.67%,
+      #ededed 93.33%,
+      white 93.33%);
+  }
+
+  .day-number {
+    position: relative;
+    z-index: 2;
+  }
+
+  .day-text {
+    font-family: $day-18-font;
+    max-width: em-calc(750);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .day-reference {
+    text-align: right;
+    z-index: 2;
+    margin-top: 2em;
+  }
+
+  .day-reference-link {
+    color: $white;
+    padding: 0.5em 0.75em;
+    background-color: $black;
+    display: inline-block;
+  }
+
+  .day-font {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    bottom: 2.5em;
+
+    @include mq(small) {
+      bottom: 3.125em;
+    }
+    @include mq(medium) {
+      bottom: 3.75em;
+    }
+    @include mq(mid) {
+      bottom: 4.375em;
+    }
+    @include mq(large) {
+      bottom: 5em;
+    }
+    left: 0;
+  }
+
+  .day-font-link {
+    color: $white;
+  }
+}
+
+.day-18-text {
+  font-size: 1.3em;
+  color: $white;
+  text-align: center;
+  padding: 1em;
+  background: $black;
+  display: block;
+  margin-top: 1em;
+  z-index: 2;
+}
+
+@include mq(small) {
+  .day-18-text {
+    font-size: 1.6em;
+    margin-top: 1.2em;
+  }
+}
+
+@include mq(medium) {
+  .day-18-text {
+    font-size: 2em;
+    margin-top: 1.4em;
+  }
+}
+
+@include mq(large) {
+  .day-18-text {
+    font-size: 2.2em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+}
