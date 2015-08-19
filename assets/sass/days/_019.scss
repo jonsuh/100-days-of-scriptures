@@ -31,6 +31,11 @@ $day-19-font: "Gentium Book Basic", "Times New Roman", Times, serif;
   }
 
   .day-reference {
+    margin-top: 1em;
+
+    @include mq(medium) {
+      margin-top: 0;
+    }
     float: right;
   }
 
