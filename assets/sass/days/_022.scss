@@ -1,0 +1,91 @@
+// ==================================================
+// Day 22
+// ==================================================
+$day-22-font: Amiri, "Times New Roman", Times, serif;
+
+.day--22 {
+  .day-scripture {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    @include mq(small) {
+      padding-top: 2em;
+      padding-bottom: 2em;
+    }
+    @include mq(medium) {
+      padding-top: 2.5em;
+      padding-bottom: 2.5em;
+    }
+  }
+  .day-text {
+    font-size: 0.75em;
+    @include mq(iphone6) {
+      font-size: 0.85em;
+    }
+    @include mq(small) {
+      font-size: 1em;
+    }
+    @include mq(medium) {
+      font-size: 1.2em;
+    }
+    @include mq(mid) {
+      font-size: 1.4em;
+    }
+    font-family: $day-22-font;
+    width: em-calc(400);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .day-reference {
+    text-align: right;
+    margin-top: em-calc(15);
+  }
+
+  .day-reference-link {
+    font-size: 1.3em;
+    @include mq(small) {
+      font-size: 1.2em;
+    }
+    @include mq(medium) {
+      font-size: 1.05em;
+    }
+    @include mq(mid) {
+      font-size: 0.9em;
+    }
+    color: $black;
+  }
+}
+
+.day-22-text {
+  $font-size: 30;
+
+  font-size: em-calc($font-size);
+  display: inline-block;
+
+  &::first-letter {
+    font-size: em-calc(77, $font-size);
+    font-weight: 700;
+    color: $white;
+    line-height: 0.6;
+    padding: em-calc(10 10 5, $font-size);
+    text-align: center;
+    background-color: $black;
+    margin-right: em-calc(5, $font-size);
+    display: inline-block;
+    float: left;
+    text-shadow: -1px 1px 0 shade($grey-darker, 20%),
+                 -2px 2px 0 rgba(shade($grey-darker, 20%), 0.95),
+                 -3px 3px 0 rgba(shade($grey-darker, 20%), 0.85),
+                 -4px 4px 0 rgba(shade($grey-darker, 20%), 0.75),
+                 -5px 5px 0 rgba(shade($grey-darker, 20%), 0.65),
+                 -6px 6px 0 rgba(shade($grey-darker, 20%), 0.55),
+                 -7px 7px 0 rgba(shade($grey-darker, 20%), 0.45),
+                 -8px 8px 0 rgba(shade($grey-darker, 20%), 0.35),
+                 -9px 9px 0 rgba(shade($grey-darker, 20%), 0.35),
+                 -10px 10px 0 rgba(shade($grey-darker, 20%), 0.2),
+                 -11px 11px 0 rgba(shade($grey-darker, 20%), 0.15),
+                 -12px 12px 0 rgba(shade($grey-darker, 20%), 0.1),
+                 -13px 13px 0 rgba(shade($grey-darker, 20%), 0.05);
+
+  }
+}
