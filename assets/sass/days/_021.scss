@@ -14,6 +14,8 @@ $day-21-red-dark  : #b6050e;
   .day-number {
     color: $grey-light;
     border-color: $grey-light;
+    position: relative;
+    z-index: 2;
   }
 
   .day-scripture {
