@@ -1,0 +1,88 @@
+// ==================================================
+// Day 25
+// ==================================================
+$day-25-font-script    : "League Script", serif;
+$day-25-font-sans-serif: Quicksand, Helvetica, Arial, sans-serif;
+$day-25-blue           : #002d40;
+$day-25-yellow         : #f2e394;
+
+.day--25 {
+  background-color: $day-25-blue;
+
+  .day-number {
+    color: $white;
+    border-color: $white;
+  }
+
+  .day-scripture {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    @include mq(small) {
+      padding-top: 1.5em;
+      padding-bottom: 1.5em;
+    }
+    @include mq(medium) {
+      padding-top: 2em;
+      padding-bottom: 2em;
+    }
+    @include mq(mid) {
+      padding-top: 3em;
+      padding-bottom: 3em;
+    }
+  }
+
+  .day-text {
+    text-align: right;
+    color: $day-25-yellow;
+    max-width: em-calc(440);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .day-reference {
+    margin-top: 1em;
+  }
+
+  .day-reference-link {
+    color: tint($day-25-blue, 20%);
+  }
+
+  .day-font-link {
+    color: $white;
+  }
+}
+
+.day-25-first {
+  font-size: 3em;
+  font-family: $day-25-font-script;
+  display: block;
+}
+
+.day-25-next {
+  font-family: $day-25-font-sans-serif;
+  font-size: 1.1em;
+  line-height: 1.3;
+  letter-spacing: 0.017em;
+  display: block;
+  margin-top: 0.6em;
+  color: tint($day-25-blue, 50%);
+}
+
+@include mq(medium) {
+  .day--25 {
+    .day-text {
+      max-width: em-calc(575);
+    }
+  }
+
+  .day-25-first {
+    font-size: 4em;
+  }
+
+  .day-25-next {
+    font-size: 1.5em;
+    letter-spacing: 0.008em;
+    line-height: 1;
+    margin-top: 0.8em;
+  }
+}
