@@ -1,0 +1,359 @@
+// ==================================================
+// Day 26
+// ==================================================
+$day-26-font-comic    : Bangers, sans-serif;
+$day-26-font-narration: "Patrick Hand", sans-serif;
+$day-26-blue          : #00adf1;
+$day-26-red           : #e51425;
+
+.day--26 {
+  background-color: $day-26-blue;
+  background-image: 
+    radial-gradient(
+      ellipse farthest-corner,
+              transparent 0%,
+              transparent 35%,
+              $day-26-blue 30%,
+              $day-26-blue 40%,
+              transparent 90%),
+    radial-gradient(
+      ellipse farthest-corner at em-calc(0 0),
+              transparent 0%,
+              transparent 20%,
+              $day-26-blue 15%,
+              $day-26-blue 20%,
+              transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at em-calc(8 8),
+              transparent 0%,
+              transparent 20%,
+              $day-26-blue 15%,
+              $day-26-blue 20%,
+              transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at em-calc(0 8),
+              transparent 0%,
+              transparent 20%,
+              $day-26-blue 15%,
+              $day-26-blue 20%,
+              transparent 40%),
+    radial-gradient(
+      ellipse farthest-corner at em-calc(8 0),
+              transparent 0%,
+              transparent 20%,
+              $day-26-blue 15%,
+              $day-26-blue 20%,
+              transparent 50%),
+    linear-gradient(
+      40deg,
+      tint($day-26-blue, 20%) 0,
+      tint($day-26-blue, 40%) 25%,
+      tint($day-26-blue, 60%) 50%,
+      tint($day-26-blue, 40%) 75%,
+      tint($day-26-blue, 20%) 100%);
+  background-size: em-calc(8 8), em-calc(8 8), em-calc(8 8), em-calc(8 8), em-calc(8 8), 100% 100%;
+
+  .day-number,
+  .day-text,
+  .day-reference,
+  .day-font {
+    position: relative;
+    z-index: 2;
+  }
+
+  .day-text {
+    text-align: center;
+  }
+
+  .day-font {
+    color: $white;
+  }
+}
+
+.day-26-text {
+  width: em-calc(290);
+  display: inline-block;
+  position: relative;
+}
+
+.day-26-starburst {
+  width: 100%;
+
+  polygon {
+    fill: #fcff00;
+  }
+}
+
+$day-26-font-size: 55;
+
+.day-26-first {
+  font-size: em-calc($day-26-font-size);
+  font-family: $day-26-font-comic;
+  width: em-calc(250, $day-26-font-size);
+  text-align: center;
+  line-height: 0.9;
+  color: #ffff01;
+  color: $white;
+  text-shadow: em-calc(-1.5 -1.5, $day-26-font-size) 0 $black,  
+               em-calc(1.5 -1.5, $day-26-font-size) 0 $black,
+               em-calc(-1.5 1.5, $day-26-font-size) 0 $black,
+               em-calc(1.5 1.5, $day-26-font-size) 0 $black,
+               em-calc(0 6, $day-26-font-size) 0 $day-26-red;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: em-calc(-125, $day-26-font-size);
+  margin-top: em-calc(-100, $day-26-font-size);
+  z-index: 2;
+  @include font-smoothing;
+
+  span {
+    position: relative;
+    display: inline-block;
+  }
+
+  &-1 {
+    &-1 {
+      font-size: 1.3em;
+      margin-right: 0.02em;
+      transform: rotate(-5deg);
+    }
+    &-2 {
+      font-size: 1.25em;
+      transform: rotate(-5deg);
+      margin-right: 0.03em;
+      top: -0.1em;
+    }
+    &-3 {
+      font-size: 1.2em;
+      margin-right: 0.01em;
+      transform: rotate(-8deg);
+      top: -0.17em;
+    }
+    &-4 {
+      font-size: 1.15em;
+      transform: rotate(-5deg);
+      top: -0.24em;
+    }
+  }
+
+  &-2 {
+    &-1 {
+      font-size: 1.1em;
+      margin-right: 0.03em;
+      transform: rotate(-5deg);
+      top: -0.35em;
+    }
+    &-2 {
+      font-size: 1.05em;
+      transform: rotate(-5deg);
+      top: -0.45em;
+    }
+  }
+
+  &-3 {
+    &-1 {
+      font-size: 1.3em;
+      margin-right: 0.02em;
+      transform: rotate(-5deg);
+    }
+    &-2 {
+      font-size: 1.25em;
+      transform: rotate(-5deg);
+      margin-right: 0.015em;
+      top: -0.09em;
+    }
+    &-3 {
+      font-size: 1.2em;
+      transform: rotate(-5deg);
+      top: -0.18em;
+    }
+  }
+
+  &-4 {
+    &-1 {
+      font-size: 1.15em;
+      transform: rotate(-5deg);
+      top: -0.32em;
+    }
+    &-2 {
+      font-size: 1.1em;
+      transform: rotate(-5deg);
+      margin-right: 0.04em;
+      top: -0.42em;
+    }
+    &-3 {
+      font-size: 1.07em;
+      margin-right: 0.04em;
+      transform: rotate(-5deg);
+      top: -0.57em;
+    }
+    &-4 {
+      font-size: 1.05em;
+      transform: rotate(-6deg);
+      margin-right: 0.05em;
+      top: -0.66em;
+    }
+    &-5 {
+      transform: rotate(-5deg);
+      top: -0.84em;
+    }
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  // .day-26-first {
+  //   -webkit-text-stroke: em-calc(2, $day-26-font-size) $black;
+  //   text-shadow: 0 em-calc(6, $day-26-font-size) 0 $day-26-red;
+  // }
+}
+
+$day-26-font-size-2: 18;
+
+.day--26 .day-reference-link,
+.day-26-next {
+  font-family: $day-26-font-narration;
+  font-size: em-calc($day-26-font-size-2);
+  text-align: left;
+  text-transform: uppercase;
+  background: $white;
+  padding: 0.5em 0.7em;
+  border: em-calc(2, $day-26-font-size-2) solid $black;
+  border-radius: em-calc(3, $day-26-font-size-2);
+  display: inline-block;
+}
+
+.day-26-next {
+  width: em-calc(230, $day-26-font-size-2);
+  margin-top: 0.7em;
+}
+
+.day--26 .day-reference-link {
+  color: $black;
+  left: em-calc(80, $day-26-font-size-2);
+  top: em-calc(-8, $day-26-font-size-2);
+  position: relative;
+
+  &:hover {
+    color: $white;
+    background-color: $black;
+    text-decoration: none;
+  }
+}
+
+@include mq(small) {
+  $day-26-font-size: 80;
+
+  .day-26-text {
+    width: em-calc(410);
+  }
+
+  .day-26-first {
+    font-size: em-calc($day-26-font-size);
+    width: em-calc(350, $day-26-font-size);
+    text-shadow: em-calc(-1.5 -1.5, $day-26-font-size) 0 $black,  
+                 em-calc(1.5 -1.5, $day-26-font-size) 0 $black,
+                 em-calc(-1.5 1.5, $day-26-font-size) 0 $black,
+                 em-calc(1.5 1.5, $day-26-font-size) 0 $black,
+                 em-calc(0 6, $day-26-font-size) 0 $day-26-red;
+    margin-left: em-calc(-175, $day-26-font-size);
+    margin-top: em-calc(-130, $day-26-font-size);
+  }
+
+  $day-26-font-size-2: 18;
+
+  .day--26 .day-reference-link,
+  .day-26-next {
+    font-size: em-calc($day-26-font-size-2);
+    border: em-calc(2, $day-26-font-size-2) solid $black;
+    border-radius: em-calc(3, $day-26-font-size-2);
+  }
+
+  .day-26-next {
+    width: em-calc(260, $day-26-font-size-2);
+  }
+
+  .day--26 .day-reference-link {
+    left: em-calc(120, $day-26-font-size-2);
+    top: em-calc(-15, $day-26-font-size-2);
+  }
+}
+
+@include mq(medium) {
+  .day-26-text {
+    width: em-calc(500);
+  }
+
+  $day-26-font-size: 100;
+
+  .day-26-first {
+    font-size: em-calc($day-26-font-size);
+    width: em-calc(390, $day-26-font-size);
+    text-shadow: em-calc(-1.5 -1.5, $day-26-font-size) 0 $black,  
+                 em-calc(1.5 -1.5, $day-26-font-size) 0 $black,
+                 em-calc(-1.5 1.5, $day-26-font-size) 0 $black,
+                 em-calc(1.5 1.5, $day-26-font-size) 0 $black,
+                 em-calc(0 6, $day-26-font-size) 0 $day-26-red;
+    margin-left: em-calc(-185, $day-26-font-size);
+    margin-top: em-calc(-130, $day-26-font-size);
+  }
+
+  $day-26-font-size-2: 19;
+
+  .day--26 .day-reference-link,
+  .day-26-next {
+
+    font-size: em-calc($day-26-font-size-2);
+    border: em-calc(2, $day-26-font-size-2) solid $black;
+    border-radius: em-calc(3, $day-26-font-size-2);
+  }
+
+  .day-26-next {
+    width: em-calc(355, $day-26-font-size-2);
+  }
+
+  .day--26 .day-reference-link {
+    left: em-calc(180, $day-26-font-size-2);
+    top: em-calc(-20, $day-26-font-size-2);
+  }
+}
+
+@include mq(mid) {
+  .day-26-text {
+    width: em-calc(650);
+  }
+
+  $day-26-font-size: 130;
+
+  .day-26-first {
+    font-size: em-calc($day-26-font-size);
+    width: em-calc(500, $day-26-font-size);
+    text-shadow: em-calc(-1.5 -1.5, $day-26-font-size) 0 $black,  
+                 em-calc(1.5 -1.5, $day-26-font-size) 0 $black,
+                 em-calc(-1.5 1.5, $day-26-font-size) 0 $black,
+                 em-calc(1.5 1.5, $day-26-font-size) 0 $black,
+                 em-calc(0 6, $day-26-font-size) 0 $day-26-red;
+    margin-left: em-calc(-250, $day-26-font-size);
+    margin-top: em-calc(-160, $day-26-font-size);
+  }
+
+  $day-26-font-size-2: 19;
+
+  .day--26 .day-reference-link,
+  .day-26-next {
+
+    font-size: em-calc($day-26-font-size-2);
+    border: em-calc(2, $day-26-font-size-2) solid $black;
+    border-radius: em-calc(3, $day-26-font-size-2);
+  }
+
+  .day-26-next {
+    width: em-calc(355, $day-26-font-size-2);
+  }
+
+  .day--26 .day-reference-link {
+    left: em-calc(180, $day-26-font-size-2);
+    top: em-calc(-20, $day-26-font-size-2);
+  }
+}
