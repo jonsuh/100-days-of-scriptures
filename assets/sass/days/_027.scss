@@ -1,0 +1,227 @@
+// ==================================================
+// Day 27
+// ==================================================
+$day-27-font: "Francois One", Helvetica, Arial, sans-serif;
+$day-27-green: #5cc4a4;
+
+.day--27 {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background:
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 10%,
+        rgba($grey-darkest, 0.1) 10%,
+        rgba($grey-darkest, 0.1) 10.5%,
+        transparent 10.5%,
+        transparent 20.5%,
+        rgba($grey-darkest, 0.1) 20.5%,
+        rgba($grey-darkest, 0.1) 21%,
+        transparent 21%,
+        transparent 31%,
+        rgba($grey-darkest, 0.1) 31%,
+        rgba($grey-darkest, 0.1) 31.5%,
+        transparent 31.5%,
+        transparent 41.5%,
+        rgba($grey-darkest, 0.1) 41.5%,
+        rgba($grey-darkest, 0.1) 42%,
+        transparent 42%,
+        transparent 52%,
+        rgba($grey-darkest, 0.1) 52%,
+        rgba($grey-darkest, 0.1) 52.5%,
+        transparent 52.5%,
+        transparent 62.5%,
+        rgba($grey-darkest, 0.1) 63%,
+        rgba($grey-darkest, 0.1) 63.5%,
+        transparent 63.5%,
+        transparent 73.5%,
+        rgba($grey-darkest, 0.1) 73.5%,
+        rgba($grey-darkest, 0.1) 74%,
+        transparent 74%,
+        transparent 84%,
+        rgba($grey-darkest, 0.1) 84.5%,
+        rgba($grey-darkest, 0.1) 85%,
+        transparent 85%,
+        transparent 95%,
+        rgba($grey-darkest, 0.1) 95%,
+        rgba($grey-darkest, 0.1) 95.5%,
+        transparent 95.5%,
+        transparent 100%
+      ),
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10%,
+        rgba($grey-darkest, 0.07) 10%,
+        rgba($grey-darkest, 0.07) 10.5%,
+        transparent 10.5%,
+        transparent 20.5%,
+        rgba($grey-darkest, 0.07) 20.5%,
+        rgba($grey-darkest, 0.07) 21%,
+        transparent 21%,
+        transparent 31%,
+        rgba($grey-darkest, 0.07) 31%,
+        rgba($grey-darkest, 0.07) 31.5%,
+        transparent 31.5%,
+        transparent 41.5%,
+        rgba($grey-darkest, 0.07) 41.5%,
+        rgba($grey-darkest, 0.07) 42%,
+        transparent 42%,
+        transparent 52%,
+        rgba($grey-darkest, 0.07) 52%,
+        rgba($grey-darkest, 0.07) 52.5%,
+        transparent 52.5%,
+        transparent 62.5%,
+        rgba($grey-darkest, 0.07) 63%,
+        rgba($grey-darkest, 0.07) 63.5%,
+        transparent 63.5%,
+        transparent 73.5%,
+        rgba($grey-darkest, 0.07) 73.5%,
+        rgba($grey-darkest, 0.07) 74%,
+        transparent 74%,
+        transparent 84%,
+        rgba($grey-darkest, 0.07) 84.5%,
+        rgba($grey-darkest, 0.07) 85%,
+        transparent 85%,
+        transparent 95%,
+        rgba($grey-darkest, 0.07) 95%,
+        rgba($grey-darkest, 0.07) 95.5%,
+        transparent 95.5%,
+        transparent 100%
+      );
+  }
+
+  .day-scripture {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    @include mq(small) {
+      padding-top: 1.5em;
+      padding-bottom: 1.5em;
+    }
+    @include mq(medium) {
+      padding-top: 2em;
+      padding-bottom: 2em;
+    }
+    @include mq(mid) {
+      padding-top: 2.5em;
+      padding-bottom: 2.5em;
+    }
+    @include mq(large) {
+      padding-top: 3em;
+      padding-bottom: 3em;
+    }
+  }
+
+  .day-number,
+  .day-text,
+  .day-reference,
+  .day-font {
+    position: relative;
+    z-index: 2;
+  }
+
+  .day-text {
+    font-family: $day-27-font;
+    width: em-calc(290);
+    @include mq(small) {
+      width: em-calc(390);
+    }
+    @include mq(medium) {
+      width: em-calc(520);
+    }
+    @include mq(mid) {
+      width: em-calc(650);
+    }
+    margin-left: auto;
+    margin-right: auto;
+    @include font-smoothing;
+  }
+
+  .day-reference {
+    text-align: right;
+    margin-top: em-calc(20);
+  }
+
+  .day-reference-link {
+    font-size: em-calc(18);
+    @include mq(medium) {
+      font-size: em-calc(19);
+    }
+    @include mq(mid) {
+      font-size: em-calc(20);
+    }
+    color: $day-27-green;
+  }
+}
+
+.day-27-text {
+  $font-size: 20;
+
+  font-size: em-calc($font-size);
+  line-height: 1.2;
+  display: block;
+  position: relative;
+
+  &::before {
+    font-size: em-calc(150, $font-size);
+    color: $day-27-green;
+    content: "”";
+    position: absolute;
+    top: em-calc(-7, $font-size);
+    left: 0;
+    z-index: -1;
+    left: 50%;
+    margin-left: em-calc(-3.2, $font-size);
+  }
+}
+
+@include mq(small) {
+  .day-27-text {
+    $font-size: 25;
+
+    font-size: em-calc($font-size);
+
+    &::before {
+      font-size: em-calc(200, $font-size);
+      top: em-calc(-8.5, $font-size);
+      margin-left: em-calc(-5.5, $font-size);
+    }
+  }
+}
+
+@include mq(medium) {
+  .day-27-text {
+    $font-size: 28;
+
+    font-size: em-calc($font-size);
+
+    &::before {
+      font-size: em-calc(280, $font-size);
+      top: em-calc(-10.5, $font-size);
+      margin-left: em-calc(-5.8, $font-size);
+    }
+  }
+}
+
+@include mq(mid) {
+  .day-27-text {
+    $font-size: 35;
+
+    font-size: em-calc($font-size);
+
+    &::before {
+      font-size: em-calc(280, $font-size);
+      top: em-calc(-12.5, $font-size);
+      margin-left: em-calc(-6.7, $font-size);
+    }
+  }
+}
