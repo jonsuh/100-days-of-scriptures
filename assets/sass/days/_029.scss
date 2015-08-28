@@ -1,0 +1,80 @@
+// ==================================================
+// Day 29
+// ==================================================
+$day-29-text     : Vollkorn, Georgia, "Times New Roman", Times, serif;
+$day-29-purple   : #685c79;
+$day-29-pink     : #da727e;
+$day-29-pink-dark: #ac6c82;
+
+.day--29 {
+  background-color: $day-29-purple;
+
+  .day-text {
+    text-align: center;
+    font-family: $day-29-text;
+  }
+
+  .day-reference-link {
+    color: $day-29-pink-dark;
+    position: relative;
+  }
+
+  .day-font {
+    position: relative;
+  }
+}
+
+$day-29-font-size: 400;
+
+.day-29-o {
+  font-size: em-calc($day-29-font-size);
+  color: $day-29-pink;
+  display: inline-block;
+  position: relative;
+  height: em-calc(335, $day-29-font-size);
+}
+
+.day-29-sc {
+  font-variant: small-caps;
+}
+
+.day-29-text {
+  font-size: em-calc(20, $day-29-font-size);
+  line-height: 1.1;
+  text-align: justify;
+  display: block;
+  position: absolute;
+  width: em-calc(110);
+  top: 50%;
+  left: 50%;
+  margin-left: em-calc(-55);
+  margin-top: em-calc(-41);
+}
+
+@include mq(small) {
+  $day-29-font-size: 500;
+
+  .day-29-o {
+    font-size: em-calc($day-29-font-size);
+    height: em-calc(420, $day-29-font-size);
+  }
+
+  .day-29-text {
+    font-size: em-calc(23, $day-29-font-size);
+    margin-top: em-calc(-42);
+  }
+}
+
+@include mq(medium) {
+  $day-29-font-size: 700;
+
+  .day-29-o {
+    font-size: em-calc($day-29-font-size);
+    height: em-calc(580, $day-29-font-size);
+  }
+
+  .day-29-text {
+    font-size: em-calc(30, $day-29-font-size);
+    margin-top: em-calc(-42);
+  }
+}
