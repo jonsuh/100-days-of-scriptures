@@ -1,0 +1,238 @@
+// ==================================================
+// Day 30
+// ==================================================
+$day-30-font-handwriting: "Permanent Marker", sans-serif;
+$day-30-serif           : Lustria, serif;
+$day-30-tan             : #ecdfc4;
+$day-30-brown           : #795548;
+
+.day--30 {
+  background-color: $day-30-tan;
+
+  .day-text {
+    font-familY: $day-30-serif;
+    color: $day-30-brown;
+    position: relative;
+    width: em-calc(660);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .day-reference {
+    position: absolute;
+    bottom: em-calc(50);
+    right: em-calc(60);
+  }
+
+  .day-reference-link {
+    font-size: em-calc(30);
+    font-family: $day-30-font-handwriting;
+    color: $black;
+    display: inline-block;
+    position: relative;
+    transform: rotate(-2deg);
+  }
+}
+
+.day-30-reference-split {
+  display: block;
+  position: relative;
+  transform: rotate(1deg);
+
+  &::before {
+    content: "Verses ";
+  }
+}
+
+.day-30-postcard {
+  background-color: tint($day-30-tan, 50%);
+  height: em-calc(460);
+  border: 1px solid shade($day-30-tan, 30%);
+  display: table;
+  position: relative;
+  @include clearfix;
+}
+
+.day-30-postcard-title {
+  $font-size: 35;
+
+  font-size: em-calc($font-size);
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  left: 0;
+  top: em-calc(55, $font-size);
+  position: absolute;
+  z-index: 2;
+}
+
+.day-30-postcard-stamp {
+  $font-size: 12;
+
+  font-size: em-calc($font-size);
+  line-height: 1.5;
+  text-align: center;
+  width: em-calc(60, $font-size);
+  padding-left: em-calc(10, $font-size);
+  padding-right: em-calc(10, $font-size);
+  height: em-calc(70, $font-size);
+  border: 1px dotted shade($day-30-tan, 20%);
+  position: absolute;
+  top: em-calc(20, $font-size);
+  right: em-calc(20, $font-size);
+  padding-top: em-calc(17, $font-size);
+}
+
+.day-30-postcard-left,
+.day-30-postcard-right {
+  display: table-cell;
+  position: relative;
+}
+
+.day-30-postcard-left {
+  width: em-calc(360);
+}
+
+.day-30-postcard-right {
+  width: em-calc(300);
+}
+
+.day-30-postcard-div {
+  position: absolute;
+  left: em-calc(359);
+  width: 1px;
+  height: 60%;
+  top: 30%;
+  border: 0;
+  border-right: 1px dashed shade($day-30-tan, 30%);
+  z-index: 2;
+}
+
+.day-30-postcard-address-title {
+  $font-size: 14;
+
+  font-size: em-calc($font-size);
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  display: block;
+  position: relative;
+  top: em-calc(200);
+}
+
+.day-30-postcard-address {
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-top: 70%;
+  line-height: 1.2;
+
+  li {
+    border-bottom: 1px solid shade($day-30-tan, 30%);
+  }
+}
+
+.day-30-postcard-address-writing {
+  font-family: $day-30-font-handwriting;
+  font-size: em-calc(20);
+  color: $black;
+  display: block;
+  position: relative;
+  margin-left: em-calc(30);
+  top: em-calc(8);
+}
+
+.day-30-postcard-address {
+  li:nth-child(1) {
+    .day-30-postcard-address-writing {
+      transform: rotate(-1deg);
+    }
+  }
+
+  li:nth-child(2) {
+    .day-30-postcard-address-writing {
+      letter-spacing: 0.02em;
+      transform: rotate(2deg);
+    }
+  }
+
+  li:nth-child(3) {
+    .day-30-postcard-address-writing {
+      letter-spacing: 0.02em;
+      transform: rotate(1deg);
+    }
+  }
+}
+
+.day-30-text {
+  $font-size: 22;
+
+  font-family: $day-30-font-handwriting;
+  font-size: em-calc($font-size);
+  color: $grey-darkest;
+  width: em-calc(360, $font-size);
+  top: em-calc(135, $font-size);
+  left: em-calc(45, $font-size);
+  transform: rotate(-3.5deg);
+  position: absolute;
+  z-index: 3;
+}
+
+.day-30-text-1 {
+  margin-left: 0.2em;
+}
+
+@include mq(785, max) {
+  .day--30 {
+    .day-text {
+      font-size: 0.8em;
+    }
+  }
+}
+
+@include mq(medium, max) {
+  .day--30 {
+    .day-text {
+      font-size: 0.6em;
+    }
+  }
+}
+
+@include mq(small, max) {
+  .day--30 {
+    .day-text {
+      font-size: 0.8em;
+      width: 100%;
+    }
+  }
+
+  .day-30-postcard {
+    width: 100%;
+    height: em-calc(650);
+  }
+
+  .day-30-postcard-left,
+  .day-30-postcard-right {
+    width: 100%;
+    display: block;
+    position: relative;
+  }
+
+  .day-30-postcard-title {
+    $font-size: 25;
+
+    font-size: em-calc($font-size);
+    top: em-calc(70, $font-size);
+  }
+
+  .day-30-postcard-address-title {
+    top: em-calc(470);
+  }
+
+  .day-30-postcard-address {
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: em-calc(420);
+    line-height: 1.2;
+  }
+}
