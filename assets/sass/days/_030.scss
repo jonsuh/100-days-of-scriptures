@@ -35,13 +35,10 @@ $day-30-brown           : #795548;
 }
 
 .day-30-reference-split {
+  text-align: right;
   display: block;
   position: relative;
   transform: rotate(1deg);
-
-  &::before {
-    content: "Verses ";
-  }
 }
 
 .day-30-postcard {
