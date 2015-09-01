@@ -1,0 +1,115 @@
+// ==================================================
+// Day 33
+// ==================================================
+$day-33-font: "Droid Serif", "Times New Roman", Times, serif;
+$day-33-blue: #303f9f;
+
+.day--33 {
+  .day-scripture {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    @include mq(small) {
+      padding-top: 2em;
+      padding-bottom: 2em;
+    }
+  }
+
+  .day-text {
+    font-family: $day-33-font;
+    text-align: center;
+  }
+
+  .day-reference {
+    margin-top: em-calc(30);
+    @include mq(medium) {
+      margin-top: em-calc(50);
+    }
+    @include mq(medium) {
+      margin-top: em-calc(60);
+    }
+  }
+
+  .day-reference-link {
+    font-size: em-calc(14);
+    color: $day-33-blue;
+    @include mq(small) {
+      font-size: em-calc(15);
+    }
+    @include mq(medium) {
+      font-size: 1em;
+    }
+  }
+}
+
+.day-33-fortune {
+  background: linear-gradient(to right, $white 50%, tint($white, 10%));
+  padding: em-calc(40 50);
+  @include mq(small) {
+    padding: em-calc(40 75);
+  }
+  @include mq(medium) {
+    padding: em-calc(40 100);
+  }
+  @include mq(large) {
+    padding: em-calc(40 125);
+  }
+  display: inline-block;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: em-calc(50);
+    background: $day-33-blue;
+    left: 0;
+  }
+
+  &::before {
+    height: em-calc(15);
+    top: 0;
+  }
+
+  &::after {
+    height: em-calc(10);
+    bottom: 0;
+  }
+}
+
+.day-33-text {
+  @include mq(small) {
+    font-size: em-calc(17);
+  }
+  @include mq(medium) {
+    font-size: em-calc(18);
+  }
+  &::before {
+    content: "";
+    width: em-calc(18);
+    height: em-calc(20);
+    background: $day-33-blue;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &::after {
+    content: "";
+    background: linear-gradient(to right, rgba($black, 0.5) 50%, rgba($black, 0.2));
+    position: absolute;
+    top: em-calc(8);
+    right: em-calc(-5);
+    bottom: em-calc(1);
+    left: em-calc(5);
+    z-index: -1;
+    transform: skewY(1deg);
+    filter: blur(2px);
+  }
+}
+
+.day-33-smiley {
+  font-size: 1.2em;
+  font-family: serif;
+  position: relative;
+  bottom: 0.03em;
+}
