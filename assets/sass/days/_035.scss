@@ -1,0 +1,152 @@
+// ==================================================
+// Day 35
+// ==================================================
+$day-35-font  : Chonburi, serif;
+$day-35-salmon: #ffbbb6;
+
+.day--35 {
+  background-color: $day-35-salmon;
+
+  .day-scripture {
+    @include mq(small) {
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+    @include mq(medium) {
+      padding-top: 1.5em;
+      padding-bottom: 1.5em;
+    }
+    @include mq(mid) {
+      padding-top: 2em;
+      padding-bottom: 2em;
+    }
+  }
+
+  .day-text {
+    font-family: $day-35-font;
+    color: $black;
+    width: em-calc(160);
+    padding-top: em-calc(30);
+    padding-bottom: em-calc(40);
+    margin-left: auto;
+    margin-right: auto;
+    background: $white;
+    transform: skewX(-15deg);
+    position: relative;
+
+    &::before {
+      background-color: rgba($white, 0.5);
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform: skewX(3deg) skewY(-2deg);
+    }
+  }
+
+  .day-reference {
+    text-align: right;
+    margin-top: em-calc(20);
+    margin-right: em-calc(-68);
+    transform: skewX(15deg);
+  }
+
+  .day-reference-link {
+    color: $grey-dark;
+  }
+}
+
+.day-35-text {
+  $font-size: 27;
+
+  font-size: em-calc($font-size);
+  line-height: 1.2;
+  text-align: center;
+  display: block;
+  margin-left: em-calc(-60, $font-size);
+  margin-right: em-calc(-60, $font-size);
+  transform: skewX(15deg);
+}
+
+@include mq(small) {
+  .day--35 {
+    .day-text {
+      width: em-calc(220);
+      padding-top: em-calc(40);
+      padding-bottom: em-calc(50);
+    }
+
+    .day-reference {
+      margin-top: em-calc(25);
+      margin-right: em-calc(-110);
+    }
+
+    .day-reference-link {
+      font-size: em-calc(17);
+    }
+  }
+
+  .day-35-text {
+    $font-size: 40;
+
+    font-size: em-calc($font-size);
+    margin-left: em-calc(-90, $font-size);
+    margin-right: em-calc(-90, $font-size);
+  }
+}
+
+@include mq(medium) {
+  .day--35 {
+    .day-text {
+      width: em-calc(290);
+      padding-top: em-calc(50);
+      padding-bottom: em-calc(60);
+    }
+
+    .day-reference {
+      margin-top: em-calc(30);
+      margin-right: em-calc(-130);
+    }
+
+    .day-reference-link {
+      font-size: em-calc(18);
+    }
+  }
+
+  .day-35-text {
+    $font-size: 50;
+
+    font-size: em-calc($font-size);
+    margin-left: em-calc(-120, $font-size);
+    margin-right: em-calc(-120, $font-size);
+  }
+}
+
+@include mq(mid) {
+  .day--35 {
+    .day-text {
+      width: em-calc(340);
+      padding-top: em-calc(60);
+      padding-bottom: em-calc(70);
+    }
+
+    .day-reference {
+      margin-right: em-calc(-157);
+    }
+
+    .day-reference-link {
+      font-size: em-calc(19);
+    }
+  }
+
+  .day-35-text {
+    $font-size: 60;
+
+    font-size: em-calc($font-size);
+    margin-left: em-calc(-130, $font-size);
+    margin-right: em-calc(-130, $font-size);
+  }
+}
