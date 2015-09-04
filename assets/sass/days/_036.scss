@@ -1,0 +1,173 @@
+// ==================================================
+// Day 36
+// ==================================================
+$day-36-font: VT323, monospace;
+
+.day--36::before,
+.day--36::after,
+.day-36-bricks,
+.day-36-bricks::before {
+    // background-image: linear-gradient(to right, black 4px, transparent 4px),
+    //                   linear-gradient(to bottom, black 4px, transparent 4px),
+    //                   linear-gradient(to bottom, $white 4px, transparent 4px),
+    //                   linear-gradient(to right, $white 4px, transparent 4px),
+    //                   linear-gradient(to bottom, $grey-dark 4px, transparent 4px),
+    //                   linear-gradient(to right, $grey-dark 4px, transparent 4px),
+    //                   linear-gradient(to right, $grey-light 23px, transparent 23px);
+    // background-position: 0px 0px,
+    //                      0px 23px,
+    //                      0px 0px,
+    //                      4px 0px,
+    //                      23px 20px,
+    //                      23px 0px;
+    background-image: linear-gradient(to right, black 4px, transparent 4px),
+                      linear-gradient(to bottom, black 4px, transparent 4px),
+                      linear-gradient(to bottom, $grey-dark 4px, transparent 4px),
+                      linear-gradient(to right, $grey-dark 4px, transparent 4px),
+                      linear-gradient(to bottom, $white 4px, transparent 4px),
+                      linear-gradient(to right, $white 4px, transparent 4px),
+                      linear-gradient(to right, $grey-light 24px, transparent 24px);
+    background-position: 0px 0px,
+                         0px 24px,
+                         0px 21px,
+                         24px 0px,
+                         0px 0px,
+                         4px 0px;
+    background-size: 28px 28px;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.day--36 {
+  position: relative;
+  background-color: $black;
+
+  &::before {
+    top: 56px;
+    height: 56px;
+  }
+
+  &::after {
+    top: 56px;
+    height: 28px;
+    left: -14px;
+    right: -14px;
+  }
+
+  .day-number {
+    position: relative;
+    color: $white;
+    border-color: $white;
+    z-index: 2;
+  }
+
+  .day-text {
+    font-family: $day-36-font;
+    line-height: 1.4;
+    color: $white;
+    text-transform: uppercase;
+  }
+
+  .day-reference {
+    text-align: right;
+    text-transform: uppercase;
+    position: absolute;
+  }
+
+  .day-reference-link {
+    color: $white;
+    line-height: 0.7;
+    margin-top: 0.1em;
+    transform: scale(1.5,1) translate3d(0,0,0);
+    display: inline-block;
+  }
+
+  .day-font {
+    margin-bottom: em-calc(30);
+  }
+
+  .day-font-link {
+    color: $white;
+  }
+}
+
+.day-36-bricks {
+  bottom: 0px;
+  height: 84px;
+
+  &::before {
+    bottom: 28px;
+    height: 28px;
+    left: -14px;
+    right: -14px;
+  }
+}
+
+.day-36-text {
+  display: block;
+  transform: scale(1.5,1) translate3d(0,0,0);
+}
+
+.day--36 .day-reference,
+.day-36-text {
+  width: 60%;
+  margin-left: 20%;
+}
+
+.day--36 .day-reference {
+  top: em-calc(20);
+}
+
+.day--36 .day-reference-link,
+.day-36-text {
+  font-size: em-calc(20);
+}
+
+@include mq(small) {
+  .day--36 .day-reference {
+    top: em-calc(16);
+  }
+
+  .day--36 .day-reference-link,
+  .day-36-text {
+    font-size: em-calc(24);
+  }
+}
+
+@include mq(medium) {
+  .day--36 .day-reference {
+    top: em-calc(10);
+  }
+
+  .day--36 .day-reference-link,
+  .day-36-text {
+    font-size: em-calc(26);
+  }
+}
+
+@include mq(mid) {
+  .day--36 .day-reference {
+    top: em-calc(3);
+  }
+
+  .day--36 .day-reference,
+  .day-36-text {
+    width: 50%;
+    margin-left: 25%;
+  }
+
+  .day--36 .day-reference-link,
+  .day-36-text {
+    font-size: em-calc(30);
+  }
+}
+
+@include mq(large) {
+  .day--36 .day-reference,
+  .day-36-text {
+    width: 40%;
+    margin-left: 30%;
+  }
+}
