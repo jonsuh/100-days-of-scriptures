@@ -1,0 +1,180 @@
+// ==================================================
+// Day 37
+// ==================================================
+$day-37-font      : Oxygen, Helvetica, Arial, sans-serif;
+$day-37-blue      : #3949ab;
+$day-37-blue-light: #7986cb;
+
+.day--37 {
+  background-color: $day-37-blue;
+  background: radial-gradient(circle at center, $day-37-blue, shade($day-37-blue, 10%));
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    background-color: $day-37-blue-light;
+    width: em-calc(16);
+    height: em-calc(110);
+    left: 50%;
+    margin-left: em-calc(-8);
+    position: absolute;
+  }
+
+  &::before {
+    background: linear-gradient(to bottom, rgba($day-37-blue-light, 0.5), $day-37-blue-light);
+    top: 0;
+  }
+
+  &::after {
+    background: linear-gradient(to top, rgba($day-37-blue-light, 0.5), $day-37-blue-light);
+    bottom: 0;
+  }
+
+  .day-scripture {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    @include mq(small) {
+      padding-top: 1.5em;
+      padding-bottom: 1.5em;
+    }
+    @include mq(medium) {
+      padding-top: 2em;
+      padding-bottom: 2em;
+    }
+    @include mq(medium) {
+      padding-top: 2.5em;
+      padding-bottom: 2.5em;
+    }
+  }
+
+  .day-text {
+    font-family: $day-37-font;
+    font-weight: 700;
+    color: $day-37-blue-light;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .day-reference {
+    position: absolute;
+    left: 50%;
+    bottom: em-calc(97);
+    margin-left: em-calc(25);
+  }
+
+  .day-reference-link {
+    font-size: em-calc(12);
+    letter-spacing: 0.1em;
+    color: $day-37-blue-light;
+  }
+
+  .day-font {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.day-37-text {
+  $font-size: 17;
+
+  font-size: em-calc($font-size);
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  width: em-calc(280, $font-size);
+  display: inline-block;
+}
+
+@include mq(small) {
+  .day--37 {
+    &::before,
+    &::after {
+      width: em-calc(20);
+      height: em-calc(130);
+      margin-left: em-calc(-10);
+    }
+
+    .day-reference {
+      bottom: em-calc(117);
+      margin-left: em-calc(30);
+    }
+
+    .day-reference-link {
+      font-size: em-calc(13);
+    }
+  }
+
+  .day-37-text {
+    $font-size: 22;
+
+    font-size: em-calc($font-size);
+    width: em-calc(370, $font-size);
+  }
+}
+
+@include mq(medium) {
+  .day--37 {
+    &::before,
+    &::after {
+      width: em-calc(24);
+      height: em-calc(150);
+      margin-left: em-calc(-12);
+    }
+
+    .day-reference {
+      bottom: em-calc(137);
+      margin-left: em-calc(40);
+    }
+
+    .day-reference-link {
+      font-size: em-calc(14);
+    }
+  }
+
+  .day-37-text {
+    $font-size: 30;
+
+    font-size: em-calc($font-size);
+    width: em-calc(500, $font-size);
+  }
+}
+
+@include mq(mid) {
+  .day--37 {
+    &::before,
+    &::after {
+      height: em-calc(170);
+    }
+
+    .day-reference {
+      bottom: em-calc(157);
+      margin-left: em-calc(50);
+    }
+
+    .day-reference-link {
+      font-size: em-calc(15);
+    }
+  }
+
+  .day-37-text {
+    $font-size: 35;
+
+    font-size: em-calc($font-size);
+    width: em-calc(590, $font-size);
+  }
+}
+
+@include mq(large) {
+  .day--37 {
+    .day-reference-link {
+      font-size: em-calc(16);
+    }
+  }
+
+  .day-37-text {
+    $font-size: 40;
+
+    font-size: em-calc($font-size);
+    width: em-calc(660, $font-size);
+  }
+}
