@@ -1,0 +1,64 @@
+// ==================================================
+// Day 38
+// ==================================================
+$day-38-font: Neuton, Georgia, "Times New Roman", Times, serif;
+
+.day--38 {
+  position: relative;
+
+  .day-scripture {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    @include mq(small) {
+      padding-top: 1.5em;
+      padding-bottom: 1.5em;
+    }
+    @include mq(medium) {
+      padding-top: 2em;
+      padding-bottom: 2em;
+    }
+    @include mq(mid) {
+      padding-top: 2.5em;
+      padding-bottom: 2.5em;
+    }
+    @include mq(large) {
+      padding-top: 3em;
+      padding-bottom: 3em;
+    }
+  }
+
+  .day-text {
+    font-family: $day-38-font;
+    @include mq(small) {
+      font-size: 1.1em;
+    }
+    @include mq(medium) {
+      font-size: 1.2em;
+    }
+    text-align: center;
+  }
+
+  .day-reference {
+    margin-top: 2em;
+  }
+
+  .day-reference-link {
+    font-size: em-calc(18);
+    color: $grey-darkest;
+  }
+}
+
+.day-38-text {
+  $font-size: 18;
+
+  font-size: em-calc($font-size);
+  line-height: 1.2;
+  text-align: left;
+  display: inline-block;
+  width: em-calc(260, $font-size);
+  // padding: em-calc(20 15, $font-size);
+  // background: $white;
+  position: relative;
+  // height: em-calc(400, $font-size);
+  // margin-bottom: em-calc(-400, $font-size);
+}
