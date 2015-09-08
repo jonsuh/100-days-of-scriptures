@@ -1,0 +1,129 @@
+// ==================================================
+// Day 40
+// ==================================================
+$day-40-font: Vidaloka, "Times New Roman", Times, serif;
+$day-40-purple: #730046;
+
+.day--40 {
+  background-color: $day-40-purple;
+  background-color: #bfbb11;
+
+  .day-text {
+    font-family: $day-40-font;
+    color: $white;
+    text-align: center;
+  }
+
+  .day-reference {
+    text-align: center;
+    background-color: #fac300;
+    border-radius: 100%;
+    display: table;
+    width: em-calc(100);
+    height: em-calc(100);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: em-calc(-60);
+    position: relative;
+    left: em-calc(75);
+  }
+
+  .day-reference-link {
+    color: $day-40-purple;
+    height: em-calc(100);
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    vertical-align: middle;
+    display: table-cell;
+  }
+}
+
+.day-40-circle {
+  width: em-calc(280);
+  height: em-calc(280);
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $day-40-purple;
+  border-radius: 100%;
+  display: table;
+}
+
+.day-40-text {
+  font-size: em-calc(18);
+  line-height: 1.3;
+  padding-left: 2em;
+  padding-right: 2em;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+@include mq(small) {
+  .day--40 {
+    .day-reference {
+      width: em-calc(120);
+      height: em-calc(120);
+      margin-top: em-calc(-80);
+      left: em-calc(100);
+    }
+
+    .day-reference-link {
+      height: em-calc(120);
+      padding-left: 2em;
+      padding-right: 2em;
+    }
+  }
+
+  .day-40-circle {
+    width: em-calc(350);
+    height: em-calc(350);
+  }
+
+  .day-40-text {
+    font-size: em-calc(22);
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+
+@include mq(medium) {
+  .day--40 {
+    .day-reference {
+      margin-top: em-calc(-100);
+      left: em-calc(150);
+    }
+
+    .day-reference-link {
+      font-size: em-calc(17);
+    }
+  }
+
+  .day-40-circle {
+    width: em-calc(420);
+    height: em-calc(420);
+  }
+
+  .day-40-text {
+    font-size: em-calc(26);
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+  }
+}
+
+@include mq(mid) {
+  .day--40 {
+    .day-reference-link {
+      font-size: em-calc(18);
+    }
+  }
+
+  .day-40-circle {
+    width: em-calc(500);
+    height: em-calc(500);
+  }
+
+  .day-40-text {
+    font-size: em-calc(30);
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+  }
+}
