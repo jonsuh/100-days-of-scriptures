@@ -1,0 +1,74 @@
+// ==================================================
+// Day 41
+// ==================================================
+$day-41-font       : Questrial;
+$day-41-font-script: Sacramento;
+$day-41-grey-light : #eaebec;
+$day-41-grey       : #222c33;
+$day-41-teal       : #b2dfdb;
+
+.day--41 {
+  background-color: $day-41-grey-light;
+  position: relative;
+
+  .day-text {
+    font-family: $day-41-font;
+    color: $day-41-grey;
+    width: em-calc(280);
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq(small) {
+      font-size: 1.1em;
+    }
+
+    @include mq(medium) {
+      font-size: 1.2em;
+    }
+  }
+
+  .day-number,
+  .day-reference,
+  .day-font {
+    position: relative;
+    z-index: 2;
+  }
+
+  .day-reference {
+    margin-top: 2em;
+    text-align: center;
+  }
+
+  .day-reference-link {
+    color: $day-41-grey;
+  }
+
+  .day-font {
+    color: $day-41-teal;
+  }
+}
+
+.day-41-blessed {
+  $font-size: 400;
+
+  font-family: $day-41-font-script;
+  font-size: em-calc($font-size);
+  color: $day-41-teal;
+  position: absolute;
+  transform: rotate(-90deg);
+  top: 50%;
+  left: 50%;
+  margin-top: em-calc(-150, $font-size);
+  margin-left: em-calc(-500, $font-size);
+  z-index: 1;
+}
+
+.day-41-text {
+  line-height: 1.3;
+  position: relative;
+  z-index: 2;
+
+  li {
+    margin-bottom: 1em;
+  }
+}
