@@ -1,0 +1,143 @@
+// ==================================================
+// Day 42
+// ==================================================
+$day-42-font: "Istok Web";
+$day-42-cyan: #80deea;
+$day-42-pink: #f06292;
+
+.day--42 {
+  background: linear-gradient(30deg, rgba($day-42-pink, 0.6), $white, rgba($day-42-cyan, 0.6));
+
+  .day-text {
+    font-family: $day-42-font;
+    width: em-calc(290);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .day-reference {
+    padding-right: 0.25em;
+    margin-top: 0.5em;
+    text-align: right;
+    position: relative;
+  }
+
+  .day-reference-link {
+    color: $grey-darker;
+    background-color: rgba($day-42-cyan, 0.6);
+    padding: 0.2em 0.5em;
+
+    &:hover {
+      background-color: rgba($day-42-pink, 0.6);
+      text-decoration: none;
+    }
+  }
+}
+
+.day-42-first,
+.day-42-next {
+  position: relative;
+  display: inline-block;
+}
+
+.day-42-strong {
+  font-size: em-calc(62);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.day-42-text {
+  color: $grey-darker;
+  padding: 0.1em 0.5em;
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.day-42-first {
+  .day-42-strong {
+    color: $day-42-cyan;
+  }
+
+  .day-42-text {
+    background-color: rgba($day-42-pink, 0.6);
+    margin-top: em-calc(-15);
+  }
+}
+
+.day-42-next {
+  .day-42-strong {
+    color: $day-42-pink;
+  }
+
+  .day-42-text {
+    width: em-calc(157);
+    background-color: rgba($day-42-cyan, 0.6);
+    margin-top: em-calc(-22);
+  }
+}
+
+@include mq(small) {
+  .day--42 {
+    .day-text {
+      width: em-calc(400);
+    }
+  }
+
+  .day-42-strong {
+    font-size: em-calc(86);
+  }
+
+  .day-42-next {
+    .day-42-text {
+      width: auto;
+      margin-top: em-calc(-15);
+    }
+  }
+}
+
+@include mq(medium) {
+  .day--42 {
+    .day-text {
+      width: em-calc(510);
+    }
+  }
+
+  .day-42-strong {
+    font-size: em-calc(110);
+  }
+
+  .day-42-text {
+    font-size: em-calc(18);
+  }
+
+  .day-42-first,
+  .day-42-next {
+    .day-42-text {
+      margin-top: em-calc(-17);
+    }
+  }
+}
+
+@include mq(mid) {
+  .day--42 {
+    .day-text {
+      width: em-calc(650);
+    }
+  }
+
+  .day-42-strong {
+    font-size: em-calc(140);
+  }
+
+  .day-42-text {
+    font-size: em-calc(20);
+  }
+
+  .day-42-first,
+  .day-42-next {
+    .day-42-text {
+      margin-top: em-calc(-18.5);
+    }
+  }
+}
