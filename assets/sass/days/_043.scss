@@ -1,0 +1,80 @@
+// ==================================================
+// Day 43
+// ==================================================
+$day-43-font: "Montserrat Alternates", sans-serif;
+
+.day--43 {
+  background-color: $black;
+  position: relative;
+
+  .day-scripture {
+    text-align: center;
+  }
+
+  .day-number,
+  .day-text,
+  .day-reference,
+  .day-font {
+    position: relative;
+    z-index: 2;
+  }
+
+  .day-number {
+    color: $grey-darker;
+    border-color: $grey-darker;
+  }
+
+  .day-text {
+    font-family: $day-43-font;
+    color: $white;
+    text-transform: uppercase;
+    display: inline-block;
+    width: em-calc(265);
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: em-calc(1200);
+    left: 0;
+    background-size: 70px 60px, 70px 60px, 1px 60px;
+    z-index: 1;
+  }
+
+  &::before {
+    top: 0;
+    background-image:
+      repeating-linear-gradient(120deg, shade($white, 75%), shade($white, 75%) 1px, transparent 1px, transparent 30px),
+      repeating-linear-gradient(60deg, shade($white, 75%), shade($white, 75%) 1px, transparent 1px, transparent 30px),
+      repeating-linear-gradient(0deg, shade($white, 75%), shade($white, 75%) 1px, transparent 1px, transparent 30px);
+  }
+
+  &::after {
+    bottom: 0;
+    background-image:
+      linear-gradient(to bottom, transparent, rgba($black, 0.8)),
+      repeating-linear-gradient(120deg, shade($white, 75%), shade($white, 75%) 1px, transparent 1px, transparent 30px),
+      repeating-linear-gradient(60deg, shade($white, 75%), shade($white, 75%) 1px, transparent 1px, transparent 30px),
+      repeating-linear-gradient(175deg, shade($white, 75%), shade($white, 75%) 1px, transparent 1px, transparent 30px);
+    background-size: 100% 100%, 70px 60px, 70px 60px, 1px 60px;
+  }
+
+  .day-reference {
+    margin-top: em-calc(60);
+  }
+
+  .day-reference-link {
+    color: $grey-dark;
+  }
+
+  .day-font-link {
+    color: $grey-darker;
+  }
+}
+
+.day-43-text {
+  text-align: justify;
+  display: block;
+}
