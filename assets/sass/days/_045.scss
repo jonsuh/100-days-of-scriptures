@@ -1,0 +1,105 @@
+// ==================================================
+// Day 45
+// ==================================================
+$day-45-font     : Suranna, "Times New Roman", Times, serif;
+$day-45-blue     : #046380;
+$day-45-blue-dark: #012e2e;
+$day-45-ivory    : #efecca;
+
+.day--45 {
+  background-color: $day-45-blue;
+
+  .day-scripture {
+    padding-bottom: em-calc(50);
+    @include mq(mid) {
+      padding-bottom: em-calc(73);
+    }
+  }
+
+  .day-text {
+    font-family: $day-45-font;
+    color: $day-45-ivory;
+    width: em-calc(300);
+    @include mq(mid) {
+      width: em-calc(670);
+    }
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .day-reference {
+    display: block;
+    margin-top: em-calc(39);
+    @include mq(mid) {
+      margin-top: em-calc(59);
+    }
+  }
+
+  .day-reference-link {
+    @include mq(mid) {
+      font-size: em-calc(18);
+    }
+    color: $day-45-blue;
+    padding: 0.2em 0.4em;
+    background-color: $day-45-blue-dark;
+    display: inline-block;
+
+    &:hover {
+      color: $day-45-blue-dark;
+      background-color: $day-45-ivory;
+      text-decoration: none;
+    }
+  }
+}
+
+.day-45-first {
+  $font-size: 50;
+
+  font-size: em-calc($font-size);
+  line-height: 1.2;
+  max-width: em-calc(300, $font-size);
+  display: inline-block;
+
+  &::before {
+    content: "“";
+    display: block;
+  }
+}
+
+.day-45-first,
+.day-45-next {
+  vertical-align: bottom;
+}
+
+.day-45-next {
+  $font-size: 23;
+
+  font-size: em-calc($font-size);
+  line-height: 1.3;
+  max-width: em-calc(290, $font-size);
+  margin-top: em-calc(20, $font-size);
+  display: block;
+  position: relative;
+
+  &::after {
+    font-size: em-calc(50, $font-size);
+    content: "”";
+    text-align: right;
+    display: block;
+    position: absolute;
+    bottom: em-calc(-45, $font-size);
+    right: 0;
+  }
+}
+
+@include mq(mid) {
+  .day-45-next {
+    $font-size: 23;
+
+    font-size: em-calc($font-size);
+    max-width: em-calc(290, $font-size);
+    margin-left: em-calc(70, $font-size);
+    top: em-calc(23, $font-size);
+    display: inline-block;
+  }
+}
