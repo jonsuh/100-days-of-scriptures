@@ -1,0 +1,139 @@
+// ==================================================
+// Day 46
+// ==================================================
+$day-46-sans-serif: "Work Sans", Helvetica, Arial, sans-serif;
+$day-46-serif     : Domine, "Times New Roman", Times, serif;
+$day-46-yellow    : #fcfcce;
+$day-46-pink      : #af7575;
+$day-46-grey      : #272f32;
+
+.day--46 {
+  background-color: $day-46-yellow;
+  position: relative;
+
+  .day-text {
+    font-family: $day-46-serif;
+    color: $day-46-grey;
+    text-align: center;
+    line-height: 1.4;
+    max-width: em-calc(415);
+    @include mq(small) {
+      max-width: em-calc(445);
+    }
+    @include mq(medium) {
+      max-width: em-calc(475);
+    }
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .day-scripture {
+    @include mq(small) {
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+    @include mq(medium) {
+      padding-top: 2em;
+      padding-bottom: 2em;
+    }
+  }
+
+  .day-number,
+  .day-reference,
+  .day-font {
+    position: relative;
+    z-index: 2;
+  }
+
+  .day-reference {
+    margin-top: 2em;
+  }
+
+  .day-reference-link {
+    color: $day-46-grey;
+  }
+
+  .day-font {
+    color: $day-46-pink;
+  }
+}
+
+.day-46-text {
+  position: relative;
+  z-index: 2;
+  @include mq(small) {
+    font-size: em-calc(17);
+  }
+  @include mq(medium) {
+    font-size: em-calc(18);
+  }
+}
+
+.day-46-strong {
+  font-family: $day-46-sans-serif;
+  font-size: em-calc(40);
+  @include mq(small) {
+    font-size: em-calc(50);
+  }
+  @include mq(medium) {
+    font-size: em-calc(60);
+  }
+  @include mq(mid) {
+    font-size: em-calc(70);
+  }
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: rgba($day-46-pink, 0.3);
+  line-height: 1;
+  position: absolute;
+  display: inline-block;
+  z-index: 1;
+
+  &--f {
+    top: -0.2em;
+    left: 3%;
+  }
+
+  &--v {
+    top: 36%;
+    left: 9%;
+  }
+
+  &--k {
+    top: 6%;
+    right: 4%;
+  }
+
+  &--t {
+    top: 20%;
+    right: 22%;
+  }
+
+  &--p {
+    top: 40%;
+    right: -0.2em;
+  }
+
+  &--g {
+    bottom: 27%;
+    left: 17%;
+  }
+
+  &--b {
+    bottom: -0.2em;
+    left: 5%;
+  }
+
+  &--c {
+    bottom: 17%;
+    right: 18%;
+  }
+}
+
+.day-46-hr {
+  width: 3em;
+  border: 0;
+  border-top: 3px dashed $day-46-grey;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
