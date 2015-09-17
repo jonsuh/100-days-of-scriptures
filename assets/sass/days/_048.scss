@@ -1,0 +1,55 @@
+// ==================================================
+// Day 48
+// ==================================================
+$day-48-font: Poppins, sans-serif;
+$day-48-orange-light: #fd823b;
+$day-48-orange-dark: #ef5411;
+
+.day--48 {
+  background-color: $day-48-orange-light;
+
+  .day-text {
+    font-family: $day-48-font;
+    color: $grey-darker;
+    text-shadow: 2px 2px 0 $day-48-orange-dark;
+    width: em-calc(280);
+    @include mq(small) {
+      width: em-calc(390);
+    }
+    @include mq(medium) {
+      width: em-calc(530);
+    }
+  }
+
+  .day-reference {
+    margin-top: 2em;
+    @include mq(small) {
+      margin-top: 2.5em;
+    }
+    @include mq(medium) {
+      margin-top: 3em;
+    }
+  }
+
+  .day-reference-link {
+    font-size: em-calc(16);
+    color: $grey-darker;
+    @include mq(small) {
+      font-size: em-calc(18);
+    }
+    @include mq(medium) {
+      font-size: em-calc(20);
+    }
+  }
+}
+
+.day-48-text {
+  font-size: em-calc(20);
+  @include mq(small) {
+    font-size: em-calc(30);
+  }
+  @include mq(medium) {
+    font-size: em-calc(40);
+  }
+  line-height: 1.7;
+}
