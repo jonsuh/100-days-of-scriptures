@@ -39,12 +39,9 @@ $day-49-purple: #574b9b;
   }
 
   .day-reference {
-    margin-top: 1em;
+    margin-top: 1.75em;
 
     @include mq(medium) {
-      margin-top: 1.75em;
-    }
-    @include mq(large) {
       margin-top: 2.5em;
     }
   }
