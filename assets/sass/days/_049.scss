@@ -1,0 +1,115 @@
+// ==================================================
+// Day 49
+// ==================================================
+$day-49-font  : "Playfair Display SC", "Times New Roman", Times, serif;
+$day-49-cyan  : #46cdcf;
+$day-49-teal  : #9ce3cf;
+$day-49-blue  : #6a7ff5;
+$day-49-purple: #574b9b;
+
+.day--49 {
+  .day-scripture {
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    @include mq(small) {
+      padding-top: 1.75em;
+      padding-bottom: 1.75em;
+    }
+    @include mq(medium) {
+      padding-top: 2.5em;
+      padding-bottom: 2.5em;
+    }
+    @include mq(mid) {
+      padding-top: 3.25em;
+      padding-bottom: 3.25em;
+    }
+    @include mq(large) {
+      padding-top: 4em;
+      padding-bottom: 4em;
+    }
+  }
+
+  .day-text {
+    font-family: $day-49-font;
+    font-weight: 700;
+    font-style: italic;
+    font-variant-property: small-caps;
+    text-align: center;
+  }
+
+  .day-reference {
+    margin-top: 1em;
+
+    @include mq(medium) {
+      margin-top: 1.75em;
+    }
+    @include mq(large) {
+      margin-top: 2.5em;
+    }
+  }
+
+  .day-reference-link {
+    color: $white;
+    padding: 0em 0.3em 0.2em;
+    text-transform: lowercase;
+    background: linear-gradient(90deg, $day-49-teal -10%, $day-49-cyan, $day-49-blue, $day-49-purple 110%);
+    display: inline-block;
+
+    @include mq(small) {
+      font-size: em-calc(17);
+    }
+    @include mq(medium) {
+      font-size: em-calc(18);
+    }
+    @include mq(mid) {
+      font-size: em-calc(19);
+    }
+
+    &:hover {
+      background: linear-gradient(90deg, $day-49-purple -10%, $day-49-blue, $day-49-cyan, $day-49-teal 110%);
+      text-decoration: none;
+    }
+  }
+}
+
+.day-49-text {
+  font-size: 2.7em;
+  @include mq(small) {
+    font-size: 3.7em;
+  }
+  @include mq(medium) {
+    font-size: 4.7em;
+  }
+  @include mq(mid) {
+    font-size: 6em;
+  }
+  @include mq(large) {
+    font-size: 7em;
+  }
+
+  @include mq(small) {
+    font-size: 10vw;
+  }
+}
+
+.day-49 {
+  &-1 { color: $day-49-teal; }
+  &-2 { color: #7fdccf; }
+  &-3 { color: #63d4cf; }
+  &-4 { color: $day-49-cyan; }
+  &-5 { color: #52b3dc; }
+  &-6 { color: #5e99e8; }
+  &-7 { color: $day-49-blue; }
+  &-8 { color: #646ed7; }
+  &-9 { color: #5d5cb9; }
+  &-10 { color: $day-49-purple; }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .day-49-text {
+    background: -webkit-linear-gradient(0deg, $day-49-teal, $day-49-cyan, $day-49-blue, $day-49-purple 95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
