@@ -1,0 +1,366 @@
+// ==================================================
+// Day 50
+// ==================================================
+$day-50-font: Monoton, sans-serif;
+$day-50-pink: #f20dd5;
+$day-50-blue: #4495fb;
+
+.day--50 {
+  background-color: rgba($day-50-pink, 0.1);
+  position: relative;
+
+  .day-scripture {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    @include mq(small) {
+      padding-top: 1.5em;
+      padding-bottom: 1.5em;
+    }
+    @include mq(medium) {
+      padding-top: 2em;
+      padding-bottom: 2em;
+    }
+    @include mq(mid) {
+      padding-top: 2.5em;
+      padding-bottom: 2.5em;
+    }
+    @include mq(large) {
+      padding-top: 3em;
+      padding-bottom: 3em;
+    }
+  }
+
+  .day-text {
+    font-family: $day-50-font;
+    color: $day-50-pink;
+    text-transform: lowercase;
+    @include font-smoothing;
+  }
+
+  .day-reference {
+    margin-top: 2em;
+    @include mq(medium) {
+      margin-top: 3em;
+    }
+    @include mq(large) {
+      margin-top: 4em;
+    }
+    text-align: center;
+  }
+
+  .day-reference-link {
+    text-transform: uppercase;
+    color: $day-50-pink;
+    @include mq(small) {
+      font-size: em-calc(17);
+    }
+    @include mq(medium) {
+      font-size: em-calc(18);
+    }
+    @include mq(mid) {
+      font-size: em-calc(19);
+    }
+    @include mq(large) {
+      font-size: em-calc(20);
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+$day-50-font-size: 40;
+
+.day--50.is-on {
+  .day-reference-link {
+    color: $white;
+    animation: day-50-flicker 2s 1 forwards;
+    text-shadow: 0 0 em-calc(5) $white,
+                 0 0 em-calc(10) $white,
+                 0 0 em-calc(15) $white,
+                 0 0 em-calc(20) $day-50-blue,
+                 0 0 em-calc(25) $day-50-blue,
+                 0 0 em-calc(30) $day-50-blue,
+                 0 0 em-calc(35) $day-50-blue,
+                 0 0 em-calc(40) $day-50-blue;
+  }
+
+  .day-50-text {
+    animation: day-50-flicker 2.4s 1 forwards;
+
+    text-shadow: 0 0 em-calc(5, $day-50-font-size) $white,
+                 0 0 em-calc(10, $day-50-font-size) $white,
+                 0 0 em-calc(15, $day-50-font-size) $white,
+                 0 0 em-calc(20, $day-50-font-size) $day-50-pink,
+                 0 0 em-calc(33, $day-50-font-size) $day-50-pink,
+                 0 0 em-calc(46, $day-50-font-size) $day-50-pink,
+                 0 0 em-calc(59, $day-50-font-size) $day-50-pink,
+                 0 0 em-calc(72, $day-50-font-size) $day-50-pink;
+  }
+
+  .day-50-switch {
+    border-color: $grey-darkest;
+    background-color: shade($white, 80%);
+  }
+
+  .day-50-switch-label {
+    border-color: $grey-darkest;
+  }
+
+  .day-50-switch {
+    &::before,
+    &::after {
+      background-color: shade($grey-darkest, 20%);
+    }
+  }
+}
+
+.day-50-text {
+  font-size: em-calc($day-50-font-size);
+  max-width: em-calc(300, $day-50-font-size);
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+@include mq(small) {
+  $day-50-font-size: 50;
+
+  .day-50-text {
+    font-size: em-calc($day-50-font-size);
+    max-width: em-calc(375, $day-50-font-size);
+  }
+  .day--50.is-on {
+    .day-50-text {
+      animation: day-50-flicker 2.4s 1 forwards;
+
+      text-shadow: 0 0 em-calc(5, $day-50-font-size) $white,
+                   0 0 em-calc(10, $day-50-font-size) $white,
+                   0 0 em-calc(15, $day-50-font-size) $white,
+                   0 0 em-calc(20, $day-50-font-size) $day-50-pink,
+                   0 0 em-calc(33, $day-50-font-size) $day-50-pink,
+                   0 0 em-calc(46, $day-50-font-size) $day-50-pink,
+                   0 0 em-calc(59, $day-50-font-size) $day-50-pink,
+                   0 0 em-calc(72, $day-50-font-size) $day-50-pink;
+    }
+  }
+}
+
+@include mq(medium) {
+  $day-50-font-size: 60;
+
+  .day-50-text {
+    font-size: em-calc($day-50-font-size);
+    max-width: em-calc(450, $day-50-font-size);
+  }
+  .day--50.is-on {
+    .day-50-text {
+      animation: day-50-flicker 2.4s 1 forwards;
+
+      text-shadow: 0 0 em-calc(5, $day-50-font-size) $white,
+                   0 0 em-calc(10, $day-50-font-size) $white,
+                   0 0 em-calc(15, $day-50-font-size) $white,
+                   0 0 em-calc(20, $day-50-font-size) $day-50-pink,
+                   0 0 em-calc(33, $day-50-font-size) $day-50-pink,
+                   0 0 em-calc(46, $day-50-font-size) $day-50-pink,
+                   0 0 em-calc(59, $day-50-font-size) $day-50-pink,
+                   0 0 em-calc(72, $day-50-font-size) $day-50-pink;
+    }
+  }
+}
+
+@include mq(mid) {
+  $day-50-font-size: 70;
+
+  .day-50-text {
+    font-size: em-calc($day-50-font-size);
+    max-width: em-calc(525, $day-50-font-size);
+  }
+  .day--50.is-on {
+    .day-50-text {
+      animation: day-50-flicker 2.4s 1 forwards;
+
+      text-shadow: 0 0 em-calc(5, $day-50-font-size) $white,
+                   0 0 em-calc(10, $day-50-font-size) $white,
+                   0 0 em-calc(15, $day-50-font-size) $white,
+                   0 0 em-calc(20, $day-50-font-size) $day-50-pink,
+                   0 0 em-calc(33, $day-50-font-size) $day-50-pink,
+                   0 0 em-calc(46, $day-50-font-size) $day-50-pink,
+                   0 0 em-calc(59, $day-50-font-size) $day-50-pink,
+                   0 0 em-calc(72, $day-50-font-size) $day-50-pink;
+    }
+  }
+}
+
+@include mq(large) {
+  $day-50-font-size: 80;
+
+  .day-50-text {
+    font-size: em-calc($day-50-font-size);
+    max-width: em-calc(600, $day-50-font-size);
+  }
+  .day--50.is-on {
+    .day-50-text {
+      animation: day-50-flicker 2.4s 1 forwards;
+
+      text-shadow: 0 0 em-calc(5, $day-50-font-size) $white,
+                   0 0 em-calc(10, $day-50-font-size) $white,
+                   0 0 em-calc(15, $day-50-font-size) $white,
+                   0 0 em-calc(20, $day-50-font-size) $day-50-pink,
+                   0 0 em-calc(33, $day-50-font-size) $day-50-pink,
+                   0 0 em-calc(46, $day-50-font-size) $day-50-pink,
+                   0 0 em-calc(59, $day-50-font-size) $day-50-pink,
+                   0 0 em-calc(72, $day-50-font-size) $day-50-pink;
+    }
+  }
+}
+
+.day--50.is-on {
+  background-color: $black;
+
+  .day-text {
+    color: $white;
+  }
+}
+
+@keyframes day-50-flicker {
+  0% {
+    opacity: 0.5;
+  }
+  4% {
+    opacity: 0.5;
+  }
+  6% {
+    opacity: 0.45;
+  }
+  8% {
+    opacity: 0.55;
+  }
+  10% {
+    opacity: 0.45;
+  }
+  11% {
+    opacity: 0.5;
+  }
+  12% {
+    opacity: 0.65;
+  }
+  14% {
+    opacity: 0.55;
+  }
+  16% {
+    opacity: 0.70;
+  }
+  17% {
+    opacity: 0.75;
+  }
+  19% {
+    opacity: 0.5;
+  }
+  20% {
+    opacity: 0.65;
+  }
+  24% {
+    opacity: 0.5;
+  }
+  26% {
+    opacity: 0.75;
+  }
+  28% {
+    opacity: 0.6;
+  }
+  38% {
+    opacity: 0.65;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  42% {
+    opacity: 0.6;
+  }
+  44% {
+    opacity: 0.7;
+  }
+  46% {
+    opacity: 0.65;
+  }
+  56% {
+    opacity: 0.6;
+  }
+  58% {
+    opacity: 0.75;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  68% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 1.0;
+  }
+  72% {
+    opacity: 0.7;
+  }
+  93% {
+    opacity: 0.9;
+  }
+  95% {
+    opacity: 1.0;
+  }
+  97% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+
+.day-50-switch {
+  background: $white;
+  padding: em-calc(9 5);
+  border: 1px solid $grey-lighter;
+  border-radius: 2px;
+  display: inline-block;
+  position: absolute;
+  right: em-calc(20);
+  bottom: em-calc(20);
+
+  &::before,
+  &::after {
+    width: em-calc(3);
+    height: em-calc(3);
+    border-radius: 100%;
+    background: $grey-light;
+    content: "";
+    display: block;
+    position: absolute;
+    left: em-calc(11);
+  }
+
+  &::before {
+    top: em-calc(3);
+  }
+
+  &::after {
+    bottom: em-calc(3);
+  }
+}
+
+.day-50-switch-checkbox {
+  display: none;
+}
+
+.day-50-switch-label {
+  width: em-calc(13);
+  height: em-calc(20);
+  background: linear-gradient(to bottom, #ccc 0%, #eee 50%, #fafafa 50%, $white 92%, #adadad 92%, #9d9d9d);
+  border: 1px solid $grey-lighter;
+  display: block;
+  cursor: pointer;
+}
+
+.day-50-switch-checkbox:checked + .day-50-switch-label {
+  background: linear-gradient(to bottom, shade(#fafafa, 80%), shade($white, 80%) 5%, shade(#cdcdcd, 80%) 5%, shade(#eee, 80%) 50%, shade(#fafafa, 80%) 50%, shade($white, 80%));
+}
