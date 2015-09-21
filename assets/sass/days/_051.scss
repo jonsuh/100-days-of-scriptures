@@ -1,0 +1,137 @@
+// ==================================================
+// Day 51
+// ==================================================
+$day-51-font       : "Rock Salt", sans-serif;
+$day-51-blue-light : #bee7eb;
+$day-51-brown-light: #d1b48c;
+$day-51-red        : #e53935;
+
+.day--51 {
+  background-color: $day-51-brown-light;
+
+  .day-text {
+    font-size: 0.8em;
+    font-family: $day-51-font;
+    text-transform: lowercase;
+    text-align: center;
+    @include font-smoothing;
+  }
+
+  .day-reference {
+    margin-top: em-calc(-62);
+    margin-bottom: em-calc(62);
+    position: relative;
+  }
+
+  .day-reference-link {
+    color: $day-51-red;
+  }
+}
+
+.day-51-text {
+  text-align: left;
+  width: em-calc(280);
+  height: em-calc(522);
+  line-height: em-calc(20);
+  padding: em-calc(60 20 0 50);
+  padding-bottom: 0;
+  border: 1px solid $grey-lightest;
+
+  background: linear-gradient(to top, $day-51-blue-light 0%, $white 8%) 0 em-calc(4);
+  background-size: 100% em-calc(20);
+  background-position: 0 0;
+  border-radius: em-calc(3);
+  box-shadow: 0 em-calc(1 2) rgba($black, 0.05);
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+  }
+
+  &::before {
+    width: 100%;
+    height: em-calc(50);
+    background: $white;
+    left: 0;
+  }
+
+  &::after {
+    left: em-calc(30);
+    bottom: 0;
+    border: 1px solid;
+    border-color: transparent rgba($day-51-red, 0.3);
+  }
+}
+
+.day-51-holes {
+  top: em-calc(70);
+  left: em-calc(15);
+
+  &,
+  &::before,
+  &::after {
+    border-radius: 100%;
+    width: em-calc(20);
+    height: em-calc(20);
+    background-color: $day-51-brown-light;
+    box-shadow: inset 0 em-calc(1 2) rgba($black, 0.15);
+    position: absolute;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    left: 0;
+    display: block;
+  }
+
+  &::before {
+    bottom: em-calc(-215);
+  }
+
+  &::after {
+    bottom: em-calc(-415);
+  }
+}
+
+@include mq(small) {
+  .day--51 {
+    .day-text {
+      font-size: 0.9em;
+    }
+  }
+
+  .day-51-text {
+    width: em-calc(350);
+    padding-left: em-calc(80);
+
+    &::after {
+      left: em-calc(60);
+    }
+  }
+
+  .day-51-holes {
+    left: em-calc(20);
+  }
+}
+
+@include mq(medium) {
+  .day--51 {
+    .day-text {
+      font-size: 1em;
+    }
+  }
+}
+
+@include mq(mid) {
+  .day--51 {
+    .day-text {
+      font-size: 1.1em;
+    }
+  }
+}
