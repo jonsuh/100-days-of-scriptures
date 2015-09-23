@@ -1,0 +1,125 @@
+// ==================================================
+// Day 53
+// ==================================================
+$day-53-font  : "Trocchi", serif;
+$day-53-yellow: #ffc045;
+$day-53-blue  : #065471;
+
+.day--53 {
+  background-color: $day-53-yellow;
+
+  .day-scripture {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    @include mq(small) {
+      padding-top: 1.5em;
+      padding-bottom: 1.5em;
+    }
+    @include mq(medium) {
+      padding-top: 2em;
+      padding-bottom: 2em;
+    }
+    @include mq(mid) {
+      padding-top: 2.5em;
+      padding-bottom: 2.5em;
+    }
+  }
+
+  .day-text {
+    font-family: $day-53-font;
+    color: $day-53-blue;
+    text-align: center;
+    @include font-smoothing;
+  }
+
+  .day-reference {
+    margin-top: 2em;
+    @include mq(medium) {
+      margin-top: 3em;
+    }
+  }
+
+  .day-reference-link {
+    font-size: em-calc(17);
+    color: $day-53-blue;
+    line-height: 1.4;
+    background-color: $white;
+    transform: rotate(3deg);
+    box-shadow: 1px 2px 3px rgba($black, 0.15);
+    display: inline-block;
+    margin-left: 7em;
+
+    &:hover {
+      transform: rotate(-5deg);
+      text-decoration: none;
+    }
+  }
+}
+
+.day-53-text {
+  $font-size: 24;
+
+  font-size: em-calc($font-size);
+  line-height: 1.3;
+  width: em-calc(290, $font-size);
+  display: inline-block;
+
+  > span {
+    background-color: $white;
+    position: relative;
+    display: inline-block;
+    margin-top: 0.15em;
+    margin-bottom: 0.15em;
+    box-shadow: 1px 2px 3px rgba($black, 0.15);
+
+    &:nth-child(2) { transform: rotate(2deg) }
+    &:nth-child(3) { transform: rotate(-4deg) }
+    &:nth-child(4) { transform: rotate(-8deg) }
+    &:nth-child(5) { transform: rotate(5deg) }
+    &:nth-child(6) { transform: rotate(2deg) }
+    &:nth-child(7) { transform: rotate(-3deg) }
+    &:nth-child(8) { transform: rotate(-5deg) }
+    &:nth-child(9) { transform: rotate(1deg) }
+
+    &:nth-child(10) { transform: rotate(1deg) }
+    &:nth-child(11) { transform: rotate(7deg) }
+    &:nth-child(12) { transform: rotate(-2deg) }
+    // &:nth-child(13) {  }
+    &:nth-child(14) { transform: rotate(2deg) }
+    &:nth-child(15) { transform: rotate(-5deg) }
+  }
+}
+
+@include mq(small) {
+  .day-53-text {
+    $font-size: 30;
+
+    font-size: em-calc($font-size);
+    width: em-calc(360, $font-size);
+  }
+}
+
+@include mq(medium) {
+  .day-53-text {
+    $font-size: 30;
+
+    font-size: em-calc($font-size);
+    width: em-calc(520, $font-size);
+  }
+}
+
+@include mq(mid) {
+  .day--53 {
+    .day-text {
+      font-size: 1.3em;
+    }
+  }
+}
+
+@include mq(large) {
+  .day--53 {
+    .day-text {
+      font-size: 1.5em;
+    }
+  }
+}
