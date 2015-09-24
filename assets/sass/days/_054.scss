@@ -1,0 +1,79 @@
+// ==================================================
+// Day 54
+// ==================================================
+$day-54-font: "Cutive Mono", Consolas, "Liberation Mono", Courier, monospace;
+$day-54-pink: #fbaad0;
+
+.day--54 {
+  background-color: $day-54-pink;
+
+  .day-text {
+    @include mq(small) {
+      font-size: 1.1em;
+    }
+    @include mq(small) {
+      font-size: 1.2em;
+    }
+    font-family: $day-54-font;
+    color: $black;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .day-reference {
+    position: relative;
+    margin-top: em-calc(-125);
+    margin-bottom: em-calc(125);
+  }
+
+  .day-reference-link {
+    color: $black;
+  }
+}
+
+.day-54-text {
+  $font-size: 15;
+
+  font-size: em-calc($font-size);
+  text-align: left;
+  background-color: $white;
+  width: em-calc(280, $font-size);
+  padding: em-calc(70 30 140);
+  @include mq(small) {
+    width: em-calc(310, $font-size);
+    padding-left: em-calc(40);
+    padding-right: em-calc(40);
+  }
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  filter: drop-shadow(2px 2px 0 shade($day-54-pink, 30%));
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    height: em-calc(6);
+    left: 0;
+    width: 100%;
+    background-size: em-calc(6 10);
+  }
+
+  &::before {
+    top: em-calc(-5);
+    background-image: linear-gradient(45deg, transparent 33.333%, $white 33.333%, $white 66.667%, transparent 66.667%),
+                      linear-gradient(-45deg, transparent 33.333%, $white 33.333%, $white 66.667%, transparent 66.667%);
+  }
+
+  &::after {
+    bottom: em-calc(-5);
+    background-image: linear-gradient(45deg, $white 33.333%, transparent 33.333%, transparent 66.667%, $white 66.667%),
+                      linear-gradient(-45deg, $white 33.333%, transparent 33.333%, transparent 66.667%, $white 66.667%);
+  }
+}
+
+.day-54-asterisks {
+  text-align: center;
+  margin: em-calc(25 0);
+  overflow: hidden;
+}
