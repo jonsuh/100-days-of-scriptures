@@ -1,0 +1,124 @@
+// ==================================================
+// Day 57
+// ==================================================
+$day-57-font     : Rubik, Helvetica, Arial, sans-serif;
+$day-57-teal     : #9be8cb;
+$day-57-teal-dark: #228291;
+$day-57-blue     : #6796e5;
+
+.day--57 {
+	background-color: $day-57-teal;
+
+	.day-scripture {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		@include mq(small) {
+			padding-top: 2em;
+			padding-bottom: 2em;
+		}
+	}
+
+	.day-text {
+		font-family: $day-57-font;
+		position: relative;
+	}
+
+	.day-reference {
+		margin-top: 2em;
+		text-align: center;
+	}
+
+	.day-reference-link {
+		color: $day-57-blue;
+		margin-left: em-calc(40);
+		@include mq(small) {
+			margin-left: em-calc(90);
+		}
+		@include mq(medium) {
+			margin-left: em-calc(130);
+		}
+
+		&:hover {
+			color: $day-57-teal-dark;
+			text-decoration: none;
+		}
+	}
+}
+
+.day-57-first,
+.day-57-next {
+	line-height: 1.2;
+	color: $white;
+	border: 6px solid black;
+	border-radius: 100%;
+	width: em-calc(200);
+	height: em-calc(200);
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	display: table;
+}
+
+.day-57-first {
+	border-color: $day-57-blue;
+	border-color: rgba($day-57-blue, 0.5);
+	left: em-calc(-70);
+}
+
+.day-57-next {
+	border-color: $day-57-teal-dark;
+	border-color: rgba($day-57-teal-dark, 0.5);
+	left: em-calc(20);
+	top: em-calc(-75);
+	margin-bottom: em-calc(-75);
+}
+
+.day-57-text {
+	text-align: center;
+	padding: em-calc(30);
+	display: table-cell;
+	vertical-align: middle;
+}
+
+@include mq(small) {
+	.day-57-first,
+	.day-57-next {
+		font-size: 1.1em;
+	}
+
+	.day-57-first {
+		left: em-calc(-40);
+	}
+
+	.day-57-next {
+		left: em-calc(40);
+	}
+}
+
+@include mq(medium) {
+	.day-57-first,
+	.day-57-next {
+		font-size: 1.2em;
+	}
+
+	.day-57-first {
+		left: em-calc(-50);
+	}
+
+	.day-57-next {
+		left: em-calc(50);
+	}
+}
+
+@include mq(mid) {
+	.day-57-first,
+	.day-57-next {
+		font-size: 1.3em;
+		width: em-calc(225);
+		height: em-calc(225);
+	}
+
+	.day-57-text {
+		padding: em-calc(42);
+	}
+}
