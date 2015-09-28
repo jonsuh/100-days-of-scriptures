@@ -1,0 +1,79 @@
+// ==================================================
+// Day 58
+// ==================================================
+$day-58-font : Vollkorn, "Times New Roman", Times, serif;
+$day-58-cream: #e7e1d9;
+$day-58-red  : #d01d1f;
+
+.day--58 {
+	background-color: $day-58-cream;
+
+	.day-scripture {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		@include mq(small) {
+			padding-top: 2em;
+			padding-bottom: 2em;
+		}
+	}
+
+	.day-text {
+		font-family: $day-58-font;
+		color: shade($grey-darker, 15%);
+		font-style: italic;
+		text-align: center;
+	}
+
+	.day-reference {
+		margin-top: 2em;
+	}
+
+	.day-reference-link {
+		color: $day-58-red;
+		@include mq(small) {
+			font-size: em-calc(17);
+		}
+		@include mq(medium) {
+			font-size: em-calc(18);
+		}
+
+		&::before {
+			content: "—";
+		}
+	}
+}
+
+.day-58-text {
+	$font-size: 18;
+
+	font-size: em-calc($font-size);
+	line-height: 1.3;
+	text-align: left;
+	width: em-calc(280, $font-size);
+	display: inline-block;
+
+	&::before {
+		content: "“ ";
+	}
+
+	&::after {
+		content: " ”";
+	}
+}
+
+@include mq(small) {
+	.day-58-text {
+		$font-size: 19;
+
+		font-size: em-calc($font-size);
+		width: em-calc(324, $font-size);
+	}
+}
+
+@include mq(medium) {
+	.day-58-text {
+		$font-size: 20;
+
+		font-size: em-calc($font-size);
+	}
+}
