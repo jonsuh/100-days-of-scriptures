@@ -1,0 +1,149 @@
+// ==================================================
+// Day 60
+// ==================================================
+$day-60-font  : Megrim, sans-serif;
+$day-60-purple: #3c2573;
+$day-60-pink  : #f33375;
+$day-60-red   : #d20d00;
+$day-60-yellow: #f9cb27;
+$day-60-green : #029f4c;
+$day-60-teal  : #00678d;
+$day-60-blue  : #04659a;
+
+.day--60 {
+	background-color: $black;
+	position: relative;
+
+	.day-scripture {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		@include mq(small) {
+			padding-top: 2em;
+			padding-bottom: 2em;
+		}
+		@include mq(medium) {
+			padding-top: 3em;
+			padding-bottom: 3em;
+		}
+		@include mq(mid) {
+			padding-top: 4em;
+			padding-bottom: 4em;
+		}
+		@include mq(large) {
+			padding-top: 5em;
+			padding-bottom: 5em;
+		}
+	}
+
+	.day-number,
+	.day-reference,
+	.day-font {
+		position: relative;
+	}
+
+	.day-number {
+		color: rgba($white, 0.2);
+		border-color: rgba($white, 0.2);
+		z-index: 2;
+	}
+
+	.day-text {
+		font-family: $day-60-font;
+		color: $white;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	.day-reference {
+		margin-top: 2em;
+		@include mq(mid) {
+			margin-top: 3em;
+		}
+		position: relative;
+	}
+
+	.day-reference-link {
+		@include mq(small) {
+			font-size: em-calc(17);
+		}
+		@include mq(medium) {
+			font-size: em-calc(18);
+		}
+		@include mq(mid) {
+			font-size: em-calc(19);
+		}
+		color: rgba($white, 0.6);
+	}
+
+	.day-font-link {
+		color: rgba($white, 0.2);
+	}
+}
+
+.day-60-color {
+	width: 60%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+
+.day-60-color--1 {
+	left: -15%;
+	background-image: radial-gradient(ellipse at top, rgba($day-60-purple, 0.6), transparent 80%);
+}
+
+.day-60-color--2 {
+	left: 0%;
+	background-image: radial-gradient(ellipse at top, rgba($day-60-pink, 0.5), transparent 70%);
+}
+
+.day-60-color--3 {
+	left: 15%;
+	background-image: radial-gradient(ellipse at top, rgba($day-60-red, 0.6), transparent 60%);
+}
+
+.day-60-color--4 {
+	left: 30%;
+	background-image: radial-gradient(ellipse at top, rgba($day-60-yellow, 0.6), transparent 70%);
+}
+
+.day-60-color--5 {
+	left: 45%;
+	background-image: radial-gradient(ellipse at top, rgba($day-60-green, 0.6), transparent 60%);
+}
+
+.day-60-color--6 {
+	left: 60%;
+	background-image: radial-gradient(ellipse at top, rgba($day-60-teal, 0.6), transparent 70%);
+}
+
+.day-60-color--7 {
+	left: 75%;
+	background-image: radial-gradient(ellipse at top, rgba($day-60-blue, 0.6), transparent 60%);
+}
+
+.day-60-text {
+	font-size: em-calc(20);
+	line-height: 1.2;
+	position: relative;
+	max-width: em-calc(320);
+	display: inline-block;
+}
+
+@include mq(medium) {
+	.day-60-text {
+		font-size: em-calc(26);
+	}
+}
+
+@include mq(mid) {
+	.day-60-text {
+		font-size: em-calc(32);
+	}
+}
+
+@include mq(large) {
+	.day-60-text {
+		font-size: em-calc(38);
+	}
+}
