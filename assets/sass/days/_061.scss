@@ -1,0 +1,125 @@
+// ==================================================
+// Day 61
+// ==================================================
+$day-61-font: "Unica One", sans-serif;
+$day-61-grey: #37474f;
+$day-61-red : #c62828;
+
+.day--61 {
+	background-color: $day-61-grey;
+
+	.day-scripture {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		@include mq(small) {
+			padding-top: 2em;
+			padding-bottom: 2em;
+		}
+		@include mq(medium) {
+			padding-top: 3em;
+			padding-bottom: 3em;
+		}
+		@include mq(mid) {
+			padding-top: 4em;
+			padding-bottom: 4em;
+		}
+	}
+
+	.day-text {
+		font-family: $day-61-font;
+		text-align: center;
+		@include font-smoothing;
+	}
+
+	.day-reference {
+		margin-top: 2em;
+		@include mq(mid) {
+			margin-top: 3em;
+		}
+	}
+
+	.day-reference-link {
+		@include mq(small) {
+			font-size: em-calc(17);
+		}
+		@include mq(medium) {
+			font-size: em-calc(18);
+		}
+		color: $white;
+	}
+}
+
+.day-61-container {
+	@include mq(small) {
+		font-size: 1.3em;
+	}
+	@include mq(medium) {
+		font-size: 1.5em;
+	}
+	@include mq(mid) {
+		font-size: 1.7em;
+	}
+	@include mq(large) {
+		font-size: 1.9em;
+	}
+	width: em-calc(280);
+	display: inline-block;
+	position: relative;
+}
+
+$day-61-text-height: 24;
+$day-61-font-size: 25;
+
+.day-61-text-wrap {
+	font-size: em-calc($day-61-font-size);
+	color: $white;
+	line-height: 0.8;
+	width: 100%;
+	height: em-calc($day-61-text-height, $day-61-font-size);
+	position: absolute;
+	left: 0;
+	overflow: hidden;
+}
+
+.day-61-text {
+	display: block;
+	position: relative;
+}
+
+.day-61-text-wrap--1 {
+	position: relative;
+	overflow: inherit;
+	height: auto;
+}
+
+.day-61-text-wrap--2 {
+	top: em-calc($day-61-text-height, $day-61-font-size);
+
+	.day-61-text {
+		top: em-calc($day-61-text-height * -1, $day-61-font-size);
+	}
+}
+
+.day-61-text-wrap--3 {
+	top: em-calc($day-61-text-height * 2, $day-61-font-size);
+
+	.day-61-text {
+		top: em-calc($day-61-text-height * 2 * -1, $day-61-font-size);
+	}
+}
+
+.day-61-text-wrap--4 {
+	top: em-calc($day-61-text-height * 3, $day-61-font-size);
+
+	.day-61-text {
+		top: em-calc($day-61-text-height * 3 * -1, $day-61-font-size);
+	}
+}
+
+.day-61-text-wrap--2,
+.day-61-text-wrap--4 {
+	.day-61-text {
+		background-color: $white;
+		color: $day-61-red;
+	}
+}
