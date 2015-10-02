@@ -3,7 +3,6 @@
 // ==================================================
 $day-61-font: "Unica One", sans-serif;
 $day-61-grey: #37474f;
-$day-61-red : #c62828;
 
 .day--61 {
 	background-color: $day-61-grey;
@@ -120,6 +119,6 @@ $day-61-font-size: 25;
 .day-61-text-wrap--4 {
 	.day-61-text {
 		background-color: $white;
-		color: $day-61-red;
+		color: $day-61-grey;
 	}
 }
