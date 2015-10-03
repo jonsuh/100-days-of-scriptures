@@ -1,0 +1,94 @@
+// ==================================================
+// Day 62
+// ==================================================
+$day-62-font: Catamaran, sans-serif;
+
+.day--62 {
+	.day-scripture {
+		padding-top: 2em;
+		padding-bottom: 2em;
+		@include mq(small) {
+			padding-top: 3em;
+			padding-bottom: 3em;
+		}
+		@include mq(medium) {
+			padding-top: 4em;
+			padding-bottom: 4em;
+		}
+		@include mq(mid) {
+			padding-top: 5em;
+			padding-bottom: 5em;
+		}
+	}
+
+	.day-text {
+		font-family: $day-62-font;
+		font-weight: 600;
+		color: $black;
+		text-align: center;
+		@include font-smoothing;
+	}
+
+	.day-reference {
+		margin-top: 3em;
+		@include mq(medium) {
+			margin-top: 4em;
+		}
+	}
+
+	.day-reference-link {
+		color: $black;
+		letter-spacing: 0.75em;
+		@include mq(small) {
+			font-size: em-calc(17);
+		}
+		@include mq(medium) {
+			font-size: em-calc(18);
+			letter-spacing: 1em;
+		}
+		@include mq(mid) {
+			font-size: em-calc(19);
+			letter-spacing: 1.5em;
+		}
+	}
+}
+
+.day-62-text {
+	$font-size: 16;
+
+	font-size: em-calc($font-size);
+	line-height: 2;
+	letter-spacing: 0.75em;
+	width: em-calc(250, $font-size);
+	display: inline-block;
+}
+
+@include mq(small) {
+	.day-62-text {
+		$font-size: 26;
+
+		font-size: em-calc($font-size);
+		letter-spacing: 0.75em;
+		width: em-calc(410, $font-size);
+	}
+}
+
+@include mq(medium) {
+	.day-62-text {
+		$font-size: 27;
+
+		font-size: em-calc($font-size);
+		letter-spacing: 1em;
+		width: em-calc(520, $font-size);
+	}
+}
+
+@include mq(mid) {
+	.day-62-text {
+		$font-size: 27;
+
+		font-size: em-calc($font-size);
+		letter-spacing: 1.5em;
+		width: em-calc(690, $font-size);
+	}
+}
