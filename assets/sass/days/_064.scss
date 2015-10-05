@@ -1,0 +1,90 @@
+// ==================================================
+// Day 64
+// ==================================================
+$day-64-font  : "Gravitas One", serif;
+$day-64-blue  : #2e8fc6;
+$day-64-teal  : #56cfd2;
+$day-64-yellow: #f3ff92;
+
+.day--64 {
+	background-color: $day-64-blue;
+	background: linear-gradient(30deg, $day-64-blue, $day-64-teal);
+
+	.day-scripture {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		@include mq(small) {
+			padding-top: 2em;
+			padding-bottom: 2em;
+		}
+		@include mq(medium) {
+			padding-top: 3em;
+			padding-bottom: 3em;
+		}
+	}
+
+	.day-text {
+		font-family: $day-64-font;
+		text-align: center;
+		text-transform: uppercase;
+		@include font-smoothing;
+	}
+
+	.day-reference {
+		margin-top: 0.3em;
+	}
+
+	.day-reference-link {
+		letter-spacing: 0.32em;
+		color: $day-64-teal;
+		padding-left: 0.35em;
+	}
+}
+
+.day-64-text {
+	font-size: em-calc(50);
+	color: $day-64-yellow;
+	display: block;
+}
+
+.day-64-text--i-am {
+	letter-spacing: 0.26em;
+	padding-left: 0.28em;
+}
+
+.day-64-text + .day-64-text--i-am {
+	transform: scale(-1, 1) rotate(180deg);
+	margin-top: -0.1em;
+}
+
+@include mq(small) {
+	.day--64 {
+		.day-text {
+			font-size: 1.4em;
+		}
+	}
+}
+
+@include mq(medium) {
+	.day--64 {
+		.day-text {
+			font-size: 1.8em;
+		}
+	}
+}
+
+@include mq(mid) {
+	.day--64 {
+		.day-text {
+			font-size: 2em;
+		}
+	}
+}
+
+@include mq(large) {
+	.day--64 {
+		.day-text {
+			font-size: 2.25em;
+		}
+	}
+}
