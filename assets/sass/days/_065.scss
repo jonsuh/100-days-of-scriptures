@@ -1,0 +1,132 @@
+// ==================================================
+// Day 65
+// ==================================================
+$day-65-font        : Raleway, sans-serif;
+$day-65-blue-darkest: #06040a;
+$day-65-blue-dark   : #0b0e17;
+$day-65-blue-light  : #2e2d50;
+
+.day--65 {
+	background-color: $day-65-blue-dark;
+	background: radial-gradient(at bottom right, $day-65-blue-light, $day-65-blue-dark 80%, $day-65-blue-darkest);
+	position: relative;
+
+	.day-scripture {
+		padding-top: 5em;
+		@include mq(small) {
+			padding-top: 7em;
+			padding-bottom: 1em;
+		}
+		@include mq(medium) {
+			padding-top: 9em;
+			padding-bottom: 2em;
+		}
+		@include mq(large) {
+			padding-top: 11em;
+			padding-bottom: 3em;
+		}
+	}
+
+	.day-number {
+		color: rgba($white, 0.2);
+		border-color: rgba($white, 0.2);
+	}
+
+	.day-text {
+		font-family: $day-65-font;
+		font-weight: 200;
+		color: $white;
+		text-align: center;
+		@include font-smoothing;
+	}
+
+	.day-reference {
+		margin-top: 1em;
+		@include mq(medium) {
+			margin-top: 1.5em;
+		}
+		transform: rotate(-2deg);
+		backface-visibility: hidden;
+	}
+
+	.day-reference-link {
+		color: rgba($white, 0.7);
+		text-shadow: 0 0 1px rgba($day-65-blue-dark, 0.9),
+								 0 0 3px rgba($day-65-blue-light, 0.4),
+								 0 0 4px rgba($day-65-blue-light, 0.3),
+								 0 0 5px rgba($day-65-blue-light, 0.2),
+								 0 0 6px rgba($day-65-blue-light, 0.1);
+	}
+
+	.day-font-link {
+		color: rgba($white, 0.1);
+	}
+}
+
+.day-65-star {
+	width: em-calc(7);
+	height: em-calc(7);
+	display: block;
+	position: absolute;
+	top: 10%;
+	left: 35%;
+	background-color: rgba($white, 0.6);
+	border-radius: 100%;
+	filter: blur(4px);
+	animation: day-65-star 7s infinite;
+}
+
+@keyframes day-65-star {
+	0%, 100% {
+		background-color: $white;
+		filter: blur(4px);
+	}
+	50% {
+		background-color: rgba($white, 0.6);
+		filter: blur(2px);
+	}
+}
+
+.day-65-text {
+	$font-size: 20;
+
+	font-size: em-calc($font-size);
+	line-height: 1.3;
+	max-width: em-calc(350, $font-size);
+	display: inline-block;
+	transform: rotate(-2deg);
+	backface-visibility: hidden;
+	text-shadow: 0 0 1px rgba($day-65-blue-dark, 0.9),
+							 0 0 2px rgba($white, 0.4),
+							 0 0 3px rgba($white, 0.3),
+							 0 0 4px rgba($white, 0.2),
+							 0 0 5px rgba($white, 0.1);
+}
+
+@include mq(medium) {
+	.day-65-text {
+		$font-size: 25;
+
+		font-size: em-calc($font-size);
+		max-width: em-calc(420, $font-size);
+		max-width: em-calc(580, $font-size);
+	}
+}
+
+@include mq(large) {
+	.day-65-text {
+		$font-size: 30;
+
+		font-size: em-calc($font-size);
+		max-width: em-calc(700, $font-size);
+	}
+}
+
+@include mq(xlarge) {
+	.day-65-text {
+		$font-size: 35;
+
+		font-size: em-calc($font-size);
+		max-width: em-calc(800, $font-size);
+	}
+}
