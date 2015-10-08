@@ -1,0 +1,77 @@
+// ==================================================
+// Day 66
+// ==================================================
+$day-66-font: Satisfy, serif;
+$day-66-grey: #dedede;
+
+.day--66 {
+	background-color: $day-66-grey;
+
+	.day-scripture {
+		padding-top: 2em;
+		padding-bottom: 2em;
+		@include mq(small) {
+			padding-top: 3em;
+			padding-bottom: 3em;
+		}
+		@include mq(medium) {
+			padding-top: 4em;
+			padding-bottom: 4em;
+		}
+		@include mq(large) {
+			padding-top: 5em;
+			padding-bottom: 5em;
+		}
+	}
+
+	.day-text {
+		font-family: $day-66-font;
+		line-height: 1.1;
+		text-align: center;
+		@include font-smoothing;
+	}
+
+	.day-reference {
+		margin-top: 2em;
+		@include mq(medium) {
+			margin-top: 3em;
+		}
+	}
+
+	.day-reference-link {
+		font-size: em-calc(17);
+		color: $grey-darkest;
+		@include mq(small) {
+			font-size: em-calc(18);
+		}
+		@include mq(medium) {
+			font-size: em-calc(19);
+		}
+	}
+}
+
+.day-66-text {
+	$font-size: 25;
+
+	font-size: em-calc($font-size);
+	width: em-calc(200, $font-size);
+	display: inline-block;
+}
+
+@include mq(small) {
+	.day-66-text {
+		$font-size: 30;
+
+		font-size: em-calc($font-size);
+		width: em-calc(240, $font-size);
+	}
+}
+
+@include mq(medium) {
+	.day-66-text {
+		$font-size: 35;
+
+		font-size: em-calc($font-size);
+		width: em-calc(280, $font-size);
+	}
+}
