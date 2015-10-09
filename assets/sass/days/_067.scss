@@ -1,0 +1,99 @@
+// ==================================================
+// Day 67
+// ==================================================
+$day-67-serif: "Julius Sans One", serif;
+$day-67-slab : "Josefin Slab", serif;
+$day-67-teal : #0b8793;
+$day-67-green: #43cea2;
+
+.day--67 {
+	background-color: $day-67-teal;
+	background: linear-gradient(to right, $day-67-teal 5%, $day-67-green 95%);
+
+	.day-scripture {
+		padding-bottom: 3em;
+	}
+
+	.day-text {
+		font-family: $day-67-slab;
+		color: $white;
+		text-shadow: 2px 2px 0 rgba($day-67-teal, 0.7);
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.day-reference-link {
+		letter-spacing: 0.5em;
+		color: tint($day-67-green, 30%);
+
+		&::before {
+			content: "\00a0";
+		}
+	}
+
+	.day-font {
+		color: $grey-lighter;
+	}
+}
+
+.day-67-text {
+	line-height: 1.5;
+	letter-spacing: 0.25em;
+	margin-bottom: 1em;
+	width: em-calc(290);
+	@include font-smoothing;
+	display: inline-block;
+
+	strong {
+		font-size: 1.5em;
+		font-family: $day-67-serif;
+		letter-spacing: 0.1em;
+		margin-top: 0.75em;
+		margin-bottom: 0.75em;
+		display: block;
+	}
+}
+
+.day-67-hr {
+	border: 0;
+	border-top: 2px solid $white;
+	width: em-calc(200);
+	margin: 4em auto;
+	box-shadow: 2px 2px 0 rgba($day-67-teal, 0.7);
+}
+
+@include mq(small) {
+	.day-67-text {
+		font-size: 1.2em;
+	}
+}
+
+@include mq(medium) {
+	.day-67-text {
+		font-size: 1.2em;
+		letter-spacing: 0.3em;
+		margin-bottom: 1.25em;
+		width: auto;
+
+		strong {
+			font-size: 2em;
+			letter-spacing: 0.15em;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+	}
+}
+
+@include mq(mid) {
+	.day-67-text {
+		letter-spacing: 0.4em;
+		margin-bottom: 1.5em;
+
+		strong {
+			font-size: 3em;
+			letter-spacing: 0.1em;
+			margin-top: 0.3em;
+			margin-bottom: 0.3em;
+		}
+	}
+}
