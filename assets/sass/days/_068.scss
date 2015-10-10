@@ -1,0 +1,67 @@
+// ==================================================
+// Day 68
+// ==================================================
+$day-68-font: Tinos, serif;
+$day-68-tan : #d0ccc0;
+$day-68-blue: #1037a3;
+
+.day--68 {
+	background-color: $day-68-tan;
+
+	.day-scripture {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		@include mq(small) {
+			padding-top: 2em;
+			padding-bottom: 2em;
+		}
+	}
+
+	.day-text {
+		font-family: $day-68-font;
+		font-size: 1.05em;
+		@include mq(small) {
+			font-size: 1.1em;
+		}
+		@include mq(medium) {
+			font-size: 1.15em;
+		}
+		text-align: center;
+	}
+
+	.day-reference {
+		margin-top: 1.25em;
+	}
+
+	.day-reference-link {
+		color: $day-68-tan;
+		background-color: $day-68-blue;
+		background: linear-gradient(25deg, tint($day-68-blue, 10%), $day-68-blue);
+		padding: 0.25em 0.5em;
+		display: inline-block;
+	}
+}
+
+.day-68-text {
+	$font-size: 16;
+
+	font-size: em-calc($font-size);
+	color: $day-68-blue;
+	line-height: 1.3;
+	text-align: justify;
+	width: em-calc(250, $font-size);
+	display: inline-block;
+}
+
+.day-68-title {
+	font-size: 5em;
+	font-weight: 700;
+	height: 1em;
+	line-height: 0.9;
+	text-align: center;
+	color: $day-68-tan;
+	background-color: $day-68-blue;
+	background: linear-gradient(25deg, tint($day-68-blue, 10%), $day-68-blue);
+	margin-bottom: 0.2em;
+	display: block;
+}
