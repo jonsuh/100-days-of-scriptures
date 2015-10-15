@@ -1,0 +1,211 @@
+// ==================================================
+// Day 71
+// ==================================================
+$day-71-text      : "Roboto Mono", Consolas, "Liberation Mono", Courier, monospace;
+$day-71-grey-light: #f0f1f2;
+$day-71-grey      : #d3d4d5;
+
+.day--71 {
+	background-color: $day-71-grey-light;
+
+	.day-scripture {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		@include mq(small) {
+			padding-top: 2em;
+			padding-bottom: 2em;
+		}
+		@include mq(medium) {
+			padding-top: 3em;
+			padding-bottom: 3em;
+		}
+		@include mq(mid) {
+			padding-top: 4em;
+			padding-bottom: 4em;
+		}
+	}
+
+	.day-text {
+		font-family: $day-71-text;
+	}
+
+	.day-reference {
+		text-align: center;
+	}
+
+	.day-reference-link {
+		color: $grey;
+		display: inline-block;
+	}
+}
+
+.day--71 .day-reference-link,
+.day-71-text {
+	font-size: em-calc(15);
+	margin-top: 2em;
+	@include mq(small) {
+		font-size: 1em;
+		margin-top: 3em;
+	}
+	text-shadow: 0px 1px 0px $white, 0 0 0 $grey-darker, 0px 2px 0px rgba($white, 0.5);
+}
+
+.day-71-text {
+	color: $grey-dark;
+	line-height: 1.3;
+	text-align: center;
+  display: block;
+}
+
+.day-71-braille-container {
+	width: em-calc(290);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.day-71-braille {
+	font-size: 3px;
+	@include clearfix;
+}
+
+.day-71-braille-cell {
+	width: em-calc(62);
+	height: em-calc(106);
+	margin-left: em-calc(17.5);
+	margin-right: em-calc(17.5);
+	margin-top: em-calc(43);
+	margin-bottom: em-calc(43);
+	display: inline-block;
+	float: left;
+	white-space: nowrap;
+	// background-color: yellow;
+}
+
+.day-71-braille-bump {
+	width: em-calc(25);
+	height: em-calc(25);
+	margin-bottom: em-calc(16);
+	border-radius: 100%;
+	// background-color: $black;
+	display: inline-block;
+	float: left;
+
+	&:nth-child(even) {
+		float: right;
+	}
+
+	&:nth-child(5),
+	&:nth-child(6) {
+		margin-bottom: 0;
+	}
+}
+.day-71-braille-bump.is-raised {
+	background: linear-gradient(to bottom, $white 20%, $day-71-grey);
+}
+
+.day-71-braille-cell--1,
+.day-71-braille-cell--2,
+.day-71-braille-cell--3,
+.day-71-braille-cell--4,
+.day-71-braille-cell--5,
+.day-71-braille-cell--6,
+.day-71-braille-cell--7,
+.day-71-braille-cell--8,
+.day-71-braille-cell--9,
+.day-71-braille-cell--10,
+.day-71-braille-cell--11,
+.day-71-braille-cell--12,
+.day-71-braille-cell--13 {
+	
+}
+
+.day-71-braille-cell--4,
+.day-71-braille-cell--6,
+.day-71-braille-cell--11,
+.day-71-braille-cell--13 {
+	clear: left;
+}
+
+@include mq(small) {
+	.day-71-braille-container {
+		width: em-calc(410);
+	}
+
+	.day-71-braille {
+		font-size: 5px;
+	}
+
+	.day-71-braille-cell--3-space {
+		display: none;
+	}
+	.day-71-braille-cell--4 {
+		clear: none;
+	}
+	.day-71-braille-cell--7,
+	.day-71-braille-cell--9 {
+		clear: left;
+	}
+}
+
+@include mq(medium) {
+	.day-71-braille-container {
+		width: em-calc(520);
+	}
+
+	.day-71-braille {
+		font-size: 6px;
+	}
+
+	.day-71-braille-cell--3-space {
+		display: inline-block;
+	}
+	.day-71-braille-cell--7-space {
+		display: none;
+	}
+	.day-71-braille-cell--7,
+	.day-71-braille-cell--9 {
+		clear: none;
+	}
+	.day-71-braille-cell--4 {
+		clear: left;
+	}
+}
+
+@include mq(mid) {
+	.day-71-braille-container {
+		width: em-calc(670);
+	}
+
+	.day-71-braille {
+		font-size: 7px;
+	}
+
+	.day-71-braille-cell--7-space {
+		display: inline-block;
+	}
+}
+
+@include mq(large) {
+	.day-71-braille-container {
+		width: em-calc(830);
+	}
+
+	.day-71-braille-cell--9 {
+		clear: left;
+	}
+}
+
+@include mq(xlarge) {
+	.day-71-braille-container {
+		width: em-calc(1020);
+	}
+
+	.day-71-braille-cell--4,
+	.day-71-braille-cell--6,
+	.day-71-braille-cell--11 {
+		clear: none;
+	}
+	.day-71-braille-cell--5 {
+		clear: left;
+	}
+}
