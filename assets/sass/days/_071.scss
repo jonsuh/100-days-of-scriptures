@@ -4,6 +4,7 @@
 $day-71-text      : "Roboto Mono", Consolas, "Liberation Mono", Courier, monospace;
 $day-71-grey-light: #f0f1f2;
 $day-71-grey      : #d3d4d5;
+$day-71-grey-dark : #b5b6b7;
 
 .day--71 {
 	background-color: $day-71-grey-light;
@@ -100,7 +101,7 @@ $day-71-grey      : #d3d4d5;
 	}
 }
 .day-71-braille-bump.is-raised {
-	background: linear-gradient(to bottom, $white 20%, $day-71-grey);
+	background: linear-gradient(to bottom, $white 30%, $day-71-grey 70%, $day-71-grey-dark);
 }
 
 .day-71-braille-cell--1,
