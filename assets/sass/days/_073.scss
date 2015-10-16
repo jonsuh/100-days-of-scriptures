@@ -1,0 +1,82 @@
+// ==================================================
+// Day 73
+// ==================================================
+$day-73-font       : Jaldi, sans-serif;
+$day-73-red        : #e53935;
+$day-73-pink       : #d81b60;
+$day-73-purple     : #8e24aa;
+$day-73-indigo     : #3949ab;
+$day-73-blue       : #1e88e5;
+$day-73-cyan       : #01acc1;
+$day-73-green      : #43a047;
+$day-73-green-light: #7cb342;
+$day-73-yellow     : #f6be1a;
+$day-73-orange     : #fb8c07;
+
+.day--73 {
+	background-color: $grey-darkest;
+
+	.day-number,
+	.day-font-link {
+		color: $grey-dark;
+		border-color: $grey-dark;
+	}
+
+	.day-scripture {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		@include mq(small) {
+			padding-top: 2em;
+			padding-bottom: 2em;
+		}
+	}
+
+	.day-text {
+		font-family: $day-73-font;
+		width: em-calc(240);
+		@include mq(small) {
+			width: em-calc(300);
+		}
+		@include mq(medium) {
+			width: em-calc(360);
+		}
+		@include mq(medium) {
+			width: em-calc(420);
+		}
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		@include font-smoothing;
+	}
+
+	.day-reference {
+		margin-top: 2em;
+	}
+
+	.day-reference-link {
+		font-size: em-calc(18);
+		color: $grey;
+		@include mq(small) {
+			font-size: em-calc(19);
+		}
+		@include mq(medium) {
+			font-size: em-calc(20);
+		}
+	}
+}
+
+.day-73-text {
+	font-size: em-calc(20);
+	@include mq(small) {
+		font-size: em-calc(25);
+	}
+	@include mq(medium) {
+		font-size: em-calc(30);
+	}
+	@include mq(mid) {
+		font-size: em-calc(35);
+	}
+	line-height: 1.4;
+	color: $white;
+	background: linear-gradient(to right, red, $day-73-red, $day-73-pink, $day-73-purple, $day-73-indigo, $day-73-blue, $day-73-cyan, $day-73-green, $day-73-green-light, $day-73-yellow, $day-73-orange);
+}
