@@ -1,0 +1,74 @@
+// ==================================================
+// Day 74
+// ==================================================
+$day-74-font: Lora, serif;
+$day-74-blue : #bee1e2;
+
+.day--74 {
+	background-color: $day-74-blue;
+
+	.day-scripture {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		@include mq(small) {
+			padding-top: 2em;
+			padding-bottom: 2em;
+		}
+		@include mq(medium) {
+			padding-top: 3em;
+			padding-bottom: 3em;
+		}
+	}
+
+	.day-text {
+		font-family: $day-74-font;
+		color: $black;
+	}
+
+	.day-text,
+	.day-reference {
+		width: em-calc(210);
+		@include mq(small) {
+			width: em-calc(280);
+		}
+		@include mq(medium) {
+			width: em-calc(350);
+		}
+		@include mq(medium) {
+			width: em-calc(420);
+		}
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.day-reference {
+		text-align: center;
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+		border-top: 2px solid $black;
+		border-bottom: 2px solid $black;
+	}
+
+	.day-reference-link {
+		font-style: italic;
+		color: $black;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
+}
+
+.day-74-text {
+	font-size: em-calc(30);
+	@include mq(small) {
+		font-size: em-calc(40);
+	}
+	@include mq(medium) {
+		font-size: em-calc(50);
+	}
+	@include mq(mid) {
+		font-size: em-calc(60);
+	}
+	font-weight: 700;
+	margin-bottom: 0.7em;
+	display: block;
+}
