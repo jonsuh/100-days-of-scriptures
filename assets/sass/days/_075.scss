@@ -1,0 +1,82 @@
+// ==================================================
+// Day 75
+// ==================================================
+$day-75-font: "Arbutus Slab", "Times New Roman", Times, serif;
+$day-75-salmon: #c1867b;
+$day-75-ivory: #ebedc8;
+$day-75-purple: #74698c;
+
+.day--75 {
+	background-color: $day-75-salmon;
+
+	.day-scripture {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		@include mq(small) {
+			padding-top: 2em;
+			padding-bottom: 2em;
+		}
+		@include mq(medium) {
+			padding-top: 3em;
+			padding-bottom: 3em;
+		}
+		@include mq(mid) {
+			padding-top: 4em;
+			padding-bottom: 4em;
+		}
+		@include mq(large) {
+			padding-top: 5em;
+			padding-bottom: 5em;
+		}
+	}
+
+	.day-text {
+		font-family: $day-75-font;
+		text-align: center;
+		@include font-smoothing;
+	}
+
+	.day-reference {
+		margin-top: 1em;
+		@include mq(small) {
+			margin-top: 1.25em;
+		}
+		@include mq(medium) {
+			margin-top: 1.5em;
+		}
+	}
+
+	.day-reference-link {
+		color: $day-75-ivory;
+	}
+}
+
+.day-75-text {
+	font-size: em-calc(23);
+	@include mq(small) {
+		font-size: em-calc(30);
+	}
+	@include mq(medium) {
+		font-size: em-calc(40);
+	}
+	@include mq(mid) {
+		font-size: em-calc(50);
+	}
+	@include mq(large) {
+		font-size: em-calc(60);
+	}
+
+	em {
+		font-style: normal;
+		color: $day-75-purple;
+		background-color: $day-75-ivory;
+		padding: 0.1em;
+		margin: 0.125em -0.05em;
+		display: inline-block;
+	}
+
+	.day-75-em {
+		color: $day-75-ivory;
+		background-color: $day-75-purple;
+	}
+}
