@@ -1,0 +1,78 @@
+// ==================================================
+// Day 76
+// ==================================================
+$day-76-font   : Cousine, mono;
+$day-76-pink   : #ff19af;
+$day-76-magenta: #ba1bc7;
+$day-76-purple : #8e24aa;
+
+.day--76 {
+	background-color: $day-76-pink;
+	background: linear-gradient(130deg, $day-76-pink, $day-76-magenta 70%, $day-76-purple);
+
+	.day-scripture {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		@include mq(small) {
+			padding-top: 2em;
+			padding-bottom: 2em;
+		}
+		@include mq(medium) {
+			padding-top: 3em;
+			padding-bottom: 3em;
+		}
+		@include mq(mid) {
+			padding-top: 3em;
+			padding-bottom: 3em;
+		}
+	}
+
+	.day-text {
+		font-family: $day-76-font;
+		@include font-smoothing;
+	}
+
+	.day-reference {
+		margin-top: 2em;
+		@include mq(mid) {
+			margin-top: 3em;
+		}
+		text-align: center;
+	}
+
+	.day-reference-link {
+		color: rgba($white, 0.3);
+	}
+}
+
+.day-76-pre {
+	font-size: 3px;
+	width: 280px;
+	margin-left: auto;
+	margin-right: auto;
+	@include mq(small) {
+		font-size: 4px;
+		width: 370px;
+	}
+	@include mq(medium) {
+		font-size: 5px;
+		width: 460px;
+	}
+	@include mq(mid) {
+		font-size: 7px;
+		width: 640px;
+	}
+	font-weight: 700;
+  white-space: pre-wrap;
+
+  @for $i from 1 through 51 {
+  	$x: (80 - $i) * 0.012;
+
+  	&-#{$i} {
+  		color: rgba($white, $x);
+  		text-shadow: 0 0 1px rgba($white, $x * 0.6),
+  								 0 0 2px rgba($white, $x * 0.5),
+  								 0 0 3px rgba($white, $x * 0.4);
+  	}
+  }
+}
