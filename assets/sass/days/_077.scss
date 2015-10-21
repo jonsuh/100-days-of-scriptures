@@ -1,0 +1,93 @@
+// ==================================================
+// Day 77
+// ==================================================
+$day-77-font: Montserrat, sans-serif;
+$day-77-red: #f63e38;
+
+.day--77 {
+	background-color: $day-77-red;
+
+	.day-scripture {
+		padding-top: 2em;
+		padding-bottom: 2em;
+		@include mq(small) {
+			padding-top: 3.25em;
+			padding-bottom: 3.25em;
+		}
+		@include mq(medium) {
+			padding-top: 4.5em;
+			padding-bottom: 4.5em;
+		}
+		@include mq(large) {
+			padding-top: 6em;
+			padding-bottom: 6em;
+		}
+	}
+
+	.day-text {
+		font-family: $day-77-font;
+		color: $white;
+		text-align: center;
+		text-transform: uppercase;
+		@include font-smoothing;
+	}
+
+	.day-reference {
+		margin-top: 2em;
+	}
+
+	.day-reference-link {
+		font-size: em-calc(12);
+		letter-spacing: 0.1em;
+		@include mq(small) {
+			font-size: em-calc(14);
+			letter-spacing: 0.25em;
+		}
+		color: shade($day-77-red, 15%);
+	}
+}
+
+.day-77-text {
+	$font-size: 12;
+
+	font-size: em-calc($font-size);
+	line-height: 1.3;
+	display: inline-block;
+	letter-spacing: 0.1em;
+	padding: em-calc(15, $font-size);
+	border: 1px solid $white;
+	max-width: em-calc(255, $font-size);
+}
+
+@include mq(small) {
+	.day-77-text {
+		$font-size: 14;
+
+		font-size: em-calc($font-size);
+		letter-spacing: 0.25em;
+		padding: em-calc(20, $font-size);
+		max-width: em-calc(360, $font-size);
+	}
+}
+
+@include mq(medium) {
+	.day-77-text {
+		$font-size: 14;
+
+		max-width: em-calc(460, $font-size);
+	}
+}
+
+@include mq(mid) {
+	.day-77-text {
+		padding-left: em-calc(50);
+		padding-right: em-calc(50);
+	}
+}
+
+@include mq(large) {
+	.day-77-text {
+		padding-left: em-calc(100);
+		padding-right: em-calc(100);
+	}
+}
