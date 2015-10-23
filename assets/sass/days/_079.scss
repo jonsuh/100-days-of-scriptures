@@ -1,0 +1,147 @@
+// ==================================================
+// Day 79
+// ==================================================
+$day-79-font       : "Racing Sans One", sans-serif;
+$day-79-pink       : #950856;
+$day-79-purple     : #450331;
+$day-79-blue       : #0e427c;
+$day-79-blue-glow-1: #1d8fb4;
+$day-79-blue-glow-2: #3a1040;
+
+.day--79 {
+	background-color: #950856;
+	background: radial-gradient(ellipse farthest-corner at 0px 0px, $day-79-pink, $day-79-purple, $day-79-blue);
+
+	.day-number {
+		color: $day-79-purple;
+		border-color: $day-79-purple;
+	}
+
+	.day-font-link {
+		color: $day-79-blue;
+	}
+
+	.day-scripture {
+		padding-top: 3em;
+		padding-bottom: 3em;
+		@include mq(small) {
+			padding-top: 4em;
+			padding-bottom: 4em;
+		}
+		@include mq(medium) {
+			padding-top: 5em;
+			padding-bottom: 5em;
+		}
+		@include mq(mid) {
+			padding-top: 6.5em;
+			padding-bottom: 6.5em;
+		}
+		@include mq(large) {
+			padding-top: 8em;
+			padding-bottom: 8em;
+		}
+	}
+
+	.day-text {
+		font-family: $day-79-font;
+		text-transform: uppercase;
+	}
+
+	.day-reference {
+		text-align: center;
+		margin-top: 2em;
+	}
+
+	.day-reference-link {
+		color: rgba($white, 0.1);
+		@include mq(small) {
+			font-size: em-calc(17);
+		}
+		@include mq(medium) {
+			font-size: em-calc(18);
+		}
+		@include mq(mid) {
+			font-size: em-calc(19);
+		}
+		@include font-smoothing;
+	}
+}
+
+$day-79-font-size: 30;
+
+.day-79-svg {
+	width: 100%;
+	text-align: center;
+	height: em-calc($day-79-font-size);
+}
+
+.day-79-text {
+	font-size: em-calc($day-79-font-size - 5);
+	width: 100%;
+  paint-order: stroke;
+  stroke: $black;
+  stroke-width: 1px;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+	text-shadow: $black 0px 0px 1px,
+							 rgba($white, 0.4) 0px 0px 1px,
+							 $day-79-blue-glow-1 0px 0px 3px,
+							 $day-79-blue-glow-2 0px 0px 6px;
+}
+
+@include mq(small) {
+	$day-79-font-size: 40;
+
+	.day-79-svg {
+		height: em-calc($day-79-font-size);
+	}
+
+	.day-79-text {
+		font-size: em-calc($day-79-font-size - 5);
+	  stroke-width: 2px;
+		text-shadow: $black 0px 0px 1px,
+								 rgba($white, 0.4) 0px 0px 1px,
+								 $day-79-blue-glow-1 0px 0px 4px,
+								 $day-79-blue-glow-2 0px 0px 8px;
+	}
+}
+
+@include mq(medium) {
+	$day-79-font-size: 50;
+
+	.day-79-svg {
+		height: em-calc($day-79-font-size);
+	}
+
+	.day-79-text {
+		font-size: em-calc($day-79-font-size - 5);
+		text-shadow: $black 0px 0px 1px,
+								 rgba($white, 0.4) 0px 0px 1px,
+								 $day-79-blue-glow-1 0px 0px 5px,
+								 $day-79-blue-glow-2 0px 0px 12px;
+	}
+}
+
+@include mq(mid) {
+	$day-79-font-size: 63;
+
+	.day-79-svg {
+		height: em-calc($day-79-font-size);
+	}
+
+	.day-79-text {
+		font-size: em-calc($day-79-font-size - 5);
+	}
+}
+
+@include mq(large) {
+	$day-79-font-size: 78;
+
+	.day-79-svg {
+		height: em-calc($day-79-font-size);
+	}
+
+	.day-79-text {
+		font-size: em-calc($day-79-font-size - 5);
+	}
+}
