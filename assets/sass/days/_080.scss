@@ -111,6 +111,15 @@ $day-80-grey-light: #545A66;
 }
 
 @include mq(695) {
+	.day--80 {
+		.day-reference {
+			width: em-calc(560);
+			text-align: right;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
 	.day-80-first {
 		display: inline-block;
 	}
@@ -118,21 +127,16 @@ $day-80-grey-light: #545A66;
 	.day-80-next {
 		margin-left: 0;
 	}
-
-	.day-reference {
-		width: em-calc(560);
-		text-align: right;
-		margin-left: auto;
-		margin-right: auto;
-	}
 }
 
 @include mq(850) {
-	.day-80-text {
-		font-size: 1.2em;
+	.day--80 {
+		.day-reference {
+			width: em-calc(675);
+		}
 	}
 
-	.day-reference {
-		width: em-calc(675);
+	.day-80-text {
+		font-size: 1.2em;
 	}
 }
