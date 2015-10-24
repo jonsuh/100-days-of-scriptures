@@ -1,0 +1,138 @@
+// ==================================================
+// Day 80
+// ==================================================
+$day-80-serif     : Radley, serif;
+$day-80-sans-serif: Oswald, sans-serif;
+$day-80-grey-dark : #26282e;
+$day-80-grey-light: #545A66;
+
+.day--80 {
+	background-color: $day-80-grey-dark;
+
+	.day-number {
+		color: $grey-darker;
+		border-color: $grey-darker;
+	}
+
+	.day-scripture {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		@include mq(small) {
+			padding-top: 2.5em;
+			padding-bottom: 2.5em;
+		}
+		@include mq(medium) {
+			padding-top: 4em;
+			padding-bottom: 4em;
+		}
+		@include mq(mid) {
+			padding-top: 5.5em;
+			padding-bottom: 5.5em;
+		}
+	}
+
+	.day-text {
+		font-family: $day-80-serif;
+		color: $day-80-grey-light;
+		text-align: center;
+	}
+
+	.day-reference {
+		margin-top: 1em;
+	}
+
+	.day-reference-link {
+		color: $day-80-grey-light;
+	}
+
+	.day-font {
+		color: shade($grey-darker, 20%);
+	}
+
+	.day-font-link {
+		color: $grey-darker;
+	}
+}
+
+.day-80-text {
+	font-size: 0.9em;
+}
+
+.day-80-first {
+	$font-size: 18;
+
+	font-size: em-calc($font-size);
+	text-align: right;
+	width: em-calc(270, $font-size);
+	line-height: 1.3;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: em-calc(2, $font-size);
+	vertical-align: top;
+	position: relative;
+	top: 0.2em;
+	z-index: 2;
+}
+
+.day-80-next {
+	$font-size: 70;
+
+	font-size: em-calc($font-size);
+	font-family: $day-80-sans-serif;
+	font-weight: 300;
+	text-align: right;
+	text-transform: uppercase;
+	width: em-calc(295, $font-size);
+	margin-left: em-calc(-20, $font-size);
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+
+	&::before {
+		content: "";
+		width: em-calc(250, $font-size);
+		height: em-calc(50, $font-size);
+		background: $day-80-grey-dark;
+		border-bottom: em-calc(2, $font-size) solid $day-80-grey-light;
+		display: block;
+		transform: rotate(-60deg);
+		transform-origin: top left;
+		position: absolute;
+		top: em-calc(120, $font-size);
+		left: em-calc(-75, $font-size);
+	}
+}
+
+@include mq(small) {
+	.day-80-text {
+		font-size: 1em;
+	}
+}
+
+@include mq(695) {
+	.day-80-first {
+		display: inline-block;
+	}
+
+	.day-80-next {
+		margin-left: 0;
+	}
+
+	.day-reference {
+		width: em-calc(560);
+		text-align: right;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@include mq(850) {
+	.day-80-text {
+		font-size: 1.2em;
+	}
+
+	.day-reference {
+		width: em-calc(675);
+	}
+}
