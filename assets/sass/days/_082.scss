@@ -1,0 +1,60 @@
+// ==================================================
+// Day 82
+// ==================================================
+$day-82-font: "Alegreya Sans", sans-serif;
+
+.day--82 {
+	background-color: $black;
+
+	.day-text {
+		font-family: $day-82-font;
+		color: $black;
+		@include font-smoothing;
+		text-align: center;
+	}
+
+	.day-reference {
+		margin-top: 1em;
+	}
+
+	.day-reference-link {
+		color: $black;
+		text-transform: uppercase;
+	}
+}
+
+@mixin day-82-loop {
+	$shadow: "";
+
+	@for $i from 1 through 400 {
+		@if $i > 1 {
+			$shadow: $shadow + ",";
+		}
+		$shadow: #{$shadow} -#{$i}px #{$i}px $white #{","} #{$i}px #{$i}px $grey-lighter;
+	}
+
+	text-shadow: $shadow;
+}
+
+.day-82-text-wrap {
+	@include mq(small) {
+		font-size: 1.3em;
+	}
+	@include mq(medium) {
+		font-size: 1.6em;
+	}
+	@include mq(mid) {
+		font-size: 1.9em;
+	}
+}
+
+.day-82-text {
+	$font-size: 26;
+
+	font-size: em-calc($font-size);
+	font-weight: 800;
+	width: em-calc(280, $font-size);
+	text-align: justify;
+	display: inline-block;
+	@include day-82-loop;
+}
