@@ -1,0 +1,121 @@
+// ==================================================
+// Day 84
+// ==================================================
+$day-84-font: "Fanwood Text", serif;
+
+.day--84 {
+	background: linear-gradient(to bottom, #3271bd, #87c2de 25%, #e9ebde 45%, #e5e0c1 55%, #f0c48a 70%, #f8974d 85%, #a42c08);
+	position: relative;
+
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 70%,rgba(0,0,0,0.2));
+	}
+
+	.day-scripture {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		@include mq(small) {
+			padding-top: 2em;
+			padding-bottom: 2em;
+		}
+		@include mq(medium) {
+			padding-top: 3em;
+			padding-bottom: 3em;
+		}
+		@include mq(mid) {
+			padding-top: 4em;
+			padding-bottom: 4em;
+		}
+	}
+
+	.day-number,
+	.day-text,
+	.day-reference,
+	.day-font {
+		position: relative;
+	}
+
+	.day-text {
+		font-family: $day-84-font;
+		color: $white;
+		color: $grey-darkest;
+		text-align: center;
+		@include font-smoothing;
+	}
+
+	.day-reference {
+		text-align: right;
+		width: em-calc(230);
+		@include mq(small) {
+			width: em-calc(300);
+		}
+		@include mq(medium) {
+			width: em-calc(370);
+		}
+		@include mq(mid) {
+			width: em-calc(420);
+		}
+		@include mq(large) {
+			width: em-calc(470);
+		}
+		margin-top: 2em;
+		display: inline-block;
+	}
+
+	.day-reference-link {
+		color: $grey-darker;
+		@include mq(small) {
+			font-size: em-calc(17);
+		}
+		@include mq(medium) {
+			font-size: em-calc(18);
+		}
+		@include mq(mid) {
+			font-size: em-calc(19);
+		}
+	}
+}
+
+.day-84-text {
+	$font-size: 17;
+
+	font-size: em-calc($font-size);
+	text-align: right;
+	line-height: 1.1;
+	display: inline-block;
+	width: em-calc(235, $font-size);
+
+	em {
+		font-size: 3.5em;
+		line-height: 0.8;
+		font-style: normal;
+		text-shadow: 0 0 3px $white,
+								 0 0 5px $white,
+								 0 0 7px $white,
+								 0 0 10px rgba($white, 0.7),
+								 0 0 13px rgba($white, 0.5),
+								 0 0 16px rgba($white, 0.3);
+	}
+}
+
+.day-84-text-wrap {
+	@include mq(small) {
+		font-size: 1.3em;
+	}
+	@include mq(medium) {
+		font-size: 1.6em;
+	}
+	@include mq(mid) {
+		font-size: 1.8em;
+	}
+	@include mq(large) {
+		font-size: 2em;
+	}
+}
