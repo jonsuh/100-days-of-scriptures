@@ -1,0 +1,82 @@
+// ==================================================
+// Day 83
+// ==================================================
+$day-83-font  : BenchNine, sans-serif;
+$day-83-yellow: #ffeb3b;
+
+.day--83 {
+	background-color: $day-83-yellow;
+
+	.day-scripture {
+		padding-top: 3em;
+		padding-bottom: 3em;
+		@include mq(small) {
+			padding-top: 4em;
+			padding-bottom: 4em;
+		}
+		@include mq(medium) {
+			padding-top: 5em;
+			padding-bottom: 5em;
+		}
+		@include mq(mid) {
+			padding-top: 6em;
+			padding-bottom: 6em;
+		}
+	}
+
+	.day-text {
+		font-family: $day-83-font;
+		color: $grey-darker;
+		text-align: center;
+		text-transform: uppercase;
+		@include font-smoothing;
+	}
+
+	.day-reference {
+		margin-top: 2em;
+	}
+
+	.day-reference-link {
+		font-size: em-calc(20);
+		color: $grey-darker;
+		background-color: $white;
+		text-decoration: none;
+
+		&:hover {
+			color: $white;
+			background-color: $grey-darker;
+		}
+	}
+}
+
+.day-83-text {
+	$font-size: 27;
+
+	font-size: em-calc($font-size);
+	font-weight: 300;
+	line-height: 1.5;
+	letter-spacing: -0.02em;
+	text-align: left;
+	width: em-calc(275, $font-size);
+	display: inline-block;
+
+	em {
+		font-style: normal;
+		background-color: $white;
+	}
+}
+
+.day-83-text-wrap {
+	@include mq(small) {
+		font-size: 1.2em;
+	}
+	@include mq(medium) {
+		font-size: 1.4em;
+	}
+	@include mq(mid) {
+		font-size: 1.6em;
+	}
+	@include mq(large) {
+		font-size: 1.8em;
+	}
+}
