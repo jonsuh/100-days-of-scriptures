@@ -1,0 +1,78 @@
+// ==================================================
+// Day 85
+// ==================================================
+$day-85-font: "Archivo Black", sans-serif;
+
+.day--85 {
+	background-color: $black;
+
+	.day-text {
+		font-family: $day-85-font;
+		color: $black;
+		text-transform: uppercase;
+		text-align: center;
+		@include font-smoothing;
+	}
+
+	.day-reference {
+		margin-top: 1em;
+	}
+
+	.day-reference-link {
+		color: $white;
+	}
+}
+
+.day-85-text-wrap {
+	text-align: left;
+	background-color: $white;
+	width: em-calc(280);
+	display: inline-block;
+	overflow: hidden;
+}
+
+.day-85-text {
+	font-size: em-calc(76);
+	line-height: 0.9;
+	text-align: left;
+	margin-top: -0.22em;
+	margin-bottom: -0.12em;
+	margin-left: -0.2em;
+	margin-right: -0.2em;
+	display: block;
+	transform: rotate(4deg) translate3d(0,0,0);
+	backface-visibility: hidden;
+}
+
+@include mq(small) {
+	.day-85-text-wrap {
+		width: em-calc(410);
+	}
+	.day-85-text {
+		font-size: em-calc(112);
+	}
+}
+@include mq(medium) {
+	.day-85-text-wrap {
+		width: em-calc(520);
+	}
+	.day-85-text {
+		font-size: em-calc(141);
+	}
+}
+@include mq(mid) {
+	.day-85-text-wrap {
+		width: em-calc(670);
+	}
+	.day-85-text {
+		font-size: em-calc(182);
+	}
+}
+@include mq(large) {
+	.day-85-text-wrap {
+		width: em-calc(830);
+	}
+	.day-85-text {
+		font-size: em-calc(226);
+	}
+}
