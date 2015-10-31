@@ -1,0 +1,76 @@
+// ==================================================
+// Day 86
+// ==================================================
+$day-86-font: "Crimson Text", serif;
+
+.day--86 {
+	background-color: #f0750f;
+
+	.day-scripture {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		@include mq(small) {
+			padding-top: 2em;
+			padding-bottom: 2em;
+		}
+		@include mq(medium) {
+			padding-top: 3em;
+			padding-bottom: 3em;
+		}
+	}
+
+	.day-text {
+		font-family: $day-86-font;
+		text-transform: uppercase;
+		color: $white;
+		@include font-smoothing;
+	}
+
+	.day-reference {
+		margin-left: 10%;
+		margin-top: em-calc(30);
+		padding-left: 5.5%;
+		padding-left: calc(5% + 5px);
+
+		@include mq(small) {
+			margin-left: 20%;
+		}
+		@include mq(medium) {
+			margin-left: 25%;
+		}
+		@include mq(mid) {
+			margin-left: 30%;
+		}
+	}
+
+	.day-reference-link {
+		color: $white;
+	}
+}
+
+.day-86-text {
+	$font-size: 20;
+
+	font-size: em-calc(25);
+	line-height: 1.2;
+	padding-left: 5%;
+	padding-top: em-calc(14, $font-size);
+	padding-bottom: em-calc(14, $font-size);
+	border-left: 5px solid $white;
+	margin-left: 10%;
+	text-align: left;
+	display: inline-block;
+
+	@include mq(small) {
+		font-size: em-calc(30);
+		margin-left: 20%;
+	}
+	@include mq(medium) {
+		font-size: em-calc(35);
+		margin-left: 25%;
+	}
+	@include mq(mid) {
+		font-size: em-calc(40);
+		margin-left: 30%;
+	}
+}
