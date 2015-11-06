@@ -1,0 +1,106 @@
+// ==================================================
+// Day 92
+// ==================================================
+$day-92-font: "News Cycle", sans-serif;
+$day-92-purple: #5c4d78;
+$day-92-blue: #6191e2;
+
+.day--92 {
+	background-color: $day-92-purple;
+	background: linear-gradient(to bottom, $day-92-purple, $day-92-blue);
+
+	.day-scripture {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		@include mq(small) {
+			padding-top: 2em;
+			padding-bottom: 2em;
+		}
+		@include mq(medium) {
+			padding-top: 3em;
+			padding-bottom: 3em;
+		}
+		@include mq(mid) {
+			padding-top: 4em;
+			padding-bottom: 4em;
+		}
+	}
+
+	.day-text {
+		font-family: $day-92-font;
+		color: #fff;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.day-reference-link {
+		letter-spacing: 0.05em;
+		color: $white;
+	}
+}
+
+.day-92-text {
+	$font-size: 20;
+
+	font-size: em-calc($font-size);
+	width: em-calc(280, $font-size);
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	position: relative;
+	cursor: default;
+
+	em,
+	strong {
+		transition-property: -webkit-filter, filter, opacity, letter-spacing;
+		transition-duration: 0.4s;
+		transition-timing-function: ease;
+	}
+
+	em {
+		font-style: normal;
+	}
+
+	strong {
+		font-size: 3.75em;
+		letter-spacing: 0.1em;
+		position: absolute;
+		left: 0;
+		top: -0.415em;
+		width: 100%;
+		opacity: 0.75;
+		filter: blur(5px);
+	}
+
+	&:hover {
+		em {
+			filter: blur(2px);
+		}
+
+		strong {
+			letter-spacing: 0.05em;
+			opacity: 1;
+			filter: blur(0);
+		}
+	}
+}
+
+.day-92-text + .day-92-text {
+	margin-top: 3.5em;
+}
+
+.day-92-text--last {
+	margin-bottom: 3.5em;
+}
+
+@include mq(small) {
+	.day-92-text-wrap {
+		font-size: 1.2em;
+	}
+}
+
+@include mq(medium) {
+	.day-92-text-wrap {
+		font-size: 1.4em;
+	}
+}
