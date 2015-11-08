@@ -1,0 +1,71 @@
+// ==================================================
+// Day 93
+// ==================================================
+$day-93-font: Arimo;
+
+.day--93 {
+	.day-scripture {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		@include mq(small) {
+			padding-top: 1em;
+			padding-bottom: 1em;
+		}
+		@include mq(medium) {
+			padding-top: 2em;
+			padding-bottom: 2em;
+		}
+		@include mq(mid) {
+			padding-top: 3em;
+			padding-bottom: 3em;
+		}
+	}
+
+	.day-text {
+		font-family: $day-93-font;
+		font-weight: 700;
+		color: $black;
+		text-align: center;
+	}
+
+	.day-reference {
+		margin-top: 2em;
+	}
+
+	.day-reference-link {
+		color: $black;
+	}
+}
+
+.day-93-text-wrap {
+	font-size: em-calc(30);
+	@include mq(small) {
+		font-size: em-calc(40);
+	}
+	@include mq(medium) {
+		font-size: em-calc(50);
+	}
+	@include mq(mid) {
+		font-size: em-calc(60);
+	}
+	text-align: left;
+	background: repeating-linear-gradient(
+		-45deg,
+		$white,
+		$white 25%,
+		$black 25%,
+		$black 50%,
+		$white 50%
+	) top left fixed;
+	background-size: 3.4em 3.4em;
+	background-position: center;
+	display: inline-block;
+	width: em-calc(150);
+	transform: translate3d(0,0,0);
+}
+
+.day-93-text {
+	color: $white;
+	line-height: 1.1;
+	mix-blend-mode: difference;
+}
