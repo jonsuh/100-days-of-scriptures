@@ -1,0 +1,138 @@
+// ==================================================
+// Day 95
+// ==================================================
+$day-95-yellow: #fce38a;
+$day-95-orange: #f38181;
+
+.day--95 {
+	background: linear-gradient(45deg, $day-95-yellow, $day-95-orange);
+
+	.day-scripture {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		@include mq(small) {
+			padding-top: 2em;
+			padding-bottom: 2em;
+		}
+		@include mq(medium) {
+			padding-top: 3em;
+			padding-bottom: 3em;
+		}
+		@include mq(mid) {
+			padding-top: 4em;
+			padding-bottom: 4em;
+		}
+	}
+
+	.day-text {
+		font-family: Geo;
+		text-transform: uppercase;
+	}
+
+	.day-reference {
+		margin-top: 2em;
+		text-align: center;
+	}
+
+	.day-reference-link {
+		@include mq(small) {
+			font-size: 1.1em;
+		}
+		@include mq(medium) {
+			font-size: 1.2em;
+		}
+		color: $grey-darkest;
+	}
+}
+
+.day-95-cube-container {
+	@include mq(small) {
+		font-size: 1.2em;
+	}
+	@include mq(medium) {
+		font-size: 1.4em;
+	}
+	width: em-calc(250);
+	height: em-calc(250);
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	perspective: em-calc(500);
+}
+
+.day-95-cube {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform: translateZ(em-calc(-125));
+	transition: transform 1s ease;
+	transform-style: preserve-3d;
+}
+
+.day-95-cube-side {
+	text-align: center;
+	line-height: em-calc(248);
+	width: em-calc(248);
+	height: em-calc(248);
+	border: em-calc(1) solid $day-95-orange;
+	position: absolute;
+
+	&--front {
+		background-color: rgba($white, 0.8);
+		transform: rotateY(0deg) translateZ(em-calc(125));
+	}
+	&--back {
+		background-color: rgba($white, 0.8);
+		transform: rotateX(180deg) translateZ(em-calc(125));
+	}
+	&--top {
+		background-color: rgba($white, 0.8);
+		transform: rotateX(90deg) translateZ(em-calc(125));
+	}
+	&--bottom {
+		background-color: rgba($white, 0.8);
+		transform: rotateX(-90deg) translateZ(em-calc(125));
+	}
+	&--left {
+		background-color: rgba($white, 0.8);
+		transform: rotateY(-90deg) translateZ(em-calc(125));
+	}
+	&--right {
+		background-color: rgba($white, 0.8);
+		transform: rotateY(90deg) translateZ(em-calc(125));
+	}
+}
+
+.day-95-cube.is-showing-front {
+	transform: translateZ(em-calc(-125)) rotateY(0deg);
+}
+.day-95-cube.is-showing-back {
+	transform: translateZ(em-calc(-125)) rotateX(-180deg);
+}
+.day-95-cube.is-showing-top {
+	transform: translateZ(em-calc(-125)) rotateX(-90deg);
+}
+.day-95-cube.is-showing-bottom {
+	transform: translateZ(em-calc(-125)) rotateX(90deg);
+}
+.day-95-cube.is-showing-left {
+	transform: translateZ(em-calc(-125)) rotateY(90deg);
+}
+.day-95-cube.is-showing-right {
+	transform: translateZ(em-calc(-125)) rotateY(-90deg);
+}
+
+.day-95-cube-side-label {
+	$font-size: 70;
+
+	font-size: em-calc($font-size);
+	color: $grey-darkest;
+	line-height: em-calc(250, $font-size);
+
+	@include mq(small) {
+		$font-size: 60;
+
+		font-size: em-calc($font-size);
+		line-height: em-calc(250, $font-size);
+	}
+}
