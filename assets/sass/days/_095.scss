@@ -25,7 +25,7 @@ $day-95-orange: #f38181;
 	}
 
 	.day-text {
-		font-family: Geo;
+		font-family: Geo, sans-serif;
 		text-transform: uppercase;
 	}
 
@@ -103,23 +103,49 @@ $day-95-orange: #f38181;
 	}
 }
 
-.day-95-cube.is-showing-front {
-	transform: translateZ(em-calc(-125)) rotateY(0deg);
+// .day-95-cube.is-showing-front {
+// 	transform: translateZ(em-calc(-125)) rotateY(0deg);
+// }
+// .day-95-cube.is-showing-back {
+// 	transform: translateZ(em-calc(-125)) rotateX(-180deg);
+// }
+// .day-95-cube.is-showing-top {
+// 	transform: translateZ(em-calc(-125)) rotateX(-90deg);
+// }
+// .day-95-cube.is-showing-bottom {
+// 	transform: translateZ(em-calc(-125)) rotateX(90deg);
+// }
+// .day-95-cube.is-showing-left {
+// 	transform: translateZ(em-calc(-125)) rotateY(90deg);
+// }
+// .day-95-cube.is-showing-right {
+// 	transform: translateZ(em-calc(-125)) rotateY(-90deg);
+// }
+
+.day-95-cube {
+	animation: day-95-animation 10s 1s forwards infinite;
 }
-.day-95-cube.is-showing-back {
-	transform: translateZ(em-calc(-125)) rotateX(-180deg);
-}
-.day-95-cube.is-showing-top {
-	transform: translateZ(em-calc(-125)) rotateX(-90deg);
-}
-.day-95-cube.is-showing-bottom {
-	transform: translateZ(em-calc(-125)) rotateX(90deg);
-}
-.day-95-cube.is-showing-left {
-	transform: translateZ(em-calc(-125)) rotateY(90deg);
-}
-.day-95-cube.is-showing-right {
-	transform: translateZ(em-calc(-125)) rotateY(-90deg);
+
+@keyframes day-95-animation {
+	0%, 10% { transform: translateZ(em-calc(-125)) rotateY(0deg); }
+
+	10%, 15% { transform: translateZ(em-calc(-125)) rotateX(-90deg); }
+	15%, 25% { transform: translateZ(em-calc(-125)) rotateX(-90deg); }
+
+	25%, 30% { transform: translateZ(em-calc(-125)) rotateY(90deg); }
+	30%, 40% { transform: translateZ(em-calc(-125)) rotateY(90deg); }
+
+	40%, 45% { transform: translateZ(em-calc(-125)) rotateX(-180deg); }
+	45%, 55% { transform: translateZ(em-calc(-125)) rotateX(-180deg); }
+
+	55%, 60% { transform: translateZ(em-calc(-125)) rotateY(-90deg); }
+	60%, 70% { transform: translateZ(em-calc(-125)) rotateY(-90deg); }
+
+	70%, 75% { transform: translateZ(em-calc(-125)) rotateX(90deg); }
+	75%, 85% { transform: translateZ(em-calc(-125)) rotateX(90deg); }
+
+	85%, 90% { transform: translateZ(em-calc(-125)) rotateY(0deg); }
+	90%, 100% { transform: translateZ(em-calc(-125)) rotateY(0deg); }
 }
 
 .day-95-cube-side-label {
