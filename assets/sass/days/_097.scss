@@ -1,0 +1,203 @@
+// ==================================================
+// Day 97
+// ==================================================
+$day-97-font     : VT323, mono;
+$day-97-blue     : #000b7f;
+$day-97-grey     : #bfc7c7;
+$day-97-grey-dark: #808080;
+
+.day--97 {
+	background-color: $day-97-grey;
+	cursor: wait;
+
+	.day-scripture {
+		padding-top: 2em;
+		padding-bottom: 2em;
+		@include mq(small) {
+			padding-top: 3em;
+			padding-bottom: 3em;
+		}
+		@include mq(medium) {
+			padding-top: 4em;
+			padding-bottom: 4em;
+		}
+		@include mq(mid) {
+			padding-top: 5em;
+			padding-bottom: 5em;
+		}
+	}
+
+	.day-text {
+		font-family: $day-97-font;
+		text-align: center;
+		position: relative;
+	}
+
+	.day-reference {
+		width: em-calc(100);
+		margin-left: em-calc(-40);
+		position: absolute;
+		top: em-calc(7);
+		left: 50%;
+	}
+
+	.day-reference-link {
+		color: $white;
+	}
+}
+
+.day-97-dialog {
+	text-align: left;
+	width: em-calc(280);
+	@include mq(small) {
+		width: em-calc(330);
+	}
+	padding: em-calc(4);
+	background: $day-97-blue;
+	border: 1px solid $black;
+	display: inline-block;
+}
+
+.day-97-dialog-inner {
+	background-color: $white;
+}
+
+.day-97-dialog-top {
+	background-color: $day-97-blue;
+	border: 1px solid $white;
+	border-bottom-color: $black;
+	@include clearfix;
+}
+
+.day-97-dialog-top-button,
+.day-97-dialog-top-label {
+	float: left;
+}
+
+.day-97-dialog-top-button {
+	background-color: $day-97-grey;
+	border-right: 1px solid $black;
+	width: em-calc(18);
+	height: em-calc(18);
+	position: relative;
+
+	&::before {
+		content: "";
+		display: block;
+		background-color: $white;
+		border: 1px solid $black;
+		height: em-calc(1);
+		width: em-calc(11);
+		box-shadow: 0 1px 0 $day-97-grey-dark;
+		top: em-calc(7);
+		left: em-calc(2);
+		position: absolute;
+	}
+}
+
+.day-97-dialog-content {
+	padding: em-calc(12 45 10 65);
+	position: relative;
+}
+
+.day-97-dialog-button {
+	background-color: $black;
+	width: em-calc(70);
+	height: em-calc(23);
+	border-radius: 2px;
+	margin-top: em-calc(25);
+	left: 50%;
+	margin-left: em-calc(-35);
+	position: relative;
+	cursor: pointer;
+
+	&::before {
+		text-align: center;
+		content: "OK";
+		display: block;
+		background-color: $day-97-grey;
+		border: 2px solid $white;
+		border-bottom-color: $day-97-grey-dark;
+		border-right-color: $day-97-grey-dark;
+		width: em-calc(62);
+		height: em-calc(15);
+		line-height: em-calc(14);
+		position: absolute;
+		top: em-calc(2);
+		left: em-calc(2);
+	}
+
+	&::after {
+		content: "";
+		display: block;
+		border: 1px dotted $day-97-grey-dark;
+		width: em-calc(17);
+		height: em-calc(13);
+		border-radius: em-calc(2);
+		position: absolute;
+		left: em-calc(26);
+		top: em-calc(4);
+	}
+
+	&:hover {
+		&::before {
+			border-color: $white;
+			border-top-color: $day-97-grey-dark;
+			border-left-color: $day-97-grey-dark;
+		}
+	}
+}
+
+.day-97-dialog-i {
+	background-color: $day-97-blue;
+	border: 1px solid $black;
+	width: em-calc(30);
+	height: em-calc(30);
+	border-radius: 100%;
+	position: absolute;
+	top: em-calc(15);
+	left: em-calc(15);
+
+	&::before {
+		width: em-calc(8);
+		height: em-calc(7);
+		border-radius: 100%;
+		background-color: $white;
+		content: "";
+		position: absolute;
+		display: block;
+		top: em-calc(2);
+		left: em-calc(11);
+	}
+}
+
+.day-97-dialog-i-stem {
+	background-color: $white;
+	width: em-calc(6);
+	height: em-calc(12);
+	position: absolute;
+	top: em-calc(12);
+	left: em-calc(13);
+
+	&::before,
+	&::after {
+		background-color: $white;
+		content: "";
+		position: absolute;
+		display: block;
+	}
+
+	&::before {
+		width: em-calc(9);
+		height: em-calc(2);
+		top: em-calc(-1);
+		left: em-calc(-3);
+	}
+
+	&::after {
+		width: em-calc(12);
+		height: em-calc(2);
+		bottom: em-calc(-2);
+		left: em-calc(-3);
+	}
+}
