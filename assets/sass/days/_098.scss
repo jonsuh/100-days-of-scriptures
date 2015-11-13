@@ -1,0 +1,101 @@
+// ==================================================
+// Day 98
+// ==================================================
+$day-98-font: "Playfair Display", "Times New Roman", Times, serif;
+$day-98-red : #d40d25;
+
+.day--98 {
+	background-color: $day-98-red;
+
+	.day-scripture {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		@include mq(small) {
+			padding-top: 2.5em;
+			padding-bottom: 2.5em;
+		}
+		@include mq(medium) {
+			padding-top: 4em;
+			padding-bottom: 4em;
+		}
+		@include mq(mid) {
+			padding-top: 5.5em;
+			padding-bottom: 5.5em;
+		}
+	}
+
+	.day-text {
+		font-family: $day-98-font;
+		font-weight: 700;
+		text-align: center;
+		text-transform: uppercase;
+		@include font-smoothing;
+	}
+
+	.day-reference {
+		position: relative;
+	}
+
+	.day-reference-link {
+		color: $grey-darkest;
+	}
+}
+
+.day-98-text {
+	@include mq(small) {
+		font-size: 1.5em;
+	}
+	@include mq(medium) {
+		font-size: 2.1em;
+	}
+	@include mq(mid) {
+		font-size: 2.7em;
+	}
+	@include mq(large) {
+		font-size: 2.7em;
+	}
+}
+
+.day-98-first,
+.day-98-next,
+.day-98-last {
+	display: inline-block;
+	position: relative;
+}
+
+.day-98-first {
+	font-size: em-calc(20);
+	line-height: 0.8;
+
+	&::before {
+		font-size: 4.3em;
+		color: $white;
+		content: "“";
+		position: absolute;
+		left: -0.45em;
+		bottom: -0.43em;
+	}
+}
+
+.day-98-next {
+	font-size: em-calc(17.3);
+	line-height: 0.8;
+	position: relative;
+	left: -0.1em;
+}
+
+.day-98-last {
+	font-size: em-calc(26.7);
+	line-height: 0.75;
+	position: relative;
+	left: -0.05em;
+
+	&::before {
+		font-size: 4.47em;
+		color: $white;
+		content: "”";
+		position: absolute;
+		right: -0.42em;
+		top: -0.045em;
+	}
+}
