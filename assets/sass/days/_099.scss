@@ -1,0 +1,133 @@
+// ==================================================
+// Day 99
+// ==================================================
+$day-99-text-sans-serif: "Pragati Narrow";
+$day-99-text-serif: "Old Standard TT";
+$day-99-grey: #e5e5e5;
+
+.day--99 {
+	background-color: $day-99-grey;
+
+	.day-scripture {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		@include mq(small) {
+			padding-top: 2em;
+			padding-bottom: 2em;
+		}
+		@include mq(medium) {
+			padding-top: 3em;
+			padding-bottom: 3em;
+		}
+	}
+
+	.day-text {
+		font-family: $day-99-text-serif;
+		font-style: italic;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.day-reference {
+		margin-top: 1.5em;
+	}
+
+	.day-reference-link {
+		color: $grey-darkest;
+	}
+}
+
+.day-99-text-wrap {
+	text-align: left;
+	width: em-calc(240);
+	@include mq(small) {
+		width: em-calc(300);
+	}
+	@include mq(medium) {
+		width: em-calc(400);
+	}
+	display: inline-block;
+	position: relative;
+
+	&,
+	&::before,
+	&::after {
+		border: 1px dashed $black;
+	}
+
+	&::before,
+	&::after {
+		background-color: rgba($white, 0.4);
+		width: 100%;
+		height: 100%;
+		content: "";
+		position: absolute;
+		display: block;
+	}
+
+	&::before {
+		top: em-calc(-20);
+		left: em-calc(-20);
+	}
+
+	&::after {
+		top: em-calc(-10);
+		left: em-calc(-10);
+	}
+}
+
+.day-99-text {
+	padding: em-calc(80 50 50 0);
+	@include mq(small) {
+		padding-top: em-calc(120);
+	}
+	@include mq(medium) {
+		padding: em-calc(150 75 75 0);
+	}
+	@include mq(large) {
+		padding-top: em-calc(175);
+	}
+	position: relative;
+	z-index: 2;
+}
+
+.day-99-text-serif,
+.day-99-text-sans-serif {
+	text-align: right;
+	display: block;
+}
+
+.day-99-text-serif {
+	@include mq(medium) {
+		font-size: 1.1em;
+	}
+}
+
+.day-99-text-sans-serif {
+	font-family: $day-99-text-sans-serif;
+	font-style: normal;
+	font-size: 1.75em;
+	@include font-smoothing;
+
+	@include mq(small) {
+		font-size: 2em;
+	}
+	@include mq(medium) {
+		font-size: 2.5em;
+	}
+	letter-spacing: 0.15em;
+	position: relative;
+	right: -0.2em;
+}
+
+.day-99-text-sans-serif--comma {
+	&::after {
+		content: ",";
+		position: absolute;
+		right: -0.35em;
+	}
+}
+
+.day-99-text-sans-serif + .day-99-text-serif {
+	margin-top: 1em;
+}
