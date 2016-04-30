@@ -615,10 +615,10 @@
 <span class="day-76-pre-29">                                        JJJJJJJJJJJ</span>
 <span class="day-76-pre-30">                                        JJJJJJJJJJ</span>
 <span class="day-76-pre-31">                                        JJJJJJJJJ</span>
- 
- 
 
- 
+
+
+
 <span class="day-76-pre-33">       EEEE                                   EEEE                   RRR          MMM    MMM            OOO                    RRR           EEE</span>
 <span class="day-76-pre-34">     EEEEEEEE       VVVVV        VVVVV      EEEEEEEEE       RRRR   RRRRRRR    MMM MMMMM  MMMMM        OOOOOOOOO       RRRR   RRRRRRR       EEEEEEEE</span>
 <span class="day-76-pre-35">   EEEEEEEEEEEE     VVVVV        VVVVV     EEEEEEEEEEE      RRRRR RRRRRRRR    MMM MMMMMM MMMMMM      OOOOOOOOOOOO     RRRR  RRRRRRRR     EEEEEEEEEEEE</span>
@@ -1829,20 +1829,20 @@
         <div class="day-15-pre">
             Day 15 of
 
-      ;       '##.         .+#'   
-     ##     ##  ;##      ;#   ##' 
-  ,###,   .##    ###    ##.   ### 
+      ;       '##.         .+#'
+     ##     ##  ;##      ;#   ##'
+  ,###,   .##    ###    ##.   ###
 +` ###    ##`    ###   ###    +##'
    ###   ###     ###  .##,    +###
   '##'  ,###     ###  ###     ###;
-  ###   ###.    `###  ###     ### 
-  ###   ###     ###` ,###     ### 
- ,###   ###     ###  ,###    .##` 
- ###`   ###    .##    ###    ##+  
- ###    ,##`   ##     ###   :#'   
- ###     ;##  #'       ##, ;#     
+  ###   ###.    `###  ###     ###
+  ###   ###     ###` ,###     ###
+ ,###   ###     ###  ,###    .##`
+ ###`   ###    .##    ###    ##+
+ ###    ,##`   ##     ###   :#'
+ ###     ;##  #'       ##, ;#
 
-        Days of Scriptures        
+        Days of Scriptures
 
 Login: <span id="day-15-datetime">Fri Aug 14, 2015 12:34:56</span> from 127.0.0.1
 john:/14/27$
@@ -1960,7 +1960,7 @@ john:/14/27$
       <blockquote class="day-text">
         <div class="day-9-top"></div>
         <div class="day-9-text">
-          <span class="day-9-first">My grace is sufficient for thee: for my</span> 
+          <span class="day-9-first">My grace is sufficient for thee: for my</span>
           <span class="day-9-next">strength is made perfect in weakness</span>
         </div>
         <footer class="day-reference">
@@ -2142,5 +2142,22 @@ john:/14/27$
     &copy; 2015 <a href="https://jonsuh.com">Jonathan Suh</a>.
   </div>
 </footer>
+<script>
+  if (window.location.hash) {
+    if (document.readyState === "complete") {
+      (function() {
+        var hash = window.location.hash.substring(1);
+        var day = document.getElementById(hash);
+        var bodyRect = document.body.getBoundingClientRect();
+        var dayRect = day.getBoundingClientRect();
+        var offset = dayRect.top - bodyRect.top;
+
+        setTimeout(function() {
+          window.scrollTo(0, offset);
+        }, 1000);
+      }());
+    }
+  }
+</script>
 </body>
 </html>
